@@ -18,6 +18,18 @@ JavaScript (no framework)
 
 ### Wireframes
 
+**Game Grid**
+![Game Grid](images/a.png)
+
+**Object Structure?**
+![alt text](images/c.png)
+
+**Passification Step**
+![alt text](images/b.png)
+
+**Click Flow**
+![alt text](images/d.png)
+
 ### MVP Goals
 
 - [ ] Playable
@@ -30,6 +42,7 @@ JavaScript (no framework)
 
 ### Roadblocks
 
+- Passification Step
 - Project Structure
 - "Performance?"
 - Win conditions
