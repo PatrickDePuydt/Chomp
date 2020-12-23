@@ -24,7 +24,7 @@ JavaScript (no framework)
 **Object Structure?**
 ![alt text](images/c.png)
 
-**Passification Step**
+**Pacification Step**
 ![alt text](images/b.png)
 
 **Click Flow**
@@ -42,7 +42,7 @@ JavaScript (no framework)
 
 ### Roadblocks
 
-- Passification Step
+- Pacification Step
 - Project Structure
 - "Performance?"
 - Win conditions
