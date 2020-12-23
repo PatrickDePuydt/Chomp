@@ -8,6 +8,8 @@ v122320.1
 
 ### Game Idea
 
+https://www.youtube.com/watch?v=XE6YYMn_334
+
 ### Tech Stack
 
 HTML Elements (no framework)
