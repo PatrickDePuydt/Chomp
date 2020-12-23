@@ -1,0 +1,17 @@
+/* Good Form */
+
+@import 'reset.css';
+/* Local Styles */
+
+@import 'fonts.css';
+@import 'variables.css';
+@import 'applied_color.css';
+@import 'whitespace.css';
+@import 'layout.css';
+@import 'images.css';
+@import 'buttons.css';
+* {
+    border: 40px solid coral;
+    padding: 35%;
+    color: coral;
+}
