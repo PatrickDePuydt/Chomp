@@ -21,16 +21,16 @@ JavaScript (no framework)
 ### Wireframes
 
 **Game Grid**
-![Game Grid](images/a.png)
+![Game Grid](journal/images/122320-a.png)
 
 **Object Structure?**
-![alt text](images/c.png)
+![alt text](journal/images/122320-c.png)
 
 **Pacification Step**
-![alt text](images/b.png)
+![alt text](journal/images/122320-b.png)
 
 **Click Flow**
-![alt text](images/d.png)
+![alt text](journal/images/122320-d.png)
 
 ### MVP Goals
 
