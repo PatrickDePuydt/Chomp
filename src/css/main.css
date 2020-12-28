@@ -1,0 +1,104 @@
+/* Resets */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --hoodie: #E0D3DE;
+  --cold: #ECFDFC;
+  --kinder: #ffddb3;
+  --glow: #FFFED6;
+  --cell-size: 250px;
+}
+
+[disabled="true"] {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+body {
+  background-color: var(--hoodie);
+}
+
+[data-feature="ticTacToe"].lay_grid_3x3 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+[data-feature="ticTacToe"][data-selector="board"] {
+  width: 100vw;
+  height: 100vh;
+}
+
+[data-feature="ticTacToe"] [data-target="cell"] {
+  background: var(--cold);
+  width: var(--cell-size);
+  height: var(--cell-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  border: 5px solid var(--hoodie);
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .15s ease-in-out;
+}
+
+[data-feature="ticTacToe"] [data-target="cell"]:hover {
+  background: var(--glow);
+}
+
+[data-feature="ticTacToe"] .CROSS, [data-feature="ticTacToe"] .NOUGHT {
+  cursor: not-allowed;
+}
+
+[data-feature="ticTacToe"] .CROSS:hover, [data-feature="ticTacToe"] .NOUGHT:hover {
+  opacity: .9;
+  transform: scale(.9);
+}
+
+[data-feature="ticTacToe"] [data-target="cell"].NOUGHT {
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/nought.svg);
+  background-color: transparent;
+}
+
+[data-feature="ticTacToe"] [data-target="cell"].CROSS {
+  background-size: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/cross.svg);
+  background-color: transparent;
+}
+
+/* Border Bullshit */
+
+[data-target="cell"]:first-child, [data-target="cell"]:nth-child(2), [data-target="cell"]:nth-child(3) {
+  border-top: none;
+}
+
+[data-target="cell"]:nth-child(3n + 1) {
+  border-left: none;
+}
+
+[data-target="cell"]:nth-child(3n + 3) {
+  border-right: none;
+}
+
+[data-target="cell"]:last-child, [data-target="cell"]:nth-child(8), [data-target="cell"]:nth-child(7) {
+  border-bottom: none;
+}
