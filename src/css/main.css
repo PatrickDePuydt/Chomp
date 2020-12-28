@@ -73,7 +73,7 @@ body {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/SQUARE.svg);
+  background-image: url(../images/square/square-01.svg);
   background-color: transparent;
 }
 
@@ -81,7 +81,7 @@ body {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/CIRCLE.svg);
+  background-image: url(../images/circle/circle-01.svg);
   background-color: transparent;
 }
 
