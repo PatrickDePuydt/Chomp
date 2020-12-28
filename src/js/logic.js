@@ -8,7 +8,7 @@ let whoseTurnIsIt = false;
 const handleClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
-  markCell(event, currentTeam, opposingTeam);
+  claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
 };
 
@@ -22,7 +22,7 @@ function checkForWin(currentTeam, opposingTeam) {
   }
 }
 
-const markCell = (event, currentTeam, opposingTeam) => { 
+const claimCell = (event, currentTeam, opposingTeam) => { 
   event.target.classList.remove(opposingTeam); 
   event.target.classList.add(currentTeam); 
 }
@@ -34,5 +34,3 @@ function checkScore(currentTeam) {
     });
   });
 };
-
-bindEvents();

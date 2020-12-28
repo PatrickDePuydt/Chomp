@@ -7,3 +7,5 @@
 //    cell.classList.remove("CIRCLE")
 //   });
 // };
+
+assignEventHandlers(); // Add event handlers to cells
