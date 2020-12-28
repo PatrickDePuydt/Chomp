@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-[data-feature="chomp"] article {
+[data-feature="chomp"] [data-target='side-control'] {
   flex: 1;
   display: flex;
   justify-content: center;
