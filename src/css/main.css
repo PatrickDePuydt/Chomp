@@ -17,10 +17,6 @@
   --cell-size: 250px;
 }
 
-[disabled="true"] {
-  pointer-events: none;
-  cursor: not-allowed;
-}
 
 body {
   background-color: var(--brixton);
@@ -60,9 +56,9 @@ body {
   background: var(--glow);
 }
 
-[data-feature="ticTacToe"] .CIRCLE, [data-feature="ticTacToe"] .SQUARE {
+/* [data-feature="ticTacToe"] .CIRCLE, [data-feature="ticTacToe"] .SQUARE {
   cursor: not-allowed;
-}
+} */
 
 [data-feature="ticTacToe"] .CIRCLE:hover, [data-feature="ticTacToe"] .SQUARE:hover {
   opacity: .9;
