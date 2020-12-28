@@ -1,26 +1,3 @@
-/* Resets */
-
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --brixton: #B3B3B3;
-  --cold: gold;
-  --kinder: dodgerblue;
-  --glow: #CDC7E5;
-  --cell-size: 150px;
-}
-
-body {
-  background-color: var(--brixton);
-}
-
 [data-feature="chomp"] {
   display: flex;
   align-items: center;
