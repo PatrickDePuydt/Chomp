@@ -1,0 +1,40 @@
+/* Resets */
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --brixton: #B3B3B3;
+  --cold: gold;
+  --kinder: dodgerblue;
+  --glow: #CDC7E5;
+  --cell-size: 150px;
+}
+
+body {
+  background-color: var(--brixton);
+}
+
+/* Border Bullshit */
+
+[data-target="cell"]:first-child, [data-target="cell"]:nth-child(2), [data-target="cell"]:nth-child(3) {
+  border-top: none;
+}
+
+[data-target="cell"]:nth-child(3n + 1) {
+  border-left: none;
+}
+
+[data-target="cell"]:nth-child(3n + 3) {
+  border-right: none;
+}
+
+[data-target="cell"]:last-child, [data-target="cell"]:nth-child(8), [data-target="cell"]:nth-child(7) {
+  border-bottom: none;
+}

@@ -1,1 +1,1 @@
-const gameBoardCells = document.querySelectorAll(`[data-target='cell']`); 
+const gameBoardCells = document.querySelectorAll(`[data-target='cell']`);
