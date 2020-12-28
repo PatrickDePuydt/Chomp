@@ -28,7 +28,7 @@ const handleDraw = () => {
 }
 
 const handleTurn = (singlePlayerMode, currentTeam, nextTeam) => {
-  statusBar.innerText = `${nextTeam}'s turn`;
+  // statusBar.innerText = `${nextTeam}'s turn`;
   turnOver(); // Change game board possession control to opponent
   
   // Only fires in single player mode
@@ -88,7 +88,7 @@ const bindEvents = () => {
 }
 
 bindEvents();
-resetButton.addEventListener('click', resetBoard);
+// resetButton.addEventListener('click', resetBoard);
 
 
 

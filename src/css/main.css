@@ -10,10 +10,10 @@
 }
 
 :root {
-  --hoodie: #E0D3DE;
-  --cold: #ECFDFC;
-  --kinder: #ffddb3;
-  --glow: #FFFED6;
+  --brixton: #B3B3B3;
+  --cold: gold;
+  --kinder: dodgerblue;
+  --glow: #CDC7E5;
   --cell-size: 250px;
 }
 
@@ -23,7 +23,7 @@
 }
 
 body {
-  background-color: var(--hoodie);
+  background-color: var(--brixton);
 }
 
 [data-feature="ticTacToe"].lay_grid_3x3 {
@@ -49,7 +49,7 @@ body {
   align-items: center;
   position: relative;
   cursor: pointer;
-  border: 5px solid var(--hoodie);
+  border: 5px solid var(--brixton);
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
