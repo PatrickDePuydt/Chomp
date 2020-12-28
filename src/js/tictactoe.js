@@ -1,4 +1,4 @@
-const bindEvents = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleClick));
+const bindEvents = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleCellClick));
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))};
 const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", false))}
 const handleWin = () => console.log(`Win`);
@@ -8,7 +8,7 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const turnOver = () => whoseTurnIsIt = !whoseTurnIsIt; 
 let whoseTurnIsIt = false; 
 
-const handleClick = (event) => {
+const handleCellClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const nextTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   

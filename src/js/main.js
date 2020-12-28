@@ -8,4 +8,4 @@
 //   });
 // };
 
-assignEventHandlers(); // Add event handlers to cells
+assignCellEventHandlers(); // Add event handlers to cells

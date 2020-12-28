@@ -1,4 +1,4 @@
-const assignEventHandlers = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleClick));
+const assignCellEventHandlers = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleCellClick));
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))};
 const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", false))};
 const handleWin = () => console.log(`Win`);

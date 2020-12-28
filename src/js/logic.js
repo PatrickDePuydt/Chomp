@@ -21,7 +21,7 @@ const checkScore = (currentTeam) => {
   });
 };
 
-const handleClick = (event) => {
+const handleCellClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   claimCell(event, currentTeam, opposingTeam);
