@@ -60,28 +60,28 @@ body {
   background: var(--glow);
 }
 
-[data-feature="ticTacToe"] .CROSS, [data-feature="ticTacToe"] .NOUGHT {
+[data-feature="ticTacToe"] .CIRCLE, [data-feature="ticTacToe"] .SQUARE {
   cursor: not-allowed;
 }
 
-[data-feature="ticTacToe"] .CROSS:hover, [data-feature="ticTacToe"] .NOUGHT:hover {
+[data-feature="ticTacToe"] .CIRCLE:hover, [data-feature="ticTacToe"] .SQUARE:hover {
   opacity: .9;
   transform: scale(.9);
 }
 
-[data-feature="ticTacToe"] [data-target="cell"].NOUGHT {
+[data-feature="ticTacToe"] [data-target="cell"].SQUARE {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/nought.svg);
+  background-image: url(../images/SQUARE.svg);
   background-color: transparent;
 }
 
-[data-feature="ticTacToe"] [data-target="cell"].CROSS {
+[data-feature="ticTacToe"] [data-target="cell"].CIRCLE {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/cross.svg);
+  background-image: url(../images/CIRCLE.svg);
   background-color: transparent;
 }
 

@@ -43,8 +43,8 @@ const resetBoard = () => {
 
  return [...gameBoardCells].map( cell => {
    cell.setAttribute("disabled", false)
-   cell.classList.remove("NOUGHT")
-   cell.classList.remove("CROSS")
+   cell.classList.remove("SQUARE")
+   cell.classList.remove("CIRCLE")
   });
 };
 
@@ -58,12 +58,12 @@ function checkScore(currentTeam) {
 };
 
 const isDraw = () => { // Determine if there is a draw
-  return [...gameBoardCells].every( cell => cell.classList.contains("NOUGHT") || cell.classList.contains("CROSS")) // This is saying: does every cell have either an x or an o => that's a draw
+  return [...gameBoardCells].every( cell => cell.classList.contains("SQUARE") || cell.classList.contains("CIRCLE")) // This is saying: does every cell have either an x or an o => that's a draw
 };
 
 const handleClick = (event) => {
-  const currentTeam = whoseTurnIsIt ? "NOUGHT" : "CROSS"; // Important! This is how we switch teams
-  const nextTeam = !whoseTurnIsIt ? "NOUGHT" : "CROSS"; // The next team
+  const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; // Important! This is how we switch teams
+  const nextTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; // The next team
   markCell(event, currentTeam); // Claim a cell for a team
   
   if (checkScore(currentTeam)) {
