@@ -1,1 +1,1 @@
-console.log("Two")
+console.log(a1.power)
