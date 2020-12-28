@@ -1,0 +1,12 @@
+[data-feature="chomp"] .lay_flex_center {
+  
+}
+
+[data-feature="chomp"] .lay_grid_3x3 {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(4, auto);
+}

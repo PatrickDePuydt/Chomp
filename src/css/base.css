@@ -21,7 +21,21 @@ body {
   background-color: var(--brixton);
 }
 
-/* Border Bullshit */
+[data-feature="chomp"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-feature="chomp"] article {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Borders */
 
 [data-target="cell"]:first-child, [data-target="cell"]:nth-child(2), [data-target="cell"]:nth-child(3) {
   border-top: none;

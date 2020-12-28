@@ -1,18 +1,9 @@
-[data-feature="ticTacToe"].lay_grid_3x3 {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  justify-items: center;
-  align-items: center;
-  grid-template-columns: repeat(4, auto);
-}
-
-[data-feature="ticTacToe"][data-selector="board"] {
-  width: 100vw;
+[data-feature="chomp"] [data-selector="board"] {
+  width: 60vw;
   height: 100vh;
 }
 
-[data-feature="ticTacToe"] [data-target="cell"] {
+[data-feature="chomp"] [data-target="cell"] {
   background: var(--cold);
   width: var(--cell-size);
   height: var(--cell-size);
@@ -28,14 +19,14 @@
   transition: all .15s ease-in-out;
 }
 
-[data-feature="ticTacToe"] [data-target="cell"].SQUARE {
+[data-feature="chomp"] [data-target="cell"].SQUARE {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/square/square-01.svg);
   background-color: transparent;
 }
-[data-feature="ticTacToe"] [data-target="cell"].CIRCLE {
+[data-feature="chomp"] [data-target="cell"].CIRCLE {
   background-size: 200px;
   background-repeat: no-repeat;
   background-position: center;
