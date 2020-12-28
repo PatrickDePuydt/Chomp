@@ -1,11 +1,7 @@
 let whoseTurnIsIt = false; 
 const turnOver = () => whoseTurnIsIt = !whoseTurnIsIt; 
 const gameBoardCells = document.querySelectorAll(`[data-target='cell']`); 
-const statusBar = document.querySelector(`[data-target='status_bar']`);
-const resetButton = document.querySelector(`[data-target='reset']`);
-const winningCombinations = [
-  [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
-];
+
 
 const disableBoard = () => {gameBoardCells.forEach( cell => {
   cell.setAttribute("disabled", true)
@@ -18,12 +14,12 @@ const enableBoard = () => {gameBoardCells.forEach( cell => {
 
 const handleWin = () => {
   disableBoard();
-  statusBar.innerText = "Win";
+  console.log(`Win`);
 }
 
 const handleDraw = () => {
   enalbeBoard();
-  statusBar.innerText = "Draw";
+  console.log(`draw`);
 }
 
 const handleTurn = () => turnOver(); 
