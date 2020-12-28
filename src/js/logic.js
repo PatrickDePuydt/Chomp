@@ -1,5 +1,4 @@
-
-function checkForWin(currentTeam, opposingTeam) {
+const checkForWin = (currentTeam, opposingTeam)  => {
     if (checkScore(currentTeam)) {
     handleWin();
   } else if (isDraw()) {
@@ -14,13 +13,14 @@ const claimCell = (event, currentTeam, opposingTeam) => {
   event.target.classList.add(currentTeam); 
 }
 
-function checkScore(currentTeam) {
+const checkScore = (currentTeam) => {
   return winningCombinations.some(winningCombo => { 
     return winningCombo.every(cell => { 
       return gameBoardCells[cell].classList.contains(currentTeam); 
     });
   });
 };
+
 const handleClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
