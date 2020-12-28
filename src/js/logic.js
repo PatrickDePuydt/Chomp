@@ -1,5 +1,3 @@
-
-
 const handleWin = () => console.log(`Win`);
 const handleDraw = () => console.log(`draw`);
 const handleTurn = () => turnOver(); 
@@ -34,6 +32,5 @@ function checkScore(currentTeam) {
     });
   });
 };
-
 
 bindEvents();
