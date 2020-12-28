@@ -1,0 +1,1 @@
+const gameBoardCells = document.querySelectorAll(`[data-target='cell']`); 
