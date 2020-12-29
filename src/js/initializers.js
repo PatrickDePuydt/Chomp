@@ -3,6 +3,15 @@ const assignCellEventHandlers = () => [...gameBoardCells].map( cell => {
 
   cell.addEventListener('click', handleCellClick);
   
+  switch(identifier) {
+    case "a1":
+      console.log(a1);
+      break;
+    default:
+      console.log(`Case Default`);
+  }
+
+  
   cell.setAttribute(a1.power.name, a1.power.value); // Works, but boo hoo
   
   // console.log(identifier);
