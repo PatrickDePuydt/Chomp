@@ -7,6 +7,7 @@
 [data-feature='chomp'] .TEAM_LUNA_CONTROLS {
   outline: 1px solid purple;
   flex: 3;
+  
 }
 
 [data-feature='chomp'] .TEAM_LILY_CONTROLS {
@@ -18,6 +19,7 @@
 
 [data-feature='chomp'] [data-selector='piece'] {
   outline: 1px solid gold;
+  border: none; /* Reset */
   width: var(--cell-size);
   height: var(--cell-size);
 }

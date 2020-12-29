@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+[data-feature="chomp"] .lay_full_height {
+  height: 90vh;
+}
+
 [data-feature="chomp"] .lay_grid_3x3 {
   display: grid;
   justify-content: center;
