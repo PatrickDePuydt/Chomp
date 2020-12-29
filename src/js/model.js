@@ -18,30 +18,3 @@ const cells = {
     neighbs: []
   }, 
 }
-
-const a1 = {
-  power: {
-    name: "power",
-    value: 1
-  },
-  taken: {
-    name: "taken",
-    value: false
-  },
-  team: {
-    name: "team",
-    value: null
-  },
-  chomp: {
-    name: "chomp",
-    value: null
-  },
-  neighbors: {
-    name: "neighbors",
-    value: []
-  },
-  diagonals: {
-    name: "diagonals",
-    value: []
-  }
-}

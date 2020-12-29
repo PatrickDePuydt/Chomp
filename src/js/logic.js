@@ -21,42 +21,38 @@ const checkScore = (currentTeam) => {
   });
 };
 
+const updateModel = (identifier) => {
+  cells[identifier].taken = true;
+  cells[identifier].power = piecePlayPower;
+  console.log(`Cell power updated to: ${cells[identifier].power}`);
+}
+
+
 const handleCellClick = (event) => {
-  let identifier = event.target.innerHTML; // a1
-  // console.log(typeof identifier);
-  // console.log(cells[identifier]);
-  
+  const identifier = event.target.innerHTML; 
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   let cellValue = event.target.innerHTML;
   
-  cells[identifier].taken = true;
-  cells[identifier].power = piecePlayPower;
-  
-  console.log(cells[identifier]);
-
-
-  comparePieceAgainstCell(cellValue);
+  comparePieceAgainstCell(identifier);
   claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
 };
 
 const handlePieceSelectionClick = (event) => {
   const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
-  
   choosePiece(selectedPiecePower);
 }
 
 const choosePiece = (selectedPiecePower) => {
   piecePlayPower = selectedPiecePower;
-  console.log(piecePlayPower)
 };
 
 const resetPiecePower = () => {
   console.log(`Reset`);
 } 
-const comparePieceAgainstCell = (cellValue) => {
-  console.log(cellValue);
+const comparePieceAgainstCell = (identifier) => {
+  updateModel(identifier);
 } 
 
 
