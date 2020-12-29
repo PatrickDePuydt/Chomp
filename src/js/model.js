@@ -11,4 +11,14 @@ const a1 = {
   neighbors: [],
   diagonals: []
 }
-console.log(typeof a1);
+
+const a2 = {
+  power: {
+    name: "power",
+    value: 1
+  }
+}
+
+const aTwo = document.getElementById("a2");
+aTwo.setAttribute(a2.power.name, a2.power.value)
+console.log(aTwo);

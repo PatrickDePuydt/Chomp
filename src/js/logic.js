@@ -25,6 +25,7 @@ const handleCellClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   let cellValue = event.target.innerHTML;
+  console.log(event);
 
   comparePieceAgainstCell(cellValue);
   claimCell(event, currentTeam, opposingTeam);
@@ -46,7 +47,7 @@ const resetPiecePower = () => {
   console.log(`Reset`);
 } 
 const comparePieceAgainstCell = (cellValue) => {
-  console.log(Object(cellValue).power);
+  console.log(cellValue);
 } 
 
 
