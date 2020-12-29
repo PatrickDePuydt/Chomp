@@ -4,21 +4,28 @@ const winningCombinations = [
 
 
 const a1 = {
-  power: 505,
-  taken: false,
-  team: null,
-  chomp: null,
-  neighbors: [],
-  diagonals: []
-}
-
-const a2 = {
   power: {
     name: "power",
     value: 1
+  },
+  taken: {
+    name: "taken",
+    value: false
+  },
+  team: {
+    name: "team",
+    value: null
+  },
+  chomp: {
+    name: "chomp",
+    value: null
+  },
+  neighbors: {
+    name: "neighbors",
+    value: []
+  },
+  diagonals: {
+    name: "diagonals",
+    value: []
   }
 }
-
-const aTwo = document.getElementById("a2");
-aTwo.setAttribute(a2.power.name, a2.power.value)
-console.log(aTwo);
