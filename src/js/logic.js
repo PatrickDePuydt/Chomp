@@ -22,10 +22,19 @@ const checkScore = (currentTeam) => {
 };
 
 const handleCellClick = (event) => {
+  let identifier = event.target.innerHTML; // a1
+  // console.log(typeof identifier);
+  // console.log(cells[identifier]);
+  
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   let cellValue = event.target.innerHTML;
-  console.log(event);
+  
+  cells[identifier].taken = true;
+  cells[identifier].power = piecePlayPower;
+  
+  console.log(cells[identifier]);
+
 
   comparePieceAgainstCell(cellValue);
   claimCell(event, currentTeam, opposingTeam);
