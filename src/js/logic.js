@@ -27,3 +27,18 @@ const handleCellClick = (event) => {
   claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
 };
+
+const handlePieceSelectionClick = (event) => {
+  console.log(`Helllooooooo`);
+}
+
+
+// const resetBoard = () => {
+//   bindEvents(); 
+
+//  return [...gameBoardCells].map( cell => {
+//    cell.setAttribute("disabled", false)
+//    cell.classList.remove("SQUARE")
+//    cell.classList.remove("CIRCLE")
+//   });
+// };
