@@ -1,9 +1,14 @@
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => {
+  let identifier = cell.innerHTML;
+
   cell.addEventListener('click', handleCellClick);
-  cell.setAttribute(a1.power.name, a1.power.value);
-  cell.setAttribute(a1.taken.name, a1.taken.value);
-  cell.setAttribute(a1.team.name, a1.team.value);
-  cell.setAttribute(a1.chomp.name, a1.chomp.value);
+  
+  cell.setAttribute(a1.power.name, a1.power.value); // Works, but boo hoo
+  
+  // console.log(identifier);
+  // cell.setAttribute(identifier.power.name, identifier.power.value); // Does not work, but what I'm trying to do
+
+  
 });
 
 
