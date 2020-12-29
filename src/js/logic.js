@@ -24,13 +24,30 @@ const checkScore = (currentTeam) => {
 const handleCellClick = (event) => {
   const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
   const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
+  let cellValue = event.target.innerHTML;
+
+  comparePieceAgainstCell(cellValue);
   claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
 };
 
 const handlePieceSelectionClick = (event) => {
-  console.log(`Helllooooooo`);
+  const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
+  
+  choosePiece(selectedPiecePower);
 }
+
+const choosePiece = (selectedPiecePower) => {
+  piecePlayPower = selectedPiecePower;
+  console.log(piecePlayPower)
+};
+
+const resetPiecePower = () => {
+  console.log(`Reset`);
+} 
+const comparePieceAgainstCell = (cellValue) => {
+  console.log(Object(cellValue).power);
+} 
 
 
 // const resetBoard = () => {

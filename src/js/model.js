@@ -4,10 +4,11 @@ const winningCombinations = [
 
 
 const a1 = {
-  power: 1,
+  power: 505,
   taken: false,
   team: null,
   chomp: null,
   neighbors: [],
   diagonals: []
 }
+console.log(typeof a1);

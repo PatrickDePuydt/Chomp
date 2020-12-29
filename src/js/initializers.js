@@ -10,4 +10,5 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 
 const turnOver = () => whoseTurnIsIt = !whoseTurnIsIt; 
 let whoseTurnIsIt = false; 
+let piecePlayPower = NaN;
 
