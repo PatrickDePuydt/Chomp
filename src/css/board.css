@@ -5,7 +5,7 @@
 }
 
 [data-feature="chomp"] [data-target='side-control'] {
-  flex: 1;
+
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -13,7 +13,7 @@
 }
 
 [data-feature="chomp"] [data-selector="board"] {
-  width: 60vw;
+  width: 40vw;
   height: 100vh;
 }
 

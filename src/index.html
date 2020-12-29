@@ -31,13 +31,7 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
-      href="./css/main.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="./css/animations.css"
+      href="./css/controls.css"
     />
     <title>Chomp!</title>
     <script src="./js/model.js" defer></script>
@@ -48,8 +42,8 @@
   </head>
 
   <body>
-    <main data-feature="chomp">
-      <article data-target="side-control">
+    <main data-feature="chomp" class="TEAM_LUNA">
+      <article data-target="side-control" class="TEAM_LUNA_CONTROLS">
         <section>Square Controls</section>
         <aside class="lay_flex_center">
           <button data-selector="piece" data-context="3">3</button>
@@ -75,7 +69,7 @@
         <section data-target="cell"></section>
         <section data-target="cell"></section>
       </article>
-      <article data-target="side-control">
+      <article data-target="side-control" class="TEAM_LILY_CONTROLS">
         <aside>Circle Controls</aside>
       </article>
     </main>

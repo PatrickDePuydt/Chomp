@@ -1,3 +1,7 @@
+:root {
+  --cell-size: 150px;
+}
+
 [data-feature="chomp"] [data-target="cell"] {
   background: var(--cold);
   width: var(--cell-size);
@@ -8,14 +12,14 @@
   position: relative;
   cursor: pointer;
   border: 5px solid var(--brixton);
-  background-size: 200px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
   transition: all .15s ease-in-out;
 }
 
 [data-feature="chomp"] [data-target="cell"].SQUARE {
-  background-size: 200px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/square/square-01.svg);
@@ -23,7 +27,7 @@
 }
 
 [data-feature="chomp"] [data-target="cell"].CIRCLE {
-  background-size: 200px;
+  background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/circle/circle-01.svg);

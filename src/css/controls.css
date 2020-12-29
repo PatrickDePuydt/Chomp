@@ -1,0 +1,20 @@
+/* Team Specific */
+[data-feature='chomp'].TEAM_LUNA {
+  border: 5px solid black;
+}
+
+[data-feature='chomp'] .TEAM_LUNA_CONTROLS {
+  border: 5px solid purple;
+  flex: 3;
+}
+
+[data-feature='chomp'] .TEAM_LILY_CONTROLS {
+  border: 5px solid hotpink;
+  flex: 1;
+}
+
+
+/* General */
+[data-feature='chomp'] [data-selector='piece'] {
+  border: 5px solid gold;
+}
