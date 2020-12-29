@@ -1,7 +1,3 @@
-:root {
-  --cell-size: 150px;
-}
-
 [data-feature="chomp"] [data-target="cell"] {
   background: var(--cold);
   width: var(--cell-size);

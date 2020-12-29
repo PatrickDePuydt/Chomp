@@ -1,20 +1,28 @@
 /* Team Specific */
+
 [data-feature='chomp'].TEAM_LUNA {
-  border: 5px solid black;
+  outline: 1px solid black;
 }
 
 [data-feature='chomp'] .TEAM_LUNA_CONTROLS {
-  border: 5px solid purple;
+  outline: 1px solid purple;
   flex: 3;
 }
 
 [data-feature='chomp'] .TEAM_LILY_CONTROLS {
-  border: 5px solid hotpink;
+  outline: 1px solid hotpink;
   flex: 1;
 }
 
-
 /* General */
+
 [data-feature='chomp'] [data-selector='piece'] {
-  border: 5px solid gold;
+  outline: 1px solid gold;
+  width: var(--cell-size);
+  height: var(--cell-size);
+}
+
+[data-feature='chomp'] [data-target='piece_directions'] {
+  outline: 1px solid coral;
+  width: var(--cell-size);
 }

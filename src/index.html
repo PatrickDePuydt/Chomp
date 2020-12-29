@@ -46,12 +46,27 @@
       <article data-target="side-control" class="TEAM_LUNA_CONTROLS">
         <section>Square Controls</section>
         <aside class="lay_flex_center">
-          <button data-selector="piece" data-context="3">3</button>
-          <button data-selector="piece" data-context="2">2</button>
-          <button data-selector="piece" data-context="1">1</button>
+          <div data-container="control">
+            <button data-selector="piece" data-context="3">3</button>
+            <div data-target="piece_directions">
+              Best for locking in a space, or chomping.
+            </div>
+          </div>
+          <div data-container="control">
+            <button data-selector="piece" data-context="2">2</button>
+            <div data-target="piece_directions">
+              Good to chomp, good to explore.
+            </div>
+          </div>
+          <div data-container="control">
+            <button data-selector="piece" data-context="1">1</button>
+            <div data-target="piece_directions">
+              Easy to chomp, good to distract.
+            </div>
+          </div>
         </aside>
       </article>
-      <article class="lay_grid_3x3" data-selector="board">
+      <article class="lay_grid_3x3" data-selector="board" style="opacity: 0.5">
         <section data-target="cell"></section>
         <section data-target="cell"></section>
         <section data-target="cell"></section>
@@ -69,7 +84,11 @@
         <section data-target="cell"></section>
         <section data-target="cell"></section>
       </article>
-      <article data-target="side-control" class="TEAM_LILY_CONTROLS">
+      <article
+        data-target="side-control"
+        class="TEAM_LILY_CONTROLS"
+        style="opacity: 0.5"
+      >
         <aside>Circle Controls</aside>
       </article>
     </main>

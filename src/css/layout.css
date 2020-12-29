@@ -1,3 +1,8 @@
+[data-feature="chomp"] .lay_flex_center {
+  display: flex;
+  flex-direction: column;
+}
+
 [data-feature="chomp"] .lay_grid_3x3 {
   display: grid;
   justify-content: center;

@@ -1,19 +1,16 @@
 /* Resets */
+*, *:before, *:after {box-sizing: border-box;}* {margin: 0; padding: 0;}
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
+/*  Variables & Colors // Element-Level Selectors */
 :root {
+  /* Swatches */
   --brixton: #B3B3B3;
   --cold: gold;
   --kinder: dodgerblue;
   --glow: #CDC7E5;
+  
+  /* Variables */
+  --cell-size: 150px;
 }
 
 body {
