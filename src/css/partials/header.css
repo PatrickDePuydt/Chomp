@@ -8,6 +8,6 @@
   transition: 1s all ease;
 }
 
-[data-target='header'].LUNA h1 {
+[data-target='header'].SWITCH h1 {
   transform: translateX(85vw);
 }
