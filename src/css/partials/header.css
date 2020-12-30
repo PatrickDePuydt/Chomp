@@ -1,13 +1,4 @@
-[data-target='header'] {
-  border: 5px solid gold;
+header {
   display: flex;
   transition: var(--transition);
-}
-
-[data-target='header'] h1 {
-  transition: 1s all ease;
-}
-
-[data-target='header'].SWITCH h1 {
-  transform: translateX(85vw);
 }

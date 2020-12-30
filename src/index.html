@@ -45,6 +45,12 @@
       media="screen"
       href="./css/partials/header.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/components/switcher.css"
+    />
     <title>Chomp!</title>
     <script src="./js/model.js" defer></script>
     <script src="./js/selectors.js" defer></script>
@@ -54,14 +60,19 @@
   </head>
 
   <body data-component="switcher">
-    <header data-target="header" class="pd_md_lg">
+    <header
+      data-target="header"
+      class="pd_md_lg"
+      data-component="switcher-header"
+    >
       <h1>Chomp</h1>
     </header>
     <main data-feature="chomp" class="TEAM_LUNA">
       <article
         data-target="side-control"
+        data-component="switcher-control"
         data-kitten="LUNA"
-        class="TEAM_LUNA_CONTROLS lay_full_height"
+        class="lay_full_height SWELL"
       >
         <section>Square Controls</section>
         <aside class="lay_flex_center">
@@ -109,8 +120,8 @@
       </article>
       <article
         data-target="side-control"
-        class="TEAM_LILY_CONTROLS lay_full_height"
-        style="opacity: 0.5"
+        data-component="switcher-control"
+        class="lay_full_height RECEDE"
       >
         <aside>Circle Controls</aside>
       </article>

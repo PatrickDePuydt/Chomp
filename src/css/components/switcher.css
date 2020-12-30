@@ -1,0 +1,13 @@
+[data-component='switcher'] [data-component='switcher-header'] {
+  border: 5px solid gold;
+}
+
+[data-component='switcher'] [data-component='switcher-control'].SWELL {
+  flex: 3;
+  border: 5px solid black;
+}
+
+[data-component='switcher'] [data-component='switcher-control'].RECEDE {
+  flex: 1;
+  border: 5px solid hotpink;
+}
