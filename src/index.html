@@ -51,6 +51,12 @@
       media="screen"
       href="./css/components/class-switcher.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/components/bg-switcher.css"
+    />
     <title>Chomp!</title>
     <script src="./js/model.js" defer></script>
     <script src="./js/selectors.js" defer></script>
@@ -77,7 +83,13 @@
         <section>Square Controls</section>
         <aside class="lay_flex_center">
           <div data-container="control">
-            <button data-selector="piece" data-family="x3">3</button>
+            <button
+              data-selector="piece"
+              data-family="x3"
+              data-component="bg-switcher"
+            >
+              3
+            </button>
             <div data-target="piece_directions">
               Best for locking in a space, or chomping.
             </div>
@@ -128,4 +140,5 @@
     </main>
   </body>
   <script src="js/components/class-switcher.js"></script>
+  <script src="js/components/bg-switcher.js"></script>
 </html>
