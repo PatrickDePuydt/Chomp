@@ -18,3 +18,40 @@ const cells = {
     neighbs: []
   }, 
 }
+
+
+const lunaPieceInventory = {
+  x3: {
+    quantity: 3,
+  },
+  x2: {
+    quantity: 3,
+  },
+  x1: {
+    quantity: 3,
+  },
+}
+
+const lilyPieceInventory = {
+  x3: {
+    quantity: 3,
+  },
+  x2: {
+    quantity: 3,
+  },
+  x1: {
+    quantity: 3,
+  },
+}
+
+const depleteReseource = (modelAddress) => {
+  const cleanQuantity = Number(modelAddress)
+  const currentInventory = Number(lilyPieceInventory.x3.quantity);
+  const depletedNumber = currentInventory - 1;
+  
+  console.log(`Original inventory: ${lilyPieceInventory.x3.quantity}`);
+  
+  lilyPieceInventory[`x${cleanQuantity}`].quantity = depletedNumber; // Update inventory
+
+  console.log(`Updated inventory: ${lilyPieceInventory.x3.quantity}`);
+};

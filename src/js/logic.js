@@ -43,6 +43,7 @@ const handlePieceSelectionClick = (event) => {
   const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   swapBackground(event);
+  depleteReseource(selectedPiecePower);
 }
 
 const choosePiece = (selectedPiecePower) => {
@@ -55,6 +56,8 @@ const resetPiecePower = () => {
 const comparePieceAgainstCell = (identifier) => {
   updateModel(identifier);
 } 
+
+
 
 
 // const resetBoard = () => {
