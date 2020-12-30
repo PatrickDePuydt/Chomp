@@ -58,16 +58,23 @@
       href="./css/components/bg-switcher.css"
     />
     <title>Chomp!</title>
+    <!-- Partials -->
     <script src="./js/model.js" defer></script>
     <script src="./js/selectors.js" defer></script>
     <script src="./js/initializers.js" defer></script>
     <script src="./js/logic.js" defer></script>
+
+    <!-- Plugins -->
+    <script src="js/components/class-switcher.js" defer></script>
+    <script src="js/components/bg-switcher.js" defer></script>
+
+    <!-- Excutable -->
     <script src="./js/ready.js" defer></script>
   </head>
 
   <body data-component="class-switcher">
     <header
-      data-target="header"
+      data-target="switcher-header"
       class="pd_md_lg"
       data-component="switcher-header"
     >
@@ -139,6 +146,4 @@
       </article>
     </main>
   </body>
-  <script src="js/components/class-switcher.js"></script>
-  <script src="js/components/bg-switcher.js"></script>
 </html>

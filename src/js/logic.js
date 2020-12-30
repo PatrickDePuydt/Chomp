@@ -42,6 +42,7 @@ const handleCellClick = (event) => {
 const handlePieceSelectionClick = (event) => {
   const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
+  swapBackground(event.target);
 }
 
 const choosePiece = (selectedPiecePower) => {

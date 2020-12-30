@@ -1,5 +1,6 @@
 const switcher = document.querySelector("[data-component='class-switcher']");
-const switcherHeader = document.querySelector("[data-component='class-switcher'] [data-target='header']");
+const switcherHeader = document.querySelector("[data-component='class-switcher'] [data-target='switcher-header']");
+
 const lunaSidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LUNA']");
 const lilySidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LILY']");
 
