@@ -24,31 +24,31 @@ const checkScore = (currentTeam) => {
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
-  console.log(`Cell power updated to: ${cells[identifier].power}`);
 }
+
+const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 
 
 const handleCellClick = (event) => {
   const identifier = event.target.innerHTML; 
-  const currentTeam = whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
-  const opposingTeam = !whoseTurnIsIt ? "SQUARE" : "CIRCLE"; 
+  const currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
+  const opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
   let cellValue = event.target.innerHTML;
   
   comparePieceAgainstCell(identifier);
   claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
+  
+  depleteReseource(piecePlayPower, currentTeam);
+
 };
 
 const handlePieceSelectionClick = (event) => {
   const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   swapBackground(event);
-  depleteReseource(selectedPiecePower);
 }
 
-const choosePiece = (selectedPiecePower) => {
-  piecePlayPower = selectedPiecePower;
-};
 
 const resetPiecePower = () => {
   console.log(`Reset`);
@@ -65,7 +65,7 @@ const comparePieceAgainstCell = (identifier) => {
 
 //  return [...gameBoardCells].map( cell => {
 //    cell.setAttribute("disabled", false)
-//    cell.classList.remove("SQUARE")
-//    cell.classList.remove("CIRCLE")
+//    cell.classList.remove("LILY")
+//    cell.classList.remove("LUNA")
 //   });
 // };
