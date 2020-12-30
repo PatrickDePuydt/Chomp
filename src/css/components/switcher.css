@@ -2,6 +2,19 @@
   border: 5px solid gold;
 }
 
+[data-component='switcher'] [data-component='switcher-control'] {
+  transition: var(--transition);
+}
+
+[data-component='switcher'] [data-component='switcher-header'] h1 {
+  transition: .25s all ease-out;
+}
+
+[data-component='switcher'] [data-component='switcher-header'].SWITCH h1 {
+  border: 5px solid crimson;
+  transform: translateX(85vw);
+}
+
 [data-component='switcher'] [data-component='switcher-control'].SWELL {
   flex: 3;
   border: 5px solid black;

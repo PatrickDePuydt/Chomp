@@ -4,8 +4,8 @@ const lunaSidebar = document.querySelector("[data-component='switcher'] [data-ki
 const lilySidebar = document.querySelector("[data-component='switcher'] [data-kitten='LILY']");
 
 const modifyHeader = () => switcherHeader.classList.toggle("SWITCH");
-const swellSidebar = () => lunaSidebar.classList.toggle("SWITCH");
-const recedeSidebar = () => lilySidebar.classList.toggle("SWITCH");
+const swellSidebar = () => lunaSidebar.classList.toggle("SWELL");
+const recedeSidebar = () => lilySidebar.classList.toggle("RECEDE");
 
 const toggleClass = (event) => {
   modifyHeader();  
