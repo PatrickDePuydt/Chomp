@@ -1,3 +1,6 @@
 console.log(`yay`);
 
-const swapBackground = (element) => console.log(element);
+const swapBackground = (element) => {
+  let powerValue = Number(element.target.innerHTML);
+  element.target.classList.add(`x-${String(powerValue)}`);
+}
