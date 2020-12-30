@@ -1,9 +1,13 @@
-[data-component='header'] {
+[data-target='header'] {
   border: 5px solid gold;
   display: flex;
-
+  transition: var(--transition);
 }
 
-[data-component='header'].SWOLE {
-  border: 5px solid dodgerblue;
+[data-target='header'] h1 {
+  transition: 1s all ease;
+}
+
+[data-target='header'].LUNA h1 {
+  transform: translateX(85vw);
 }

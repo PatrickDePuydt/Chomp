@@ -11,6 +11,7 @@
   
   /* Variables */
   --cell-size: 150px;
+  --transition: .15s all ease-in-out;
 }
 
 body {

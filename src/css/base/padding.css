@@ -1,3 +1,7 @@
 .pd_md {
   padding: 25px;
 }
+
+.pd_md_lg {
+  padding: 25px 50px;
+}
