@@ -1,23 +1,7 @@
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => {
-  // let identifier = cell.innerHTML;
 
-  // cell.addEventListener('click', handleCellClick);
+  cell.addEventListener('click', handleCellClick);
   
-  // switch(identifier) {
-  //   case "a1":
-  //     console.log(a1);
-  //     break;
-  //   default:
-  //     console.log(`Case Default`);
-  // }
-
-  // console.log(cells[identifier])
-  
-  // cell.setAttribute(a1.power.name, a1.power.value); // Works, but boo hoo
-  
-  // console.log(identifier);
-  // cell.setAttribute(identifier.power.name, identifier.power.value); // Does not work, but what I'm trying to do
-
   
 });
 
@@ -29,8 +13,9 @@ const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("di
 
 const handleWin = () => console.log(`Win`);
 const handleDraw = () => console.log(`draw`);
-const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("SQUARE") || cell.classList.contains("CIRCLE"));
+const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA"));
 
-let whoseTurnIsIt = false; 
-let piecePlayPower = NaN;
+let whoseTurnIsIt = false;  // Used for switching turns
+let piecePlayPower = NaN; // Used for comparing a selected piece with the gameboard
+let initialChoice; // Used for the modal to start the game
 

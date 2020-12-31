@@ -58,14 +58,19 @@ const comparePieceAgainstCell = (identifier) => {
 } 
 
 
+const startGame = (teamChoice) => {
+  if (teamChoice == "LUNA") {
+    lunaStart()
+  } else {
+    lilyStart()
+  }
+  dismissModal();
+};
 
+const lunaStart = () => {
+  console.log(`Del Tuna`);
+};
 
-// const resetBoard = () => {
-//   bindEvents(); 
-
-//  return [...gameBoardCells].map( cell => {
-//    cell.setAttribute("disabled", false)
-//    cell.classList.remove("LILY")
-//    cell.classList.remove("LUNA")
-//   });
-// };
+const lilyStart = () => {
+  console.log(`Ahhhwaaa?!!`);
+};

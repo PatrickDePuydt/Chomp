@@ -8,6 +8,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: var(--transition);
+}
+[data-component='modal'].modal.FADE {
+  background: rgba(0, 0, 0, 0);
+}
+[data-component='modal'].modal.HIDE {
+  display: none;
 }
 
 [data-component='modal'] .modal-payload {
