@@ -2,13 +2,13 @@
 
 :root {
   /* Swatches */
-  --horror: #1e1f1e;
+  --pitchblack: #1e1f1e;
   --ember: #F78644;
-  --seashell: #FCF3EC;
-  --deep: #7D6167;
-  --eggplant: #754F5B;
-  --united: #5386E4;
-  --zuni: #21E4D5;
-  --flame: #DC602E;
-  --glow: #BC412B;
+  --quartz: #FCF3EC;
+  --falcon: #7D6167;
+  --laguna: #754F5B;
+  --acoma: #5386E4;
+  --treasure: #21E4D5;
+  --supernova: #DC602E;
+  --burn: #BC412B;
 }
