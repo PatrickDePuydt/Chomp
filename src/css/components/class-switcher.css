@@ -6,6 +6,11 @@
 
 [data-component='class-switcher'] [data-component='switcher-header'] h1 {
   transition: .25s all ease-out;
+  transform: translateX(43vw);
+}
+
+[data-component='class-switcher'] [data-component='switcher-header'].LUNA h1 {
+  transform: translateX(0);
 }
 
 [data-component='class-switcher'] [data-component='switcher-header'].LILY h1 {
