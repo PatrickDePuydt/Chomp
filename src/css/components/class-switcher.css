@@ -8,7 +8,7 @@
   transition: .25s all ease-out;
 }
 
-[data-component='class-switcher'] [data-component='switcher-header'].SWITCH h1 {
+[data-component='class-switcher'] [data-component='switcher-header'].LILY h1 {
   transform: translateX(85vw);
 }
 

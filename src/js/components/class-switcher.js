@@ -4,8 +4,19 @@ const switcherHeader = document.querySelector("[data-component='class-switcher']
 const lunaSidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LUNA']");
 const lilySidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LILY']");
 
-const modifyHeader = (player) => {
-  switcherHeader.classList.toggle("SWITCH");
+const modifyHeader = (currentPlayer) => {
+  console.log(currentPlayer);
+
+  if (currentPlayer == "LUNA") {
+    switcherHeader.classList.remove("LILY"); // Clean out any debris
+    switcherHeader.classList.add("LUNA"); // Add active class
+  }
+
+  if (currentPlayer == "LILY") {
+    switcherHeader.classList.remove("LUNA"); // Clean out any debris
+    switcherHeader.classList.add("LILY"); // Add active class
+  }
+
 }
 
 
