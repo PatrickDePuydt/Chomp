@@ -1,8 +1,0 @@
-[data-feature="ticTacToe"] [data-target="cell"]:hover {
-  background: var(--glow);
-}
-
-[data-feature="ticTacToe"] .CIRCLE:hover, [data-feature="ticTacToe"] .SQUARE:hover {
-  opacity: .9;
-  transform: scale(.9);
-}
