@@ -26,21 +26,16 @@ const updateModel = (identifier) => {
   cells[identifier].power = piecePlayPower;
 }
 
-const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
-
-
 const handleCellClick = (event) => {
   let identifier = event.target.innerHTML; 
   let currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
   let opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
   let cellValue = event.target.innerHTML;
   
-  comparePieceAgainstCell(identifier);
-  claimCell(event, currentTeam, opposingTeam);
-  checkForWin(currentTeam, opposingTeam);
-
-  depleteReseource(piecePlayPower, currentTeam);
-
+  compare(identifier, piecePlayPower); // Check to make sure you can place a piece there
+  claimCell(event, currentTeam, opposingTeam); // Take space
+  depleteReseource(piecePlayPower, currentTeam); // Reduce player piece inventory
+  checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
 };
 
 const handlePieceSelectionClick = (event) => {
@@ -49,36 +44,13 @@ const handlePieceSelectionClick = (event) => {
   swapBackground(event);
 }
 
+const compare = (identifier, piecePlayPower) => updateModel(identifier);  
 
-const resetPiecePower = () => {
-  console.log(`Reset`);
-} 
-const comparePieceAgainstCell = (identifier) => {
-  updateModel(identifier);
-} 
-
-
-const startGame = (teamChoice) => {
-  if (teamChoice == "LUNA") {
-    lunaStart()
-  } else {
-    lilyStart()
-  }
-  dismissModal();
-};
-
-const lunaStart = () => {
-  console.log(`Del Tuna`);
-  setLayout("LUNA");
-};
-
-const lilyStart = () => {
-  console.log(`Ahhhwaaa?!!`);
-  setLayout("LILY");
-};
-
-const setLayout = (team) => (team == "LUNA") ? setLuna() : setLily();
-
-const setLuna = () => {
-  console.log(`Tuna Behr`);
+const depleteReseource = (piecePower, currentTeam) => {
+  // Attribution
+  let playerInventory = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  // Invetory Depletion
+  let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
+  // Update inventory
+  player[`x${Number(piecePower)}`].quantity = depletedInventory; 
 };

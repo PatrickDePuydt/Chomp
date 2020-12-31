@@ -8,15 +8,113 @@ const cells = {
     taken: false,
     team: "",
     chomp: [],
-    neighbs: []
+    neighbors: []
   },
   a2: {
     power: 0,
     taken: false,
     team: "",
     chomp: [],
-    neighbs: []
+    neighbors: []
   }, 
+  a3: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  a4: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  b1: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  b2: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  }, 
+  b3: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  b4: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  c1: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  c2: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  }, 
+  c3: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  c4: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  d1: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  d2: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  }, 
+  d3: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  },
+  d4: {
+    power: 0,
+    taken: false,
+    team: "",
+    chomp: [],
+    neighbors: []
+  }
 }
 
 
@@ -43,18 +141,3 @@ const lilyPieceInventory = {
     quantity: 3,
   },
 }
-
-// console.log(lunaPieceInventory);
-
-const depleteReseource = (piecePower, currentTeam) => {
-  // Attribution
-  // console.log("luna ", lunaPieceInventory.x3.quantity);
-  // console.log("lily ", lilyPieceInventory.x3.quantity);
-  
-  let player = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
-  
-  // Invetory Depletion
-  let depletedInventory = player[`x${Number(piecePower)}`].quantity - 1;
-  
-  player[`x${Number(piecePower)}`].quantity = depletedInventory; // Update inventory
-};

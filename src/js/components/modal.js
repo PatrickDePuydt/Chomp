@@ -1,18 +1,12 @@
-const modal = document.querySelector("[data-component='modal']");
-
-const buttonQuery = document.querySelectorAll("[data-target='modal_button']");
+const modal = document.querySelector("[data-component='modal']"); // Modal body
+const buttonQuery = document.querySelectorAll("[data-target='modal_button']"); // Modal Buttons
+const assignModalEventHandlers = () => [...buttonQuery].map( button => button.addEventListener('click', handleClick));
+// Don't forget to invoke this in ready.js
 
 const handleClick = (event) => {
-  const choice = event.target.innerHTML;
-  initialChoice = String(choice);
-  startGame(initialChoice);
+  initialChoice = String(event.target.innerHTML); // External Function call -> Set in initializers
+  startGame(initialChoice); // External Function call -> Set in initializers
 };
-
-
-const assignModalEventHandlers = () => [...buttonQuery].map( button => {
-  button.addEventListener('click', handleClick)
-});
-
 
 const dismissModal = () => {
   modal.classList.add("FADE");
