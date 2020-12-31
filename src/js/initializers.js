@@ -19,9 +19,8 @@ const turnOverPosession = () => {
   whoseTurnIsIt = !whoseTurnIsIt;
   currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
   opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
-  console.log("current: ", currentTeam);
-  console.log("opposing: ", opposingTeam);
-  // setLayout(currentTeam, opposingTeam)
+
+  setLayout(currentTeam);
 
 };
 

@@ -1,6 +1,8 @@
 const switcherHeader = document.querySelector("[data-component='class-switcher'] [data-target='switcher-header']");
 
-const switchClass = (player, element) => {
+const switchClass = (player) => {
+  let element = document.querySelector(`[data-kitten='${player}']`);
+  console.log(element);
   if (player == "LUNA") {
     element.classList.remove("LILY"); // Clean out any debris
     element.classList.add("LUNA"); // Add active class

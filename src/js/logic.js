@@ -64,14 +64,14 @@ const startGame = (teamChoice) => {
   let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
   let currentTeam = teamChoice;
   let opposingTeam = whoseTurnIsIt ? "LUNA" : "LILY"
-  console.log(`Team choice: ${teamChoice}, but the currentTeam is set to: ${currentTeam}, and the opposing team is: ${opposingTeam}`);
+  // console.log(`Team choice: ${teamChoice}, but the currentTeam is set to: ${currentTeam}, and the opposing team is: ${opposingTeam}`);
   setLayout(currentTeam, opposingTeam);
 };
 
 
 const setLayout = (currentTeam, opposingTeam) => {
-  switchClass(currentTeam, switcherHeader); 
-  switchClass(currentTeam, LUNACONTROLS);
-  switchClass(opposingTeam, LILYCONTROLS);
+  // switchClass(currentTeam, switcherHeader); 
+  switchClass(currentTeam);
+  // switchClass(opposingTeam);
 };
 
