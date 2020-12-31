@@ -1,6 +1,10 @@
-let whoseTurnIsIt = false;  // Used for switching turns
 let piecePlayPower = NaN; // Used for comparing a selected piece with the gameboard
 let initialChoice; // Used for the modal to start the game
+
+let whoseTurnIsIt;  // Used for switching turns
+let currentTeam;
+let opposingTeam;
+
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleCellClick));
 const assignPieceEventHandlers = () => [...gamePieces].map( piece => piece.addEventListener('click', handlePieceSelectionClick));
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))};
@@ -11,6 +15,13 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 const resetPiecePower = () => console.log(`Reset`);
 
-const turnOverPosession = () => whoseTurnIsIt = !whoseTurnIsIt;
-let currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
-let opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+const turnOverPosession = () => {
+  whoseTurnIsIt = !whoseTurnIsIt;
+  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
+  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+  console.log("current: ", currentTeam);
+  console.log("opposing: ", opposingTeam);
+  // setLayout(currentTeam, opposingTeam)
+
+};
+

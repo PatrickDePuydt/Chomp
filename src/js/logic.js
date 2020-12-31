@@ -59,9 +59,13 @@ const depleteReseource = (piecePower, currentTeam) => {
 
 const startGame = (teamChoice) => {
   dismissModal();
+  // if Lily, whoseTurnIsIt = true 
+  // if Luna, whoseTurnIsIt = false
+  let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
+  let currentTeam = teamChoice;
+  let opposingTeam = whoseTurnIsIt ? "LUNA" : "LILY"
+  console.log(`Team choice: ${teamChoice}, but the currentTeam is set to: ${currentTeam}, and the opposing team is: ${opposingTeam}`);
   setLayout(currentTeam, opposingTeam);
-
-  console.log(whoseTurnIsIt);
 };
 
 
