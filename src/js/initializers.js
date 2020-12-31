@@ -1,7 +1,7 @@
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => {
-  let identifier = cell.innerHTML;
+  // let identifier = cell.innerHTML;
 
-  cell.addEventListener('click', handleCellClick);
+  // cell.addEventListener('click', handleCellClick);
   
   // switch(identifier) {
   //   case "a1":
