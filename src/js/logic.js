@@ -26,12 +26,12 @@ const checkScore = (currentTeam) => {
 const comparePieceToCell = (identifier, piecePlayPower) => {
   let cellPrice = Number(cells[identifier].power);
   if (piecePlayPower > cellPrice) {
-    updateModel(identifier);  // 1
+    updateModel(identifier); 
   }
   console.log(piecePlayPower, cellPrice);
 };
 
-const depleteReseource = (piecePower, currentTeam) => {
+const depleteResource = (piecePower, currentTeam) => {
   // Attribution
   let playerInventory = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
   // Invetory Depletion
@@ -60,7 +60,6 @@ const turnOverPossession = () => {
   setLayout(currentTeam);
 };
 
-// 2
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;

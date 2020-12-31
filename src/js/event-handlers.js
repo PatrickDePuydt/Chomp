@@ -6,8 +6,10 @@ const handleCellClick = (event) => {
   
   claimCell(event, currentTeam, opposingTeam); // Take space
   
-  depleteReseource(piecePlayPower, currentTeam); // Reduce player piece inventory
-  checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
+  depleteResource(piecePlayPower, currentTeam); // Reduce player piece inventory
+  
+  // checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
+  
   turnOverPossession(); // Switch possession
 };
 
