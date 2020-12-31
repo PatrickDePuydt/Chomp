@@ -33,10 +33,12 @@ const handleCellClick = (event) => {
   depleteReseource(piecePlayPower, currentTeam); // Reduce player piece inventory
   checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
   turnOverPossession();
+  console.log(`cellValue: ${cellValue}`);
 };
 
 const handlePieceSelectionClick = (event) => {
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
+  console.log(`SelectedPiecePower: ${selectedPiecePower}`);
   choosePiece(selectedPiecePower);
   swapBackground(event);
 }
@@ -54,7 +56,6 @@ const depleteReseource = (piecePower, currentTeam) => {
   console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
-
 const startGame = (teamChoice) => {
   dismissModal();
   let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
@@ -63,11 +64,9 @@ const startGame = (teamChoice) => {
   setLayout(currentTeam, opposingTeam);
 };
 
-
 const setLayout = (currentTeam, opposingTeam) => {
   switchClass(currentTeam);
 };
-
 
 
 const turnOverPossession = () => {
