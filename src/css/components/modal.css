@@ -1,0 +1,30 @@
+[data-component='modal'].modal {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, .9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-component='modal'] .modal-payload {
+  border: 5px solid gold;
+  width: 50vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-component='modal'] h2 {
+  color: white;
+}
+
+[data-component='modal'] button {
+  width: var(--cell-size);
+  height: var(--cell-size);
+}

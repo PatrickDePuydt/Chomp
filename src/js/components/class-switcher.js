@@ -7,7 +7,7 @@ const lilySidebar = document.querySelector("[data-component='class-switcher'] [d
 const modifyHeader = () => switcherHeader.classList.toggle("SWITCH");
 
 const swell = (element) => {
-  console.log(element.classList.contains("RECEDE"));
+  console.log(element);
 
   if (element.classList.contains("RECEDE")) {
     console.log(`1`);
@@ -28,8 +28,9 @@ const recede = (element) => {
 
 const toggleClass = (event) => {
   modifyHeader();  
-  swell(event.target);  
-  recede(event.target);  
+  console.log(whoseTurnIsIt);
+  // swell(event.target);  
+  // recede(event.target);  
 }
 
 

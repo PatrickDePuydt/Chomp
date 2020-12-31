@@ -19,6 +19,12 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
+      href="./css/base/margins.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
       href="./css/board.css"
     />
     <link
@@ -57,6 +63,12 @@
       media="screen"
       href="./css/components/bg-switcher.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/components/modal.css"
+    />
     <title>Chomp!</title>
     <!-- Partials -->
     <script src="./js/model.js" defer></script>
@@ -85,7 +97,7 @@
         data-target="side-control"
         data-component="switcher-control"
         data-kitten="LUNA"
-        class="lay_full_height SWELL"
+        class="lay_full_height"
       >
         <section>Square Controls</section>
         <aside class="lay_flex_center">
@@ -171,5 +183,14 @@
         </aside>
       </article>
     </main>
+    <aside data-component="modal" class="modal">
+      <section class="modal-payload">
+        <h2 class="pd_md">Choose a Color</h2>
+        <div class="modal-actions">
+          <button class="mg_0_md">LUNA</button>
+          <button class="md_0_md">LILY</button>
+        </div>
+      </section>
+    </aside>
   </body>
 </html>
