@@ -14,5 +14,4 @@
   justify-items: center;
   align-items: center;
   grid-template-columns: repeat(4, auto);
-  outline: 1px solid crimson;
 }

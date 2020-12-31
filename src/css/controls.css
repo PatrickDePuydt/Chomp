@@ -1,7 +1,6 @@
 /* General */
 
 [data-feature='chomp'] [data-selector='piece'] {
-  outline: 1px solid gold;
   border: none;
   width: var(--cell-size);
   height: var(--cell-size);
@@ -10,12 +9,11 @@
 }
 
 [data-feature='chomp'] [data-target='piece_directions'] {
-  outline: 1px solid coral;
   width: var(--cell-size);
 }
 
 [data-feature='chomp'] [data-family='x3'] {
-  background: url("../images/circle/circle-04.svg");
+  background: url("../images/square/square-04.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -23,7 +21,7 @@
 }
 
 [data-feature='chomp'] [data-family='x2'] {
-  background: url("../images/circle/circle-05.svg");
+  background: url("../images/square/square-05.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -31,7 +29,7 @@
 }
 
 [data-feature='chomp'] [data-family='x1'] {
-  background: url("../images/circle/circle-06.svg");
+  background: url("../images/square/square-06.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;

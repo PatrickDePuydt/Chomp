@@ -5,13 +5,31 @@ const lunaSidebar = document.querySelector("[data-component='class-switcher'] [d
 const lilySidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LILY']");
 
 const modifyHeader = () => switcherHeader.classList.toggle("SWITCH");
-const swellSidebar = () => lunaSidebar.classList.toggle("SWELL");
-const recedeSidebar = () => lilySidebar.classList.toggle("RECEDE");
+
+const swell = (element) => {
+  console.log(element.classList.contains("RECEDE"));
+
+  if (element.classList.contains("RECEDE")) {
+    console.log(`1`);
+    elememnt.classList.remove("RECEDE");
+  }
+
+  element.classList.add("SWELL");
+}
+
+const recede = (element) => {
+
+  if (element.classList.contains("SWELL")) {
+    element.classList.remove("SWELL");
+  }
+  element.classList.add("RECEDE");
+}
+
 
 const toggleClass = (event) => {
   modifyHeader();  
-  swellSidebar();  
-  recedeSidebar();  
+  swell(event.target);  
+  recede(event.target);  
 }
 
 

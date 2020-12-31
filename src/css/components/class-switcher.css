@@ -1,6 +1,4 @@
-[data-component='class-switcher'] [data-component='switcher-header'] {
-  /* border: 5px solid gold; */
-}
+[data-component='class-switcher'] [data-component='switcher-header'] {}
 
 [data-component='class-switcher'] [data-component='switcher-control'] {
   transition: var(--transition);
@@ -14,10 +12,32 @@
   transform: translateX(85vw);
 }
 
+/* Swell */
+
 [data-component='class-switcher'] [data-component='switcher-control'].SWELL {
   flex: 3;
 }
 
+[data-component='class-switcher'] [data-component='switcher-control'].SWELL button {
+  /* transform: scale(1); */
+  border: 5px solid gold;
+}
+
+[data-component='class-switcher'] [data-component='switcher-control'].SWELL [data-target="piece_directions"] {
+  /* display: flex; */
+}
+
+/* Recede */
+
 [data-component='class-switcher'] [data-component='switcher-control'].RECEDE {
   flex: 1;
+}
+
+[data-component='class-switcher'] [data-component='switcher-control'].RECEDE button {
+  /* transform: scale(.5); */
+  border: 5px solid crimson;
+}
+
+[data-component='class-switcher'] [data-component='switcher-control'].RECEDE [data-target="piece_directions"] {
+  /* display: none; */
 }

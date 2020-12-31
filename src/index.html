@@ -140,9 +140,35 @@
       <article
         data-target="side-control"
         data-component="switcher-control"
-        class="lay_full_height RECEDE"
+        class="lay_full_height"
       >
         <aside>Circle Controls</aside>
+        <aside class="lay_flex_center">
+          <div data-container="control">
+            <button
+              data-selector="piece"
+              data-family="x3"
+              data-component="bg-switcher"
+            >
+              3
+            </button>
+            <div data-target="piece_directions">
+              Best for locking in a space, or chomping.
+            </div>
+          </div>
+          <div data-container="control">
+            <button data-selector="piece" data-family="x2">2</button>
+            <div data-target="piece_directions">
+              Good to chomp, good to explore.
+            </div>
+          </div>
+          <div data-container="control">
+            <button data-selector="piece" data-family="x1">1</button>
+            <div data-target="piece_directions">
+              Easy to chomp, good to distract.
+            </div>
+          </div>
+        </aside>
       </article>
     </main>
   </body>
