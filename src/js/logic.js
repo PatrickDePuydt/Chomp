@@ -52,5 +52,7 @@ const depleteReseource = (piecePower, currentTeam) => {
   // Invetory Depletion
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
-  player[`x${Number(piecePower)}`].quantity = depletedInventory; 
+  playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
+  console.log(`Luna's pieces: `, lunaPieceInventory);
+  console.log(`Lily's pieces: `, lilyPieceInventory);
 };
