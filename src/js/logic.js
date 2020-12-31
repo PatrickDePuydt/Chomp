@@ -69,8 +69,16 @@ const startGame = (teamChoice) => {
 
 const lunaStart = () => {
   console.log(`Del Tuna`);
+  setLayout("LUNA");
 };
 
 const lilyStart = () => {
   console.log(`Ahhhwaaa?!!`);
+  setLayout("LILY");
+};
+
+const setLayout = (team) => (team == "LUNA") ? setLuna() : setLily();
+
+const setLuna = () => {
+  console.log(`Tuna Behr`);
 };
