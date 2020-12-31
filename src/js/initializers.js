@@ -11,23 +11,6 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 const resetPiecePower = () => console.log(`Reset`);
 
-const startGame = (teamChoice) => {
-  setLayout(teamChoice)
-  dismissModal();
-};
-
-const setLayout = (player) => {
-  const oppositePlayer = (player == "LUNA") ? "LILY" : "LUNA";
-  modifyHeader(player); 
-  // activeSidebarSwell(player);
-  // inactiveSidebarRecede(oppositePlayer);
-};
-
-const lunaStart = () => {
-  setLayout("LUNA");
-};
-
-const lilyStart = () => {
-  setLayout("LILY");
-};
-
+const turnOverPosession = () => {
+  whoseTurnIsIt = !whoseTurnIsIt;
+}

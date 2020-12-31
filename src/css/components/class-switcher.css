@@ -1,3 +1,7 @@
+body {
+  background-color: var(--quartz);
+}
+
 [data-component='class-switcher'] [data-component='switcher-header'] {}
 
 [data-component='class-switcher'] [data-component='switcher-control'] {
@@ -45,4 +49,24 @@
 
 [data-component='class-switcher'] [data-component='switcher-control'].RECEDE [data-target="piece_directions"] {
   /* display: none; */
+}
+
+/* New Styles ********************** */
+
+[data-feature="chomp"] [data-target='side-control'] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid gold;
+}
+
+[data-feature="chomp"] [data-target='side-control'].LUNA {
+  border: 5px solid black;
+  flex: 3;
+}
+
+[data-feature="chomp"] [data-target='side-control'].LILY {
+  border: 5px solid hotpink;
+  flex: 1;
 }

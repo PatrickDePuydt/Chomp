@@ -4,7 +4,7 @@ const checkForWin = (currentTeam, opposingTeam)  => {
   } else if (isDraw()) {
     handleDraw();
   } else {
-    whoseTurnIsIt = !whoseTurnIsIt; 
+    turnOverPosession();
   }
 }
 
@@ -56,3 +56,20 @@ const depleteReseource = (piecePower, currentTeam) => {
   console.log(`Luna's pieces: `, lunaPieceInventory);
   console.log(`Lily's pieces: `, lilyPieceInventory);
 };
+
+
+const startGame = (teamChoice) => {
+  // setLayout(teamChoice)
+  dismissModal();
+
+  console.log(whoseTurnIsIt);
+};
+
+// const setLayout = (team, opposingTeam) => {
+//   const oppositeTeam = (team == "LUNA") ? "LILY" : "LUNA";
+
+//   switchClass(team, switcherHeader); 
+//   switchClass(team, LUNACONTROLS);
+//   switchClass(oppositeTeam, LILYCONTROLS);
+// };
+

@@ -1,5 +1,5 @@
 [data-feature="chomp"] [data-target="cell"] {
-  background: var(--cold);
+  background: var(--falcon);
   width: var(--cell-size);
   height: var(--cell-size);
   display: flex;

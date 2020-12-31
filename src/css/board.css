@@ -5,7 +5,6 @@
 }
 
 [data-feature="chomp"] [data-target='side-control'] {
-
   display: flex;
   justify-content: center;
   flex-direction: column;
