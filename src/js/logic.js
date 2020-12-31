@@ -6,6 +6,10 @@ const checkForWin = (currentTeam, opposingTeam)  => {
   }
 }
 
+const choosePiece = (selectedPiecePower) => {
+  piecePlayPower = selectedPiecePower;
+}
+
 const claimCell = (event, currentTeam, opposingTeam) => { 
   event.target.classList.remove(opposingTeam); 
   event.target.classList.add(currentTeam); 
@@ -19,7 +23,13 @@ const checkScore = (currentTeam) => {
   });
 };
 
-const compare = (identifier, piecePlayPower) => updateModel(identifier);  
+const comparePieceToCell = (identifier, piecePlayPower) => {
+  let cellPrice = Number(cells[identifier].power);
+  if (piecePlayPower > cellPrice) {
+    updateModel(identifier);  // 1
+  }
+  console.log(piecePlayPower, cellPrice);
+};
 
 const depleteReseource = (piecePower, currentTeam) => {
   // Attribution
@@ -50,6 +60,7 @@ const turnOverPossession = () => {
   setLayout(currentTeam);
 };
 
+// 2
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;

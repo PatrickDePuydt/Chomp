@@ -14,7 +14,6 @@ const handleWin = () => console.log(`Win`);
 const handleDraw = () => console.log(`draw`);
 
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA"));
-const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 const resetPiecePower = () => console.log(`Reset`);
 
 
