@@ -4,7 +4,11 @@ const switcherHeader = document.querySelector("[data-component='class-switcher']
 const lunaSidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LUNA']");
 const lilySidebar = document.querySelector("[data-component='class-switcher'] [data-kitten='LILY']");
 
-const modifyHeader = () => switcherHeader.classList.toggle("SWITCH");
+const modifyHeader = (player) => {
+  switcherHeader.classList.toggle("SWITCH");
+}
+
+
 
 const swell = (element) => {
   console.log(element);
