@@ -15,12 +15,5 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 const resetPiecePower = () => console.log(`Reset`);
 
-const turnOverPosession = () => {
-  whoseTurnIsIt = !whoseTurnIsIt;
-  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
-  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
 
-  setLayout(currentTeam);
-
-};
 

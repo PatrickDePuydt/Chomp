@@ -32,15 +32,13 @@ const handleCellClick = (event) => {
   claimCell(event, currentTeam, opposingTeam); // Take space
   depleteReseource(piecePlayPower, currentTeam); // Reduce player piece inventory
   checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
-  turnOverPosession();
+  turnOverPossession();
 };
 
 const handlePieceSelectionClick = (event) => {
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   swapBackground(event);
-  
-
 }
 
 const compare = (identifier, piecePlayPower) => updateModel(identifier);  
@@ -59,19 +57,24 @@ const depleteReseource = (piecePower, currentTeam) => {
 
 const startGame = (teamChoice) => {
   dismissModal();
-  // if Lily, whoseTurnIsIt = true 
-  // if Luna, whoseTurnIsIt = false
   let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
   let currentTeam = teamChoice;
   let opposingTeam = whoseTurnIsIt ? "LUNA" : "LILY"
-  // console.log(`Team choice: ${teamChoice}, but the currentTeam is set to: ${currentTeam}, and the opposing team is: ${opposingTeam}`);
   setLayout(currentTeam, opposingTeam);
 };
 
 
 const setLayout = (currentTeam, opposingTeam) => {
-  // switchClass(currentTeam, switcherHeader); 
   switchClass(currentTeam);
-  // switchClass(opposingTeam);
+};
+
+
+
+const turnOverPossession = () => {
+  whoseTurnIsIt = !whoseTurnIsIt;
+  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
+  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+
+  setLayout(currentTeam);
 };
 
