@@ -4,7 +4,7 @@ const checkForWin = (currentTeam, opposingTeam)  => {
   } else if (isDraw()) {
     handleDraw();
   } else {
-    handleTurn(currentTeam, opposingTeam);
+    whoseTurnIsIt = !whoseTurnIsIt; 
   }
 }
 
@@ -30,21 +30,21 @@ const choosePiece = (selectedPiecePower) => piecePlayPower = selectedPiecePower;
 
 
 const handleCellClick = (event) => {
-  const identifier = event.target.innerHTML; 
-  const currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
-  const opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+  let identifier = event.target.innerHTML; 
+  let currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
+  let opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
   let cellValue = event.target.innerHTML;
   
   comparePieceAgainstCell(identifier);
   claimCell(event, currentTeam, opposingTeam);
   checkForWin(currentTeam, opposingTeam);
-  
+
   depleteReseource(piecePlayPower, currentTeam);
 
 };
 
 const handlePieceSelectionClick = (event) => {
-  const selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
+  let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   swapBackground(event);
 }

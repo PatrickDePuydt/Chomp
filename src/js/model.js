@@ -44,14 +44,18 @@ const lilyPieceInventory = {
   },
 }
 
+// console.log(lunaPieceInventory);
+
 const depleteReseource = (piecePower, currentTeam) => {
-  const cleanTeam = String(currentTeam);
-  const player = (cleanTeam == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
-  const cleanPiecePower = Number(piecePower);
-  const currentInventory = Number(player.x3.quantity);
-  const depletedNumber = currentInventory - 1;
-  
-  console.log(`Original: ${player.x3.quantity}`);
-  player[`x${cleanPiecePower}`].quantity = depletedNumber; // Update inventory
-  console.log(`New: ${player.x3.quantity}`);
+  // Attribution
+  console.log("luna ", lunaPieceInventory.x3.quantity);
+  console.log("lily ", lilyPieceInventory.x3.quantity);
+  let player = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  //console.log(player[`x${Number(piecePower)}`].quantity);
+  // Invetory Depletion
+  let depletedInventory = player[`x${Number(piecePower)}`].quantity - 1;
+  //console.log(depletedInventory);
+  player[`x${Number(piecePower)}`].quantity = depletedInventory; // Update inventory
+  //console.log(player[`x${Number(piecePower)}`].quantity);
+  // console.log(lunaPieceInventory);
 };

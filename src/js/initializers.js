@@ -29,10 +29,8 @@ const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("di
 
 const handleWin = () => console.log(`Win`);
 const handleDraw = () => console.log(`draw`);
-const handleTurn = () => turnOver(); 
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("SQUARE") || cell.classList.contains("CIRCLE"));
 
-const turnOver = () => whoseTurnIsIt = !whoseTurnIsIt; 
 let whoseTurnIsIt = false; 
 let piecePlayPower = NaN;
 
