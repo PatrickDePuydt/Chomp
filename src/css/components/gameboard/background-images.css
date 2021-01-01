@@ -1,5 +1,5 @@
 [data-feature='chomp'] [data-family='x3'][data-genus='LILY'] {
-  background: url("../images/square/square-04.svg");
+  background: url("../../../images/square/square-04.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -7,7 +7,7 @@
 }
 
 [data-feature='chomp'] [data-family='x2'][data-genus='LILY'] {
-  background: url("../images/square/square-05.svg");
+  background: url("../../../images/square/square-05.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -15,7 +15,7 @@
 }
 
 [data-feature='chomp'] [data-family='x1'][data-genus='LILY'] {
-  background: url("../images/square/square-06.svg");
+  background: url("../../../images/square/square-06.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -23,7 +23,7 @@
 }
 
 [data-feature='chomp'] [data-family='x3'][data-genus='LUNA'] {
-  background: url("../images/circle/circle-04.svg");
+  background: url("../../../images/circle/circle-04.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -31,7 +31,7 @@
 }
 
 [data-feature='chomp'] [data-family='x2'][data-genus='LUNA'] {
-  background: url("../images/circle/circle-05.svg");
+  background: url("../../../images/circle/circle-05.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
@@ -39,7 +39,7 @@
 }
 
 [data-feature='chomp'] [data-family='x1'][data-genus='LUNA'] {
-  background: url("../images/circle/circle-06.svg");
+  background: url("../../../images/circle/circle-06.svg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
