@@ -1,47 +1,33 @@
-[data-feature='chomp'] [data-family='x3'][data-genus='LILY'] {
-  background: url("../../../images/square/square-04.svg");
+[data-feature="chomp"] [data-target="cell"].LILY {
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../../images/square/square-01.svg);
+  background-color: transparent;
+}
+
+[data-feature='chomp'] [data-family='x3'].x-3-3 {
+  background-image: url(../../../images/square/x-3-3.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
   background-size: contain;
 }
 
-[data-feature='chomp'] [data-family='x2'][data-genus='LILY'] {
-  background: url("../../../images/square/square-05.svg");
+[data-feature='chomp'] [data-family='x3'].x-3-2 {
+  background-image: url(../../../images/square/x-3-2.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: center;
   background-size: contain;
 }
 
-[data-feature='chomp'] [data-family='x1'][data-genus='LILY'] {
-  background: url("../../../images/square/square-06.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: contain;
-}
+/* Tuna Bear */
 
-[data-feature='chomp'] [data-family='x3'][data-genus='LUNA'] {
-  background: url("../../../images/circle/circle-04.svg");
+[data-feature="chomp"] [data-target="cell"].LUNA {
+  background-size: 150px;
   background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: contain;
-}
-
-[data-feature='chomp'] [data-family='x2'][data-genus='LUNA'] {
-  background: url("../../../images/circle/circle-05.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: contain;
-}
-
-[data-feature='chomp'] [data-family='x1'][data-genus='LUNA'] {
-  background: url("../../../images/circle/circle-06.svg");
-  background-repeat: no-repeat;
-  background-position-x: center;
-  background-position-y: center;
-  background-size: contain;
+  background-position: center;
+  background-image: url(../../../images/circle/circle-01.svg);
+  background-color: transparent;
 }

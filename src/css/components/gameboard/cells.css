@@ -19,28 +19,3 @@
   transform: scale(.9);
 }
 
-[data-feature="chomp"] [data-target="cell"].LILY {
-  background-size: 150px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../../../images/square/square-01.svg);
-  background-color: transparent;
-}
-[data-feature="chomp"] [data-target="cell"].x-3-2 {
-  background-size: 150px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../../../images/square/x-3-2.svg);
-  background-color: transparent;
-}
-
-
-
-/* Tuna Bear */
-[data-feature="chomp"] [data-target="cell"].LUNA {
-  background-size: 150px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(../../../images/circle/circle-01.svg);
-  background-color: transparent;
-}
