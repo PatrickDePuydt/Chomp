@@ -61,14 +61,15 @@ const turnOverPossession = () => {
   currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; // Not sure I need these anymore
   opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA";  // not sure I need these anymore
 
-  setLayout();
+  setLayout(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
+  toggleHeader(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
 };
 
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
-const toggleHeader = () => {
+const toggleHeader = (currentTeam, opposingTeam) => {
    if (currentTeam == "LUNA") {
     header.classList.remove("LILY"); // Clean out any debris
     header.classList.add("LUNA"); // Add active class
