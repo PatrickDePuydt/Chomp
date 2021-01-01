@@ -1,4 +1,14 @@
-/* General */
+/* Base Elements */
+
+button {
+  transition: var(--transition);
+}
+
+button.CLICK {
+  transform: scale(.9);
+}
+
+/* Gameboard Buttons */
 
 [data-feature='chomp'] [data-selector='piece'] {
   border: none;
@@ -6,7 +16,12 @@
   height: var(--cell-size);
   text-indent: -9999px;
   /* Throw the text offscreen, we only need the value */
+  outline: none;
+  /* Normally this is bad practice. Don't try this at home kids.*/
+  appearance: none;
+  /* Normally this is bad practice. Don't try this at home kids.*/
 }
+
 
 [data-feature='chomp'] [data-target='piece_directions'] {
   width: var(--cell-size);

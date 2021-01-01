@@ -12,10 +12,14 @@
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -9999px;
-  transition: all .15s ease-in-out;
+  transition: var(--transition);
 }
 
-[data-feature="chomp"] [data-target="cell"].SQUARE {
+[data-feature="chomp"] [data-target="cell"].CLICK {
+  transform: scale(.9);
+}
+
+[data-feature="chomp"] [data-target="cell"].LILY {
   background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,7 +27,7 @@
   background-color: transparent;
 }
 
-[data-feature="chomp"] [data-target="cell"].CIRCLE {
+[data-feature="chomp"] [data-target="cell"].LUNA {
   background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;

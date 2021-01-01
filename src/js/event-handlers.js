@@ -7,11 +7,13 @@ const handleCellClick = (event) => {
   depleteResource(piecePlayPower, currentTeam); // Reduce player piece inventory
   // checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
   turnOverPossession(); // Switch possession
+  event.target.classList.toggle("CLICK"); // Add an animation helper
 };
 
 const handlePieceSelectionClick = (event) => {
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   swapBackground(event);
+  event.target.classList.toggle("CLICK"); // Add an animation helper
 }
 
