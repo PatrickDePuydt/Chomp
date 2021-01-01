@@ -13,7 +13,6 @@ const handleCellClick = (event) => {
 const handlePieceSelectionClick = (event) => {
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
-  swapBackground(event);
   event.target.classList.toggle("CLICK"); // Add an animation helper
 }
 
