@@ -68,4 +68,12 @@ const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
-
+const toggleHeader = () => {
+   if (currentTeam == "LUNA") {
+    header.classList.remove("LILY"); // Clean out any debris
+    header.classList.add("LUNA"); // Add active class
+  } else  {
+    header.classList.remove("LUNA"); // Clean out any debris
+    header.classList.add("LILY"); // Add active class
+  }
+};
