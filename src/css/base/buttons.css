@@ -1,0 +1,13 @@
+/* General */
+
+[data-feature='chomp'] [data-selector='piece'] {
+  border: none;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  text-indent: -9999px;
+  /* Throw the text offscreen, we only need the value */
+}
+
+[data-feature='chomp'] [data-target='piece_directions'] {
+  width: var(--cell-size);
+}
