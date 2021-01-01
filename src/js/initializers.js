@@ -16,5 +16,16 @@ const handleDraw = () => console.log(`draw`);
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA"));
 const resetPiecePower = () => console.log(`Reset`);
 
+const setLayout = () => switchClass(currentTeam, opposingTeam);
+
+const toggleHeader = () => {
+   if (currentTeam == "LUNA") {
+    header.classList.remove("LILY"); // Clean out any debris
+    header.classList.add("LUNA"); // Add active class
+  } else  {
+    header.classList.remove("LUNA"); // Clean out any debris
+    header.classList.add("LILY"); // Add active class
+  }
+};
 
 

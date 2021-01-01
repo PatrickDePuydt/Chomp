@@ -2,56 +2,20 @@ body {
   background-color: var(--quartz);
 }
 
-[data-component='class-switcher'] [data-component='switcher-header'] {}
-
-[data-component='class-switcher'] [data-component='switcher-control'] {
-  transition: var(--transition);
-}
-
 [data-component='class-switcher'] [data-component='switcher-header'] h1 {
-  transition: .25s all ease-out;
+  /* Start out in the center */
   transform: translateX(43vw);
 }
 
 [data-component='class-switcher'] [data-component='switcher-header'].LUNA h1 {
+  /* Left Player */
   transform: translateX(0);
 }
 
 [data-component='class-switcher'] [data-component='switcher-header'].LILY h1 {
+  /* Right Player */
   transform: translateX(85vw);
 }
-
-/* Swell */
-
-[data-component='class-switcher'] [data-component='switcher-control'].SWELL {
-  flex: 3;
-}
-
-[data-component='class-switcher'] [data-component='switcher-control'].SWELL button {
-  /* transform: scale(1); */
-  border: 5px solid gold;
-}
-
-[data-component='class-switcher'] [data-component='switcher-control'].SWELL [data-target="piece_directions"] {
-  /* display: flex; */
-}
-
-/* Recede */
-
-[data-component='class-switcher'] [data-component='switcher-control'].RECEDE {
-  flex: 1;
-}
-
-[data-component='class-switcher'] [data-component='switcher-control'].RECEDE button {
-  /* transform: scale(.5); */
-  border: 5px solid crimson;
-}
-
-[data-component='class-switcher'] [data-component='switcher-control'].RECEDE [data-target="piece_directions"] {
-  /* display: none; */
-}
-
-/* New Styles ********************** */
 
 [data-feature="chomp"] [data-target='side-control'] {
   display: flex;

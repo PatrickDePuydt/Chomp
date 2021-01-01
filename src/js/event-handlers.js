@@ -3,13 +3,9 @@ const handleCellClick = (event) => {
   let cellValue = event.target.innerHTML;
   
   comparePieceToCell(identifier, piecePlayPower); // Check to make sure you can place a piece there
-  
   claimCell(event, currentTeam, opposingTeam); // Take space
-  
   depleteResource(piecePlayPower, currentTeam); // Reduce player piece inventory
-  
   // checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
-  
   turnOverPossession(); // Switch possession
 };
 
@@ -18,3 +14,4 @@ const handlePieceSelectionClick = (event) => {
   choosePiece(selectedPiecePower);
   swapBackground(event);
 }
+

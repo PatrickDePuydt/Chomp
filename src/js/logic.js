@@ -42,25 +42,30 @@ const depleteResource = (piecePower, currentTeam) => {
   console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
-const startGame = (teamChoice) => {
-  dismissModal();
-  let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
-  let currentTeam = teamChoice;
-  let opposingTeam = whoseTurnIsIt ? "LUNA" : "LILY"
-  setLayout(currentTeam, opposingTeam);
-};
-
-const setLayout = (currentTeam, opposingTeam) => switchClass(currentTeam);
-
-const turnOverPossession = () => {
-  whoseTurnIsIt = !whoseTurnIsIt;
+const setInitialTeams = (whoseTurnIsIt) => {
   currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
   opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+}
 
-  setLayout(currentTeam);
+
+const startGame = (teamChoice) => {
+  let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
+  dismissModal();
+  setInitialTeams(whoseTurnIsIt);
+  setLayout();
+  toggleHeader();
+};
+
+const turnOverPossession = () => {
+  whoseTurnIsIt = !whoseTurnIsIt; // Not sure I need these anymore
+  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; // Not sure I need these anymore
+  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA";  // not sure I need these anymore
+
+  setLayout();
 };
 
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
+
