@@ -1,5 +1,4 @@
 // Function Calls
 assignCellEventHandlers(); // Add event handlers to cells
-assignPieceEventHandlers(); // Add event handlers to pieces
+initializeGamePieceControls(); // Set up the game pieces
 assignModalEventHandlers(); // Add event handlers to pieces
-setInitialClassState(); //

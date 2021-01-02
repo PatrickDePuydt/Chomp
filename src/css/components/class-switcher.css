@@ -22,7 +22,6 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border: 5px solid gold;
 }
 
 [data-feature="chomp"] [data-target='side-control'].LUNA {

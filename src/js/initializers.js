@@ -7,11 +7,15 @@ let whoseTurnIsIt;  // Used for switching turns
 let currentTeam; // Used for turn tracking
 let opposingTeam; // Used for turn tracking
 
-const assignPieceEventHandlers = () => [...gamePieces].map( piece => piece.addEventListener('click', handlePieceSelectionClick)); // Assign events listeners to all the pieces
+const initializeGamePieceControls = () => [...gamePieces].map( piece => {
+  const family = piece.getAttribute("data-family");
+  const genus = piece.getAttribute("data-genus");
+  piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
+
+  piece.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
+}); 
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleCellClick)); // Add events to all the cells
-const setInitialClassState = () => [...gamePieces].map( piece => {
-  console.log(piece);
-}); // Add events to all the cells
+
 
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))}; // Used to lock the board
 const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", false))}; // Used to unlock the board

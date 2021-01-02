@@ -18,7 +18,6 @@
 }
 
 [data-component='modal'] .modal-payload {
-  border: 5px solid gold;
   width: 50vw;
   height: 50vh;
   display: flex;
