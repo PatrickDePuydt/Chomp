@@ -102,7 +102,34 @@
   background-position-y: center;
   background-attachment: fixed;
   background-size: contain;
-  background: url(../../../images/summer/x-2-0.svg);
+  background: url(../../../images/summer/x-1-0.svg);
+  background-repeat: no-repeat;
+}
+
+.xp-1 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/xp-1.svg);
+  background-repeat: no-repeat;
+}
+
+.xp-2 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/xp-2.svg);
+  background-repeat: no-repeat;
+}
+
+.xp-3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/zp-3.svg);
   background-repeat: no-repeat;
 }
 
@@ -210,6 +237,33 @@
   background-position-y: center;
   background-attachment: fixed;
   background-size: contain;
-  background: url(../../../images/winter/z-2-0.svg);
+  background: url(../../../images/winter/z-1-0.svg);
+  background-repeat: no-repeat;
+}
+
+.zp-1 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/zp-1.svg);
+  background-repeat: no-repeat;
+}
+
+.zp-2 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/zp-2.svg);
+  background-repeat: no-repeat;
+}
+
+.zp-3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/zp-3.svg);
   background-repeat: no-repeat;
 }
