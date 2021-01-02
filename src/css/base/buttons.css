@@ -2,15 +2,6 @@
 
 button {
   transition: var(--transition);
-}
-
-button.CLICK {
-  transform: scale(.9);
-}
-
-/* Gameboard Buttons */
-
-[data-feature='chomp'] [data-selector='piece'] {
   border: none;
   width: var(--cell-size);
   height: var(--cell-size);
@@ -21,6 +12,12 @@ button.CLICK {
   appearance: none;
   /* Normally this is bad practice. Don't try this at home kids.*/
 }
+
+button.CLICK {
+  transform: scale(.9);
+}
+
+/* Gameboard Buttons */
 
 
 [data-feature='chomp'] [data-target='piece_directions'] {
