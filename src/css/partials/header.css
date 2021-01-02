@@ -1,4 +1,4 @@
 header {
   display: flex;
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }

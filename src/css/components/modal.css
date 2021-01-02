@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 [data-component='modal'].modal.FADE {
   background: rgba(0, 0, 0, 0);

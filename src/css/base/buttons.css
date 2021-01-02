@@ -1,7 +1,7 @@
 /* Base Elements */
 
 button {
-  transition: var(--transition);
+  /* transition: var(--transition); */
   border: none;
   width: var(--cell-size);
   height: var(--cell-size);
@@ -14,7 +14,7 @@ button {
 }
 
 button.CLICK {
-  transform: scale(.9);
+  /* transform: scale(.9); */
 }
 
 /* Gameboard Buttons */

@@ -11,6 +11,7 @@ const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   const family = piece.getAttribute("data-family");
   const genus = piece.getAttribute("data-genus");
   piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
+  piece.classList.add('CAN_CLICK')
 
   piece.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
 }); 

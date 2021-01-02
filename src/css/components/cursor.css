@@ -1,0 +1,5 @@
+.CAN_CLICK:hover {
+  /* cursor: url('path-to-image.png'), auto; */
+  border: 1px solid gold;
+  cursor: pointer;
+}
