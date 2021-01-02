@@ -1,3 +1,30 @@
+.x3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/x3.svg);
+  background-repeat: no-repeat;
+}
+
+.x2 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/x2.svg);
+  background-repeat: no-repeat;
+}
+
+.x3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/x3.svg);
+  background-repeat: no-repeat;
+}
+
 .x-3-3 {
   background-position-x: center;
   background-position-y: center;
@@ -265,5 +292,32 @@
   background-attachment: fixed;
   background-size: contain;
   background: url(../../../images/winter/zp-3.svg);
+  background-repeat: no-repeat;
+}
+
+.z1 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/z1.svg);
+  background-repeat: no-repeat;
+}
+
+.z2 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/z2.svg);
+  background-repeat: no-repeat;
+}
+
+.z3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/z3.svg);
   background-repeat: no-repeat;
 }

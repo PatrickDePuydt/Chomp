@@ -28,15 +28,9 @@ const comparePieceToCell = (identifier, piecePlayPower) => {
   if (piecePlayPower > cellPrice) {
     updateModel(identifier); 
   }
-  console.log(piecePlayPower, cellPrice);
 };
 
-
-const depleteResource = (piecePower, currentTeam, element) => {
-  depleteModelInventory(piecePower, currentTeam);
-};
-
-const depleteModelInventory = (piecePower, currentTeam) => {
+const depleteResource = (piecePower, currentTeam) => {
 // Attribution
   let playerInventory = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
@@ -44,11 +38,12 @@ const depleteModelInventory = (piecePower, currentTeam) => {
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
   
-  swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
-
-  console.log(`Luna's pieces: `, lunaPieceInventory);
-  console.log(`Lily's pieces: `, lilyPieceInventory);
+  // console.log(`Luna's pieces: `, lunaPieceInventory);
+  // console.log(`Lily's pieces: `, lilyPieceInventory);
 };
+
+  // swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
+
 
 
 
