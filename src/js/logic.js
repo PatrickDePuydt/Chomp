@@ -42,7 +42,7 @@ const depleteResource = (piecePower, currentTeam) => {
   // console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
-  // swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
+// swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
 
 
 

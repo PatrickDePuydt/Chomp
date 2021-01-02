@@ -1,4 +1,4 @@
-.x3 {
+[data-feature="chomp"] .x3 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;
@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
 }
 
-.x2 {
+[data-feature="chomp"] .x2 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;
@@ -16,7 +16,7 @@
   background-repeat: no-repeat;
 }
 
-.x3 {
+[data-feature="chomp"] .x3 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;
@@ -133,33 +133,6 @@
   background-repeat: no-repeat;
 }
 
-.xp-1 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/summer/xp-1.svg);
-  background-repeat: no-repeat;
-}
-
-.xp-2 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/summer/xp-2.svg);
-  background-repeat: no-repeat;
-}
-
-.xp-3 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/summer/xp-3.svg);
-  background-repeat: no-repeat;
-}
-
 .z-3-3 {
   background-position-x: center;
   background-position-y: center;
@@ -268,34 +241,7 @@
   background-repeat: no-repeat;
 }
 
-.zp-1 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/winter/zp-1.svg);
-  background-repeat: no-repeat;
-}
-
-.zp-2 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/winter/zp-2.svg);
-  background-repeat: no-repeat;
-}
-
-.zp-3 {
-  background-position-x: center;
-  background-position-y: center;
-  background-attachment: fixed;
-  background-size: contain;
-  background: url(../../../images/winter/zp-3.svg);
-  background-repeat: no-repeat;
-}
-
-.z1 {
+[data-feature="chomp"] .z1 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;
@@ -304,7 +250,7 @@
   background-repeat: no-repeat;
 }
 
-.z2 {
+[data-feature="chomp"] .z2 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;
@@ -313,7 +259,7 @@
   background-repeat: no-repeat;
 }
 
-.z3 {
+[data-feature="chomp"] .z3 {
   background-position-x: center;
   background-position-y: center;
   background-attachment: fixed;

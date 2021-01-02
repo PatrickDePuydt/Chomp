@@ -10,9 +10,11 @@
   align-items: center;
   /* transition: var(--transition); */
 }
+
 [data-component='modal'].modal.FADE {
   background: rgba(0, 0, 0, 0);
 }
+
 [data-component='modal'].modal.HIDE {
   display: none;
 }
@@ -33,4 +35,24 @@
 [data-component='modal'] button {
   width: var(--cell-size);
   height: var(--cell-size);
+}
+
+[data-component='modal'] .x3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/summer/x3.svg);
+  background-repeat: no-repeat;
+  background: black;
+}
+
+[data-component='modal'] .z3 {
+  background-position-x: center;
+  background-position-y: center;
+  background-attachment: fixed;
+  background-size: contain;
+  background: url(../../../images/winter/z3.svg);
+  background-repeat: no-repeat;
+  background: white;
 }
