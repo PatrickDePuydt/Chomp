@@ -10,7 +10,7 @@ let opposingTeam; // Used for turn tracking
 const assignPieceEventHandlers = () => [...gamePieces].map( piece => piece.addEventListener('click', handlePieceSelectionClick)); // Assign events listeners to all the pieces
 const assignCellEventHandlers = () => [...gameBoardCells].map( cell => cell.addEventListener('click', handleCellClick)); // Add events to all the cells
 const setInitialClassState = () => [...gamePieces].map( piece => {
-  piece.classList.add("x-3-3");
+  console.log(piece);
 }); // Add events to all the cells
 
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))}; // Used to lock the board
