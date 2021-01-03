@@ -1,6 +1,5 @@
 const handleCellClick = (event) => {
   let identifier = event.target.innerHTML; 
-  let cellValue = event.target.innerHTML;
   
   comparePieceToCell(identifier, piecePlayPower); // Check to make sure you can place a piece there
   claimCell(event, currentTeam, opposingTeam); // Take space
@@ -10,6 +9,7 @@ const handleCellClick = (event) => {
   event.target.classList.toggle("CLICK"); // Add an animation helper
   console.log(`Genus: ${genus}`);
   setCellBackground(event.target, family, piecePlayPower);
+  
 };
 
 const handlePieceSelectionClick = (event) => {

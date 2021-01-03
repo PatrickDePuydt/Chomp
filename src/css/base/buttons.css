@@ -11,7 +11,7 @@ button {
   /* Normally this is bad practice. Don't try this at home kids.*/
   appearance: none;
   /* Normally this is bad practice. Don't try this at home kids.*/
-  border: 1px solid black;
+  border: 5px solid transparent;
 }
 
 

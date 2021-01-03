@@ -1,6 +1,10 @@
 const modal = document.querySelector("[data-component='modal']"); // Modal body
 const buttonQuery = document.querySelectorAll("[data-target='modal_button']"); // Modal Buttons
-const assignModalEventHandlers = () => [...buttonQuery].map( button => button.addEventListener('click', handleClick));
+const initializeModal = () => [...buttonQuery].map( button => {
+  button.addEventListener('click', handleClick);
+  initializeAnimation(button, "CAN_CLICK");
+  animationEngine(button, "bounce");
+});
 // Don't forget to invoke this in ready.js
 
 const handleClick = (event) => {
