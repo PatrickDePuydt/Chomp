@@ -1,5 +1,10 @@
+.CAN_CLICK {
+  transition: .15s all ease;
+}
+
 .CAN_CLICK:hover {
   /* cursor: url('path-to-image.png'), auto; */
   border: 1px solid gold;
   cursor: pointer;
+  transform: scale(1.1);
 }

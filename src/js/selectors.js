@@ -1,5 +1,4 @@
 const gameBoardCells = document.querySelectorAll(`[data-target='cell']`);
 const gamePieces = document.querySelectorAll(`[data-selector='piece']`);
 const header = document.querySelector("[data-component='class-switcher'] [data-target='switcher-header']");
-
-const lilyButtonControls = document.querySelectorAll(`[data-family='x']`);
+const instructions = document.querySelector(`[data-target='instructions']`);
