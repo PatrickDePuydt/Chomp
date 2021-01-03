@@ -35,6 +35,7 @@
 [data-component='modal'] button {
   width: var(--cell-size);
   height: var(--cell-size);
+  cursor:;
 }
 
 [data-component='modal'] .x3 {

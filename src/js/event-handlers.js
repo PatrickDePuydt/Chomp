@@ -6,8 +6,7 @@ const handleCellClick = (event) => {
   depleteResource(piecePlayPower, currentTeam); // Reduce player piece inventory
   // checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
   turnOverPossession(); // Switch possession
-  event.target.classList.toggle("CLICK"); // Add an animation helper
-  console.log(`Genus: ${genus}`);
+
   setCellBackground(event.target, family, piecePlayPower);
   
 };

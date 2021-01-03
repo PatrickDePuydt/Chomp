@@ -38,8 +38,8 @@ const depleteResource = (piecePower, currentTeam) => {
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
   
-  // console.log(`Luna's pieces: `, lunaPieceInventory);
-  // console.log(`Lily's pieces: `, lilyPieceInventory);
+  console.log(`Luna's pieces: `, lunaPieceInventory);
+  console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
 // swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
@@ -58,12 +58,9 @@ const startGame = (teamChoice) => {
   
   dismissModal();
   setInitialTeams(whoseTurnIsIt);
-  setLayout();
+  setLayout(whoseTurnIsIt);
   toggleHeader();
-
-  [...gamePieces].map( piece => {
-    piece.classList.add("CAN_CLICK")
-  });
+  
 };
 
 const turnOverPossession = () => {
@@ -71,7 +68,7 @@ const turnOverPossession = () => {
   currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; // Not sure I need these anymore
   opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA";  // not sure I need these anymore
 
-  setLayout(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
+  // setLayout(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
   toggleHeader(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
 };
 

@@ -13,14 +13,12 @@ const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   const family = piece.getAttribute("data-family");
   const genus = piece.getAttribute("data-genus");
   piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
-  initializeAnimation(piece, "CAN_CLICK");
 
   piece.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
 });
 
 const initializeGameGameboardControls = () => [...gameBoardCells].map( cell => {
   cell.addEventListener('click', handleCellClick)
-  initializeAnimation(cell, "CANNOT_CLICK");
 }); // Add events to all the cells
 
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))}; // Used to lock the board
@@ -29,4 +27,19 @@ const handleWin = () => console.log(`Win`); // Used as a placeholder for win tra
 const handleDraw = () => console.log(`draw`); // Used as a placeholder for draw tracking
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA")); // used to check if there was a combination (used in win evaluation)
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
-const setLayout = () => flipBoard(currentTeam); // Sets the layout of the board
+
+const setLayout = (whoseTurnIsIt) => {
+  let rightBias = whoseTurnIsIt;
+  let leftBias = !whoseTurnIsIt;
+  let activeControls = whoseTurnIsIt ? [...rightControls] : [...leftControls];
+  let inactiveControls = !whoseTurnIsIt ? [...leftControls] : [...rightControls];
+
+  console.log(`controls:`, inactiveControls);
+
+  inactiveControls.map(control => {
+    control.classList.add("CAN_CLICK");
+  });
+  console.log(`1`);
+
+  // flipBoard(currentTeam)
+}
