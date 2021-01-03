@@ -60,6 +60,7 @@ const startGame = (teamChoice) => {
   setInitialTeams(whoseTurnIsIt);
   setLayout(whoseTurnIsIt);
   toggleHeader();
+
   
 };
 
@@ -85,3 +86,23 @@ const toggleHeader = (currentTeam, opposingTeam) => {
     header.classList.add("LILY"); // Add active class
   }
 };
+
+
+const setLayout = (whoseTurnIsIt) => {
+  let activeControls = whoseTurnIsIt ? [...rightControls] : [...leftControls];
+  let notActiveControls = !whoseTurnIsIt ? [...rightControls] : [...leftControls];
+  handleControlButtonClickability(activeControls, notActiveControls);
+  setControlButtonLayout(whoseTurnIsIt);
+};
+
+const handleControlButtonClickability = (activeControls, notActiveControls) => {
+  activeControls.map(control => control.classList.add("CAN_CLICK"));
+  notActiveControls.map(control => control.classList.add("CANNOT_CLICK"));
+}
+
+const setControlButtonLayout = (whoseTurnIsIt) => {
+  let activePanel = whoseTurnIsIt ? rightControlPanel : leftControlPanel;
+  let notActivePanel = !whoseTurnIsIt ? rightControlPanel : leftControlPanel;
+  activePanel.classList.add("LAY_FLEX_ACTIVE");
+  notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+}
