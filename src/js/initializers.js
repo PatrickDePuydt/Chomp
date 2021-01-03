@@ -30,18 +30,42 @@ const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece t
 
 const setLayout = (whoseTurnIsIt) => {
   let activeControls = whoseTurnIsIt ? [...rightControls] : [...leftControls];
-  let inactiveControls = !whoseTurnIsIt ? [...rightControls] : [...leftControls];
+  let notActiveControls = !whoseTurnIsIt ? [...rightControls] : [...leftControls];
+  
+  handleControlButtonClickability(activeControls, notActiveControls);
+  setControlButtonLayout(whoseTurnIsIt);
+  
+};
 
-  console.log(`active controls:`, activeControls);
-  console.log(`inactiveControls controls:`, inactiveControls);
+const handleControlButtonClickability = (activeControls, notActiveControls) => {
+  // console.log(`active controls:`, activeControls);
+  // console.log(`notActiveControls controls:`, notActiveControls);
   
   activeControls.map(control => {
     control.classList.add("CAN_CLICK");
   });
-  
-  inactiveControls.map(control => {
+
+  notActiveControls.map(control => {
     control.classList.add("CANNOT_CLICK");
   });
-
-  // flipBoard(currentTeam)
 }
+
+const setControlButtonLayout = (whoseTurnIsIt) => {
+  let activePanel = whoseTurnIsIt ? rightControlPanel : leftControlPanel;
+  let notActivePanel = !whoseTurnIsIt ? rightControlPanel : leftControlPanel;
+
+  activePanel.classList.add("LAY_FLEX_ACTIVE");
+  notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+}
+
+
+
+// [data-feature="chomp"] [data-target='side-control'].LUNA {
+//   border: 5px solid black;
+//   flex: 3;
+// }
+
+// [data-feature="chomp"] [data-target='side-control'].LILY {
+//   border: 5px solid hotpink;
+//   flex: 1;
+// }

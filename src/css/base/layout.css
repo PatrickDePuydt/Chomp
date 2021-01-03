@@ -15,3 +15,13 @@
   align-items: center;
   grid-template-columns: repeat(4, auto);
 }
+
+.LAY_FLEX_ACTIVE {
+  border: 5px solid black;
+  flex: 3;
+}
+
+.LAY_FLEX_NOT_ACTIVE {
+  border: 5px solid hotpink;
+  flex: 1;
+}

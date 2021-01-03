@@ -23,13 +23,3 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
-[data-feature="chomp"] [data-target='side-control'].LUNA {
-  border: 5px solid black;
-  flex: 3;
-}
-
-[data-feature="chomp"] [data-target='side-control'].LILY {
-  border: 5px solid hotpink;
-  flex: 1;
-}
