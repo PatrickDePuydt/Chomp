@@ -4,6 +4,10 @@ const initializeAnimation = (element, animationState) => {
 };
 
 const animationEngine = (element, animation) => {
+  element.classList.add(`animate__${animation}`);
+};
+
+const naturalize = () => {
   let sturdyAnimation = animation ? animation : "bounce";
   const possibleIntervals = [0, 1, 2, 3, 4];
   const randomNumber = Math.floor(Math.random() * possibleIntervals.length)

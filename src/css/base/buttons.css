@@ -14,10 +14,35 @@ button {
   border: 5px solid transparent;
 }
 
-
 /* Gameboard Buttons */
-
 
 [data-feature='chomp'] [data-target='piece_directions'] {
   width: var(--cell-size);
+}
+
+[data-family='x'][data-genus='3'].CAN_CLICK:hover,
+[data-family='z'][data-genus='3'].CAN_CLICK:hover {
+  animation: bounce;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+
+[data-family='x'][data-genus='2'].CAN_CLICK:hover,
+[data-family='z'][data-genus='2'].CAN_CLICK:hover {
+  animation: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+
+[data-family='x'][data-genus='1'].CAN_CLICK:hover,
+[data-family='z'][data-genus='1'].CAN_CLICK:hover {
+  animation: bounce;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: 0s;
 }

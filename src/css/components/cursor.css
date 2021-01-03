@@ -8,10 +8,8 @@
 
 .CAN_CLICK:hover {
   /* cursor: url('path-to-image.png'), auto; */
-  border: 3px solid gold;
   cursor: pointer;
   transform: scale(1.1);
-
 }
 
 .CANNOT_CLICK:hover {

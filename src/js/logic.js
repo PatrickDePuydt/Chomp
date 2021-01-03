@@ -55,10 +55,15 @@ const setInitialTeams = (whoseTurnIsIt) => {
 
 const startGame = (teamChoice) => {
   let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
+  
   dismissModal();
   setInitialTeams(whoseTurnIsIt);
   setLayout();
   toggleHeader();
+
+  [...gamePieces].map( piece => {
+    piece.classList.add("CAN_CLICK")
+  });
 };
 
 const turnOverPossession = () => {
