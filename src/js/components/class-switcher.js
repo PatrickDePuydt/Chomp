@@ -1,4 +1,4 @@
-const switchClass = (player) => {
+const flipBoard = (player) => {
   let element = document.querySelector(`[data-kitten='${player}']`);
   
   if (player == "LUNA") {
