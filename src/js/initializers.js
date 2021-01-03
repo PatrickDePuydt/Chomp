@@ -29,17 +29,19 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
 
 const setLayout = (whoseTurnIsIt) => {
-  let rightBias = whoseTurnIsIt;
-  let leftBias = !whoseTurnIsIt;
   let activeControls = whoseTurnIsIt ? [...rightControls] : [...leftControls];
-  let inactiveControls = !whoseTurnIsIt ? [...leftControls] : [...rightControls];
+  let inactiveControls = !whoseTurnIsIt ? [...rightControls] : [...leftControls];
 
-  console.log(`controls:`, inactiveControls);
-
-  inactiveControls.map(control => {
+  console.log(`active controls:`, activeControls);
+  console.log(`inactiveControls controls:`, inactiveControls);
+  
+  activeControls.map(control => {
     control.classList.add("CAN_CLICK");
   });
-  console.log(`1`);
+  
+  inactiveControls.map(control => {
+    control.classList.add("CANNOT_CLICK");
+  });
 
   // flipBoard(currentTeam)
 }

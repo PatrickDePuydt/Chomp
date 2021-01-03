@@ -11,6 +11,7 @@
 .CANNOT_CLICK {
   border: 5px solid red;
   cursor: not-allowed;
+  cursor: url(../../images/cursors/boo-color.png) 25 25, pointer;
   pointer-events: not-allowed;
 }
 
