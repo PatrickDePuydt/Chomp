@@ -29,16 +29,3 @@ const handleDraw = () => console.log(`draw`); // Used as a placeholder for draw 
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA")); // used to check if there was a combination (used in win evaluation)
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
 const setLayout = () => switchClass(currentTeam, opposingTeam); // Sets the layout of the board
-
-const initializeAnimation = (element, animationState) => {
-  element.classList.add("animate__animated");
-  element.classList.add(animationState);
-};
-
-const animationEngine = (element, animation) => {
-  let sturdyAnimation = animation ? animation : "bounce";
-  setTimeout(() => {
-    
-  }, timeout);
-  element.classList.add(`animate__${sturdyAnimation}`);
-}
