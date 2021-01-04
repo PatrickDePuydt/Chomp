@@ -42,14 +42,9 @@ const depleteResource = (piecePower, currentTeam) => {
   console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
-// swapBackground(piecePower, playerInventory[`x${Number(piecePower)}`].quantity);
-
-
-
 
 const setInitialTeams = (whoseTurnIsIt) => {
-  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
-  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA"; 
+  return currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; 
 }
 
 
@@ -60,17 +55,10 @@ const startGame = (teamChoice) => {
   setInitialTeams(whoseTurnIsIt);
   setLayout(whoseTurnIsIt);
   toggleHeader();
-
-  
 };
 
 const turnOverPossession = () => {
   whoseTurnIsIt = !whoseTurnIsIt; // Not sure I need these anymore
-  currentTeam = whoseTurnIsIt ? "LILY" : "LUNA"; // Not sure I need these anymore
-  opposingTeam = !whoseTurnIsIt ? "LILY" : "LUNA";  // not sure I need these anymore
-
-  // setLayout(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
-  toggleHeader(currentTeam, opposingTeam); // Different from the global variables defined and managed in setInitialTeams
 };
 
 const updateModel = (identifier) => {
