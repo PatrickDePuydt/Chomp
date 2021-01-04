@@ -49,10 +49,10 @@ const setInitialTeams = (whoseTurnIsIt) => {
 
 
 const startGame = () => {
+  console.log(`4:`, team);
   dismissModal();
-  setInitialTeams();
-  setLayout();
-  toggleHeader();
+  setLayout(team);
+  toggleHeader(team);
 };
 
 const turnOverPossession = () => {
@@ -64,7 +64,8 @@ const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
-const toggleHeader = (currentTeam, opposingTeam) => {
+const toggleHeader = (team) => {
+   
    if (currentTeam == "LUNA") {
     header.classList.remove("LILY"); // Clean out any debris
     header.classList.add("LUNA"); // Add active class
@@ -75,11 +76,13 @@ const toggleHeader = (currentTeam, opposingTeam) => {
 };
 
 
-const setLayout = (whoseTurnIsIt) => {
-  let activeControls = whoseTurnIsIt ? [...rightControls] : [...leftControls];
-  let notActiveControls = !whoseTurnIsIt ? [...rightControls] : [...leftControls];
+const setLayout = (player) => {
+  let activeControls = (player == "LUNA") ? [...rightControls] : [...leftControls];
+  let notActiveControls = (player == "LILY") ? [...rightControls] : [...leftControls];
+  
   handleControlButtonClickability(activeControls, notActiveControls);
   setControlButtonLayout(whoseTurnIsIt);
+  console.log(`5.`);
 };
 
 const handleControlButtonClickability = (activeControls, notActiveControls) => {
