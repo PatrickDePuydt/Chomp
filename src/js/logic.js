@@ -38,8 +38,8 @@ const depleteResource = (piecePower, currentTeam) => {
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
   
-  console.log(`Luna's pieces: `, lunaPieceInventory);
-  console.log(`Lily's pieces: `, lilyPieceInventory);
+  // console.log(`Luna's pieces: `, lunaPieceInventory);
+  // console.log(`Lily's pieces: `, lilyPieceInventory);
 };
 
 
@@ -49,15 +49,19 @@ const setInitialTeams = (whoseTurnIsIt) => {
 
 
 const startGame = () => {
-  console.log(`4:`, team);
   dismissModal();
   setLayout(team);
   toggleHeader(team);
 };
 
-const turnOverPossession = () => {
-  setInitialTeams(!whoseTurnIsIt);
-  console.log('2: ', setInitialTeams(!whoseTurnIsIt));
+const turnOverPossession = (team) => {
+  console.log('turnOverPossession 2: ', team);
+  if (team == false) {
+    team = "LUNA"
+  } else {
+    team == "LILY";
+  }
+  console.log('turnOverPossession 3: ', team);
 }
 
 const updateModel = (identifier) => {
@@ -82,7 +86,6 @@ const setLayout = (player) => {
   
   handleControlButtonClickability(activeControls, notActiveControls);
   setControlButtonLayout(whoseTurnIsIt);
-  console.log(`5.`);
 };
 
 const handleControlButtonClickability = (activeControls, notActiveControls) => {

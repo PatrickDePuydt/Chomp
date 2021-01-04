@@ -9,7 +9,11 @@ const initializeModal = () => [...buttonQuery].map( button => {
 
 const handleClick = (event) => {
   initialChoice = String(event.target.innerHTML); // External Function call -> Set in initializers
-  setTeam(initialChoice);
+  let team;
+
+  (initialChoice == "LUNA") ? team = false : team = true;
+
+  setTeam(team);
   startGame(); // External Function call -> Set in initializers
   // event.target.classList.add("CLICK"); // Add an animation helper
 };

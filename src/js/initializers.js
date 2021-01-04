@@ -32,11 +32,4 @@ const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains(
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
 
 
-// B.
-const setTeam = (participant) => {
-  console.log('3: ', participant);
-  return team = participant;
-}
-
-
 
