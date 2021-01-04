@@ -19,6 +19,7 @@ const handlePieceSelectionClick = (event) => {
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   choosePiece(selectedPiecePower);
   event.target.classList.toggle("CLICK"); // Add an animation helper
+  
   // Set Family Genus
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");

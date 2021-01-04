@@ -7,14 +7,15 @@ let whoseTurnIsIt;  // Used for switching turns
 let currentTeam; // Used for turn tracking
 let opposingTeam; // Used for turn tracking
 let genus;
+let family;
 
 
 // A.
 let team;
 
 const initializeGamePieceControls = () => [...gamePieces].map( piece => {
-  const family = piece.getAttribute("data-family");
-  const genus = piece.getAttribute("data-genus");
+  family = piece.getAttribute("data-family");
+  genus = piece.getAttribute("data-genus");
   piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
 
   piece.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
