@@ -82,7 +82,7 @@ const toggleHeader = (team) => {
 
 
 const setLayout = (circleTurn) => {
-  console.log(`8: `, circleTurn);
+  // console.log(`8: `, circleTurn);
   let activeControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
   let notActiveControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
 
@@ -96,21 +96,24 @@ const handleControlButtonClickability = (activeControls, notActiveControls) => {
 }
 
 const setControlButtonLayout = (circleTurn) => {
-  let activePanel = circleTurn ? rightControlPanel : leftControlPanel;
-  let notActivePanel = !circleTurn ? rightControlPanel : leftControlPanel;
-  console.log(`9:`, circleTurn);
+  // console.log(`11: `, circleTurn);
+  
+  // console.log(`9:`, circleTurn);
   if (circleTurn == false) {
-    activePanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
-    notActivePanel.classList.remove("LAY_FLEX_ACTIVE");
+    leftControlPanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    leftControlPanel.classList.add("LAY_FLEX_ACTIVE");
     
-    activePanel.classList.add("LAY_FLEX_ACTIVE");
-    notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+    rightControlPanel.classList.remove("LAY_FLEX_ACTIVE");
+    rightControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+    console.log(`10: Luna Styles active`);
   } else {
-    activePanel.classList.remove("LAY_FLEX_ACTIVE");
-    notActivePanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    rightControlPanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    rightControlPanel.classList.add("LAY_FLEX_ACTIVE");
     
-    activePanel.classList.add("LAY_FLEX_ACTIVE");
-    notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+    leftControlPanel.classList.remove("LAY_FLEX_ACTIVE");
+    leftControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+    console.log(`11: Lily Styles active`);
   }
+
 }
 
