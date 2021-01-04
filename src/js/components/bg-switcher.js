@@ -7,6 +7,8 @@ const setCellBackground = (element, family, piecePlayPower) => {
  element.classList.add(`${family}${piecePlayPower}`);
 }
 
-const swapPieceBackground = (inventoryIndex) => {
-  console.log(`inventory index: `, inventoryIndex);
+const swapPieceBackground = (inventoryIndex, piecePlayPower) => {
+  let inventory = inventoryIndex;
+  console.log(`18 inventory index: `, inventory);
+  console.log(`?9 piecePlayPower: `, piecePlayPower);
 };
