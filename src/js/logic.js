@@ -30,16 +30,19 @@ const comparePieceToCell = (identifier, piecePlayPower) => {
   }
 };
 
+
+
 const depleteResource = (piecePower, currentTeam) => {
 // Attribution
-  let playerInventory = (String(currentTeam) == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  console.log(`3. current team: `, currentTeam);
+  let playerInventory = (currentTeam == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
   
-  // console.log(`Luna's pieces: `, lunaPieceInventory);
-  // console.log(`Lily's pieces: `, lilyPieceInventory);
+  console.log(`4. Luna's pieces: `, lunaPieceInventory);
+  console.log(`5. Lily's pieces: `, lilyPieceInventory);
 };
 
 
@@ -82,10 +85,8 @@ const toggleHeader = (team) => {
 
 
 const setLayout = (circleTurn) => {
-  // console.log(`8: `, circleTurn);
-  let activeControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
-  let notActiveControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
-
+  let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
+  let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
   handleControlButtonClickability(activeControls, notActiveControls);
   setControlButtonLayout(circleTurn);
 };
@@ -105,14 +106,14 @@ const setControlButtonLayout = (circleTurn) => {
     
     rightControlPanel.classList.remove("LAY_FLEX_ACTIVE");
     rightControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
-    console.log(`10: Luna Styles active`);
+    // console.log(`10: Luna Styles active`);
   } else {
     rightControlPanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
     rightControlPanel.classList.add("LAY_FLEX_ACTIVE");
     
     leftControlPanel.classList.remove("LAY_FLEX_ACTIVE");
     leftControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
-    console.log(`11: Lily Styles active`);
+    // console.log(`11: Lily Styles active`);
   }
 
 }

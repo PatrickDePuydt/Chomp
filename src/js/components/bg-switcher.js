@@ -6,3 +6,7 @@ const swapBackground = (piecePower, playerInventory) => {
 const setCellBackground = (element, family, piecePlayPower) => {
  element.classList.add(`${family}${piecePlayPower}`);
 }
+
+const swapPieceBackground = (inventoryIndex) => {
+  console.log(`inventory index: `, inventoryIndex);
+};

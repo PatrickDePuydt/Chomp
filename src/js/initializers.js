@@ -8,11 +8,10 @@ let currentTeam; // Used for turn tracking
 let opposingTeam; // Used for turn tracking
 let genus;
 let family;
+let team;
 
 
 // A.
-let team;
-
 const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   family = piece.getAttribute("data-family");
   genus = piece.getAttribute("data-genus");
