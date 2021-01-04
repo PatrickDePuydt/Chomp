@@ -12,7 +12,7 @@ const handleCellClick = (event) => {
 
   claimCell(event, currentTeam, opposingTeam); // Take space
   
-  depleteResource(piecePlayPower, currentTeam); 
+  depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
   
   setCellBackground(event.target, family, piecePlayPower);
   

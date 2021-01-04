@@ -7,8 +7,25 @@ const setCellBackground = (element, family, piecePlayPower) => {
  element.classList.add(`${family}${piecePlayPower}`);
 }
 
-const swapPieceBackground = (inventoryIndex, piecePlayPower) => {
+const swapPieceBackground = (inventoryIndex, piecePlayPower, currentTeam) => {
   let inventory = inventoryIndex;
+  let player = (circleTurn == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  let currentPlayerInventory = player[`x${piecePlayPower}`].quantity;
+  
+  let dynamicFamily = `[data-family="${family}"]`;
+  let dynamicGenus = `[data-genus="${genus}"]`;
+  let targetPiece = document.querySelector(`${dynamicFamily}${dynamicGenus}`);
+
+
+  console.log(`17 circleTurn: `, circleTurn);
   console.log(`18 inventory index: `, inventory);
-  console.log(`?9 piecePlayPower: `, piecePlayPower);
+  console.log(`19 piecePlayPower: `, piecePlayPower);
+  console.log(`21 currentPlayerInventory: `, currentPlayerInventory);
+  console.log(`22: family`, family);
+  console.log(`21: genus`, genus);
+  console.log(`23: targetPiece`, targetPiece);
+
+  targetPiece.classList.add(`${family}-${genus}-${currentPlayerInventory}`);
+
+
 };

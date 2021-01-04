@@ -32,10 +32,10 @@ const comparePieceToCell = (identifier, piecePlayPower) => {
 
 
 
-const depleteResource = (piecePower, currentTeam) => {
+const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
 // Attribution
   console.log(`3. current team: `, currentTeam);
-  let playerInventory = (currentTeam == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  let playerInventory = (circleTurn == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
@@ -43,6 +43,8 @@ const depleteResource = (piecePower, currentTeam) => {
   
   console.log(`4. Luna's pieces: `, lunaPieceInventory);
   console.log(`5. Lily's pieces: `, lilyPieceInventory);
+
+  swapPieceBackground(inventoryIndex, piecePlayPower);
 };
 
 
