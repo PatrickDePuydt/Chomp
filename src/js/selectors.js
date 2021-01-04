@@ -7,3 +7,7 @@ const rightControls = document.querySelectorAll(`button[data-family='z']`);
 const leftControlPanel = document.querySelector(`[data-component='switcher-control'][data-family='x']`);
 const rightControlPanel = document.querySelector(`[data-component='switcher-control'][data-family='z']`);
 
+
+
+
+

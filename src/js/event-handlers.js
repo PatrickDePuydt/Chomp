@@ -6,12 +6,19 @@ const handleCellClick = (event) => {
   depleteResource(piecePlayPower, currentTeam); // Reduce player piece inventory
   // checkForWin(currentTeam, opposingTeam); // Check to see if anyone won
   
-  console.log(setInitialTeams(whoseTurnIsIt));
+  console.log('Initial team: ', setInitialTeams(whoseTurnIsIt));
   
-  turnOverPossession(); // Switch possession
+  ; // Switch possession
   
-  setLayout(whoseTurnIsIt);
   setCellBackground(event.target, family, piecePlayPower);
+  
+  turnOverPossession();
+  
+  console.log('Next Team: ', setInitialTeams(whoseTurnIsIt));
+
+  // setLayout(whoseTurnIsIt);
+  // console.log('After: ', setInitialTeams(whoseTurnIsIt));
+
 };
 
 const handlePieceSelectionClick = (event) => {

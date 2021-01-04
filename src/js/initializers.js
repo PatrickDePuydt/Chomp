@@ -9,6 +9,9 @@ let opposingTeam; // Used for turn tracking
 let genus;
 
 
+// A.
+let team;
+
 const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   const family = piece.getAttribute("data-family");
   const genus = piece.getAttribute("data-genus");
@@ -27,3 +30,10 @@ const handleWin = () => console.log(`Win`); // Used as a placeholder for win tra
 const handleDraw = () => console.log(`draw`); // Used as a placeholder for draw tracking
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA")); // used to check if there was a combination (used in win evaluation)
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
+
+
+// B.
+const setTeam = (participant) => {
+  console.log('3: ', participant);
+  return team = participant;
+}

@@ -9,8 +9,9 @@ const initializeModal = () => [...buttonQuery].map( button => {
 
 const handleClick = (event) => {
   initialChoice = String(event.target.innerHTML); // External Function call -> Set in initializers
-  startGame(initialChoice); // External Function call -> Set in initializers
-  event.target.classList.add("CLICK"); // Add an animation helper
+  setTeam(initialChoice);
+  startGame(); // External Function call -> Set in initializers
+  // event.target.classList.add("CLICK"); // Add an animation helper
 };
 
 const dismissModal = () => {

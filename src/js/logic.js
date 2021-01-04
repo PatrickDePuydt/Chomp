@@ -48,18 +48,17 @@ const setInitialTeams = (whoseTurnIsIt) => {
 }
 
 
-const startGame = (teamChoice) => {
-  let whoseTurnIsIt = teamChoice == "LILY" ? true : false;
-  
+const startGame = () => {
   dismissModal();
-  setInitialTeams(whoseTurnIsIt);
-  setLayout(whoseTurnIsIt);
+  setInitialTeams();
+  setLayout();
   toggleHeader();
 };
 
 const turnOverPossession = () => {
-  whoseTurnIsIt = !whoseTurnIsIt; // Not sure I need these anymore
-};
+  setInitialTeams(!whoseTurnIsIt);
+  console.log('2: ', setInitialTeams(!whoseTurnIsIt));
+}
 
 const updateModel = (identifier) => {
   cells[identifier].taken = true;
@@ -94,3 +93,4 @@ const setControlButtonLayout = (whoseTurnIsIt) => {
   activePanel.classList.add("LAY_FLEX_ACTIVE");
   notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
 }
+
