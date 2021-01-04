@@ -50,7 +50,7 @@ const setInitialTeams = (whoseTurnIsIt) => {
 
 const startGame = () => {
   dismissModal();
-  setLayout(team);
+  setLayout(circleTurn);
   toggleHeader(team);
 };
 
@@ -68,6 +68,7 @@ const updateModel = (identifier) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
+
 const toggleHeader = (team) => {
    
    if (currentTeam == "LUNA") {
@@ -80,12 +81,13 @@ const toggleHeader = (team) => {
 };
 
 
-const setLayout = (player) => {
-  let activeControls = (player == "LUNA") ? [...rightControls] : [...leftControls];
-  let notActiveControls = (player == "LILY") ? [...rightControls] : [...leftControls];
-  
+const setLayout = (circleTurn) => {
+  console.log(`8: `, circleTurn);
+  let activeControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
+  let notActiveControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
+
   handleControlButtonClickability(activeControls, notActiveControls);
-  setControlButtonLayout(whoseTurnIsIt);
+  setControlButtonLayout(circleTurn);
 };
 
 const handleControlButtonClickability = (activeControls, notActiveControls) => {
@@ -93,10 +95,22 @@ const handleControlButtonClickability = (activeControls, notActiveControls) => {
   notActiveControls.map(control => control.classList.add("CANNOT_CLICK"));
 }
 
-const setControlButtonLayout = (whoseTurnIsIt) => {
-  let activePanel = whoseTurnIsIt ? rightControlPanel : leftControlPanel;
-  let notActivePanel = !whoseTurnIsIt ? rightControlPanel : leftControlPanel;
-  activePanel.classList.add("LAY_FLEX_ACTIVE");
-  notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+const setControlButtonLayout = (circleTurn) => {
+  let activePanel = circleTurn ? rightControlPanel : leftControlPanel;
+  let notActivePanel = !circleTurn ? rightControlPanel : leftControlPanel;
+  console.log(`9:`, circleTurn);
+  if (circleTurn == false) {
+    activePanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    notActivePanel.classList.remove("LAY_FLEX_ACTIVE");
+    
+    activePanel.classList.add("LAY_FLEX_ACTIVE");
+    notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+  } else {
+    activePanel.classList.remove("LAY_FLEX_ACTIVE");
+    notActivePanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    
+    activePanel.classList.add("LAY_FLEX_ACTIVE");
+    notActivePanel.classList.add("LAY_FLEX_NOT_ACTIVE");
+  }
 }
 
