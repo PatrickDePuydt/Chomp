@@ -109,7 +109,9 @@ const setLayout = (circleTurn) => {
   setControlButtonLayout(circleTurn);
   handleHeaderLayout(circleTurn);
   handleInstructionsLayout(circleTurn);
+  // hideInstructions(circleTurn);
 };
+
 
 const handleHeaderLayout = (circleTurn) => {
   if (circleTurn) {

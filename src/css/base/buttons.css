@@ -15,6 +15,7 @@ button {
 }
 
 /* Gameboard Buttons */
+
 [data-feature='chomp'] [data-target='piece_directions'] {
   width: var(--cell-size);
 }
@@ -43,3 +44,19 @@ button {
   animation-delay: 0s;
 }
 
+.button_combo {
+  display: flex;
+}
+
+[data-target='piece_directions'] {
+  border: 5px solid gold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-target='piece_directions'].HIDDEN {
+  display: none;
+}
