@@ -41,16 +41,16 @@ function superviseGameplay() {
 }
 
 const bounceClick = () => {
-  // console.log(`2 Bounce Click`);
+  (`2 Bounce Click`);
   handleGameBoardClickability(false);
 }
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
 // Attribution
-  // console.log(`3. current team: `, currentTeam);
+  (`3. current team: `, currentTeam);
   let playerInventory = (circleTurn == false) ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
-  // console.log(circleTurn == false);
+  (circleTurn == false);
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
@@ -76,13 +76,13 @@ const startGame = () => {
 };
 
 const turnOverPossession = (team) => {
-  // console.log('turnOverPossession 2: ', team);
+  ('turnOverPossession 2: ', team);
   if (team == false) {
     team = "LUNA"
   } else {
     team == "LILY";
   }
-  // console.log('turnOverPossession 3: ', team);
+  ('turnOverPossession 3: ', team);
 }
 
 const updateModel = (identifier) => {

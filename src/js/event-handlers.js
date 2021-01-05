@@ -21,7 +21,7 @@ const handleCellClick = (event) => {
 };
 
 const handlePieceSelectionClick = (event) => {
-  // console.log(`handlePieceSelection`);  
+  (`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");

@@ -37,7 +37,7 @@ const handlePieceEventListeners = () => {
   });
   
   [...notActiveControls].map( notActiveControl => {
-    // console.log(`notActiveControl:`, notActiveControl);
+    (`notActiveControl:`, notActiveControl);
     notActiveControl.classList.remove("CAN_CLICK");
     notActiveControl.classList.add("CANNOT_CLICK");
     notActiveControl.removeEventListener('click', handlePieceSelectionClick); 

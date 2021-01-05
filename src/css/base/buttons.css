@@ -49,7 +49,6 @@ button {
 }
 
 [data-target='piece_directions'] {
-  /* border: 5px solid gold; */
   padding: 0 25px;
   text-align: center;
   display: flex;
