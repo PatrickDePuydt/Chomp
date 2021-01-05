@@ -123,18 +123,16 @@ const handleControlButtonClickability = () => {
 };
 
 const handleGameBoardClickability = (canClick) => {
-  
   [...gameBoardCells].map(cell => {
-
     if (canClick) {
       cell.classList.add("CAN_CLICK");
       cell.classList.remove("CANNOT_CLICK");
-      console.log(`Can click`);
-    // 1850
+      cell.classList.add("animate__bounceIn");
+      // 1850
     }else {
       cell.classList.remove("CAN_CLICK");
       cell.classList.add("CANNOT_CLICK");
-      console.log(`Cannot click`);
+      cell.classList.remove("animate__bounceIn");
     }
   });
 };
