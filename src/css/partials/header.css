@@ -2,14 +2,14 @@ header {
   display: flex;
   flex-direction: column;
   background: var(--ember);
-  /* transition: var(--transition); */
-  /* padding: 25px 0; */
 }
 
 header .c_logo {
   display: block;
   width: 100%;
-  padding: 25px 0;
+  padding: 75px 0 5px 0;
+  border-bottom: 2px solid var(--pitchblack);
+  margin-bottom: 5px;
 }
 
 header .c_logo h1 {
@@ -18,17 +18,19 @@ header .c_logo h1 {
 
 header .header-sub {
   width: 100%;
-  border-top: 5px solid var(--pitchblack);
-  border-bottom: 5px solid var(--pitchblack);
+  border-top: 10px solid var(--pitchblack);
+  border-bottom: 10px solid var(--pitchblack);
   padding: 10px 0;
+  display: flex;
+  align-items: center;
 }
 
 header .header-sub h2 {
-  padding: 0 50px;
-  color: var(--quartz);
+  padding: 0 10px 0 50px;
+  color: var(--pitchblack);
+  font-family: "Nunito";
 }
 
 header .header-sub p {
-  padding: 0 50px;
   font-weight: bolder;
 }

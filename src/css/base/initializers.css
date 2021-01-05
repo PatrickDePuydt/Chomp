@@ -15,9 +15,14 @@
   /* Variables */
   --cell-size: 150px;
   --transition: .05s all ease-in-out;
-  --gameHeight: 80vh;
+  --gameHeight: 75vh;
 }
 
 body {
   background: var(--ember);
+}
+
+main {
+  margin-top: 5px;
+  border-top: 3px solid var(--pitchblack);
 }
