@@ -21,8 +21,8 @@ const handleCellClick = (event) => {
 };
 
 const handlePieceSelectionClick = (event) => {
-  // console.log(`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
+  
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");
   piecePower = selectedPiecePower;
@@ -30,7 +30,6 @@ const handlePieceSelectionClick = (event) => {
   choosePiece(selectedPiecePower);
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-  
   updateInstructions("Choose a game cell");
 }
 

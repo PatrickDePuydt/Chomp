@@ -8,6 +8,7 @@ const checkForWin = (currentTeam)  => {
 
 const choosePiece = (selectedPiecePower) => {
   piecePlayPower = selectedPiecePower;
+  console.log(`6. piecePowerPlay`, piecePlayPower);
 }
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
