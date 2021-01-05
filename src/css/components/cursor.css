@@ -1,22 +1,22 @@
 .CAN_CLICK {
-  border: 5px solid gold;
   transition: .15s all ease;
   cursor: url(../../images/cursors/ok-color.png) 25 25, pointer;
 }
 
 .CAN_CLICK:hover {
-  transform: scale(1.1);
+  border: 5px solid var(--treasure);
 }
 
 .CANNOT_CLICK {
-  border: 5px solid red;
+  opacity: .5;
+}
+
+.CANNOT_CLICK:hover {
+  border: 10px solid var(--supernova);
   cursor: not-allowed;
   cursor: url(../../images/cursors/boo-color.png) 25 25, pointer;
   pointer-events: not-allowed;
+  
+  animation: shake;
+  animation-duration: 1s;
 }
-
-/* [data-family='x'][data-genus='3'], [data-family='x'][data-genus='2'], [data-family='x'][data-genus='1'], [data-family='z'][data-genus='3'], [data-family='z'][data-genus='2'], [data-family='z'][data-genus='1'], [data-component="modal"] button {
-  transition: .5s all ease;
-}
-
-[data-family='x'][data-genus='3']:hover, [data-family='x'][data-genus='2']:hover, [data-family='x'][data-genus='1']:hover, [data-family='z'][data-genus='3']:hover, [data-family='z'][data-genus='2']:hover, [data-family='z'][data-genus='1']:hover, [data-component="modal"] button {} */

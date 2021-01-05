@@ -10,15 +10,6 @@
   background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
-  /* text-indent: -9999px; */
+  text-indent: -9999px;
   /* transition: var(--transition); */
 }
-
-[data-feature="chomp"] [data-target="cell"].CLICK {
-  /* transform: scale(.9); */
-}
-[data-feature="chomp"] [data-target="cell"].CANNOT_CLICK {
-  transform: scale(.8);
-  opacity: .9;
-}
-

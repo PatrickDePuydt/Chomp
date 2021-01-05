@@ -21,7 +21,7 @@ button {
 
 [data-family='x'][data-genus='3'].CAN_CLICK:hover, [data-family='z'][data-genus='3'].CAN_CLICK:hover {
   animation: bounce;
-  animation-duration: 2.25s;
+  animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
@@ -29,7 +29,7 @@ button {
 
 [data-family='x'][data-genus='2'].CAN_CLICK:hover, [data-family='z'][data-genus='2'].CAN_CLICK:hover {
   animation: bounce;
-  animation-duration: 1.25s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
@@ -37,7 +37,7 @@ button {
 
 [data-family='x'][data-genus='1'].CAN_CLICK:hover, [data-family='z'][data-genus='1'].CAN_CLICK:hover {
   animation: bounce;
-  animation-duration: .75s;
+  animation-duration: .5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
