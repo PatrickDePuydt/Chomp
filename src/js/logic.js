@@ -72,6 +72,7 @@ const startGame = () => {
   setLayout(circleTurn);
   toggleHeader(team);
   handlePieceEventListeners();
+  hideInstructions(circleTurn);
 };
 
 const turnOverPossession = (team) => {
@@ -91,7 +92,6 @@ const updateModel = (identifier) => {
 }
 
 const toggleHeader = (team) => {
-   
    if (currentTeam == "LUNA") {
     header.classList.remove("LILY"); // Clean out any debris
     header.classList.add("LUNA"); // Add active class
@@ -103,13 +103,36 @@ const toggleHeader = (team) => {
 
 
 const setLayout = (circleTurn) => {
-  let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
+  let notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
   let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
+  
   handleControlButtonClickability();
   setControlButtonLayout(circleTurn);
   handleHeaderLayout(circleTurn);
   handleInstructionsLayout(circleTurn);
-  // hideInstructions(circleTurn);
+  hideInstructions(circleTurn);
+};
+
+const hideInstructions = (circleTurn) => {
+  let activeInstructions = circleTurn ? [...leftInstructions] : [...rightInstructions];
+  let notActiveInstructions = !circleTurn ? [...rightInstructions] : [...leftInstructions];
+
+  if (circleTurn == false) {
+    activeInstructions.map(tidBit => {
+      tidBit.classList.remove("HIDDEN");
+    })
+    notActiveInstructions.map(tidBit => {
+      tidBit.classList.add("HIDDEN");
+    })
+  } else {
+    activeInstructions.map(tidBit => {
+      tidBit.classList.add("HIDDEN");
+    })
+    notActiveInstructions.map(tidBit => {
+      tidBit.classList.remove("HIDDEN");
+    })
+  }
+
 };
 
 
@@ -189,5 +212,5 @@ const setControlButtonLayout = (circleTurn) => {
 
 
  const updateInstructions = (instructions) => {
-   instructionCopy.innerText = instructions;
+  //  instructionCopy.innerText = instructions;
  }
