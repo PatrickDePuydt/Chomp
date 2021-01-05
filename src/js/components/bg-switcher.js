@@ -6,3 +6,13 @@ const swapBackground = (piecePower, playerInventory) => {
 const setCellBackground = (element, family, piecePlayPower) => {
  element.classList.add(`${family}${piecePlayPower}`);
 }
+
+const swapPieceBackground = (playerInventory, piecePlayPower) => {
+  let dynamicFamily = `[data-family="${family}"]`;
+  let dynamicGenus = `[data-genus="${genus}"]`;
+  let targetPiece = document.querySelector(`${dynamicFamily}${dynamicGenus}`);
+
+  targetPiece.classList.remove(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity + 1}`); // remove the previous class
+  targetPiece.classList.add(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity}`); // Add the new background class
+
+};

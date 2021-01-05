@@ -17,7 +17,7 @@ const handleCellClick = (event) => {
   setCellBackground(event.target, family, piecePlayPower);
   
   // console.log(`family: `, family);
-  swapPieceBackground(inventoryIndex, piecePlayPower);
+  // swapPieceBackground(inventoryIndex, piecePlayPower);
   
   swapTurns();
   setLayout(circleTurn);

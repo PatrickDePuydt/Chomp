@@ -35,8 +35,9 @@ const comparePieceToCell = (identifier, piecePlayPower) => {
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
 // Attribution
   // console.log(`3. current team: `, currentTeam);
-  let playerInventory = (circleTurn == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
+  let playerInventory = (circleTurn == false) ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
+  console.log(circleTurn == false);
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
@@ -44,16 +45,8 @@ const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
   // console.log(`4. Luna's pieces: `, lunaPieceInventory);
   // console.log(`5. Lily's pieces: `, lilyPieceInventory);
 
-  // swapPieceBackground(inventoryIndex, playerInventory, piecePlayPower);
-
-  let dynamicFamily = `[data-family="${family}"]`;
-  let dynamicGenus = `[data-genus="${genus}"]`;
-  let targetPiece = document.querySelector(`${dynamicFamily}${dynamicGenus}`);
-
-  targetPiece.classList.remove(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity + 1}`); // remove the previous class
-  targetPiece.classList.add(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity}`); // Add the new background class
+  swapPieceBackground(playerInventory, piecePlayPower);
 };
-
 
 
 const setInitialTeams = (whoseTurnIsIt) => {
