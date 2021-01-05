@@ -24,7 +24,7 @@ const initializeGamePieceControls = () => [...gamePieces].map( piece => {
 });
 
 const initializeGameGameboardControls = () => [...gameBoardCells].map( cell => {
-  cell.addEventListener('click', handleCellClick)
+  cell.addEventListener('click', handleCellClick);
 }); // Add events to all the cells
 
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))}; // Used to lock the board

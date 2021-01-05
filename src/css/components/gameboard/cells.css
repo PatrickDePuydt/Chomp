@@ -15,6 +15,10 @@
 }
 
 [data-feature="chomp"] [data-target="cell"].CLICK {
-  transform: scale(.9);
+  /* transform: scale(.9); */
+}
+[data-feature="chomp"] [data-target="cell"].CANNOT_CLICK {
+  transform: scale(.8);
+  opacity: .9;
 }
 

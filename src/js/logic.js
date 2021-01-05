@@ -44,8 +44,16 @@ const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
   // console.log(`4. Luna's pieces: `, lunaPieceInventory);
   // console.log(`5. Lily's pieces: `, lilyPieceInventory);
 
-  swapPieceBackground(inventoryIndex, piecePlayPower);
+  // swapPieceBackground(inventoryIndex, playerInventory, piecePlayPower);
+
+  let dynamicFamily = `[data-family="${family}"]`;
+  let dynamicGenus = `[data-genus="${genus}"]`;
+  let targetPiece = document.querySelector(`${dynamicFamily}${dynamicGenus}`);
+
+  targetPiece.classList.remove(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity + 1}`); // remove the previous class
+  targetPiece.classList.add(`${family}-${genus}-${playerInventory[`x${piecePlayPower}`].quantity}`); // Add the new background class
 };
+
 
 
 const setInitialTeams = (whoseTurnIsIt) => {
@@ -128,11 +136,13 @@ const handleGameBoardClickability = (canClick) => {
       cell.classList.add("CAN_CLICK");
       cell.classList.remove("CANNOT_CLICK");
       cell.classList.add("animate__bounceIn");
+      cell.addEventListener('click', handleCellClick);
       // 1850
     }else {
       cell.classList.remove("CAN_CLICK");
       cell.classList.add("CANNOT_CLICK");
       cell.classList.remove("animate__bounceIn");
+      cell.removeEventListener('click', handleCellClick);
     }
   });
 };
@@ -141,7 +151,6 @@ const setControlButtonLayout = (circleTurn) => {
   let activeControl = (circleTurn == false) ?  leftControlPanel : rightControlPanel;
   let notActiveControl = (!circleTurn == true) ? rightControlPanel : leftControlPanel;
 
-  
   activeControl.classList.add("LAY_FLEX_ACTIVE");
   activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
 
