@@ -89,18 +89,16 @@ const toggleHeader = (team) => {
 const setLayout = (circleTurn) => {
   let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
   let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
-  handleControlButtonClickability(activeControls, notActiveControls);
+  handleControlButtonClickability();
   setControlButtonLayout(circleTurn);
 };
 
 // Here
-// debugger;
 const handleControlButtonClickability = () => {
   let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
   let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
 
   if (circleTurn == false) {
-    console.log(`1`);
     [...activeControls].map( activeControl => {
       activeControl.classList.remove("CANNOT_CLICK");
       activeControl.classList.add("CAN_CLICK");
@@ -112,7 +110,6 @@ const handleControlButtonClickability = () => {
     });
 
   } else {
-    console.log(`2`);
     [...activeControls].map( activeControl => {
       activeControl.classList.add("CAN_CLICK");
       activeControl.classList.remove("CANNOT_CLICK");
@@ -125,30 +122,32 @@ const handleControlButtonClickability = () => {
   }
 };
 
+const handleGameBoardClickability = (canClick) => {
+  
+  [...gameBoardCells].map(cell => {
+
+    if (canClick) {
+      cell.classList.add("CAN_CLICK");
+      cell.classList.remove("CANNOT_CLICK");
+      console.log(`Can click`);
+    // 1850
+    }else {
+      cell.classList.remove("CAN_CLICK");
+      cell.classList.add("CANNOT_CLICK");
+      console.log(`Cannot click`);
+    }
+  });
+};
+
 const setControlButtonLayout = (circleTurn) => {
   let activeControl = (circleTurn == false) ?  leftControlPanel : rightControlPanel;
   let notActiveControl = (!circleTurn == true) ? rightControlPanel : leftControlPanel;
 
-  // if (circleTurn == false) {
-    console.log(`1: Active Control`, activeControl);
-    console.log(`1: NOT Active Control`, notActiveControl);
-    activeControl.classList.add("LAY_FLEX_ACTIVE");
-    activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
-
-    notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
-    notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
-
-  // } else {
-  //   console.log(`2: Active Control`, activeControl);
-  //   console.log(`2: NOT Active Control`, notActiveControl);
-      
-  //   activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
-  //   activeControl.classList.add("LAY_FLEX_ACTIVE");
-
-  //   notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
-  //   notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
-  // }
   
+  activeControl.classList.add("LAY_FLEX_ACTIVE");
+  activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
 
+  notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
+  notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
 };
 

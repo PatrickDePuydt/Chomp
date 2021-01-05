@@ -6,9 +6,12 @@ let initialChoice; // Used for the modal to start the game
 let whoseTurnIsIt;  // Used for switching turns
 let currentTeam; // Used for turn tracking
 let opposingTeam; // Used for turn tracking
+let circleTurn;
 let genus;
 let family;
 let team;
+let canEvenClick;
+
 
 
 // A.

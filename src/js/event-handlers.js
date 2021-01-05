@@ -21,6 +21,7 @@ const handleCellClick = (event) => {
   
   swapTurns();
   setLayout(circleTurn);
+  handleGameBoardClickability(false);
 };
 
 const handlePieceSelectionClick = (event) => {
@@ -35,6 +36,9 @@ const handlePieceSelectionClick = (event) => {
   // Set Family Genus
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");
+  
+  handleGameBoardClickability(true);
+
 
   // console.log(`Handle Piece Click,`, currentTeam);
 }
