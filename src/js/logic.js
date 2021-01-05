@@ -129,7 +129,7 @@ const setControlButtonLayout = (circleTurn) => {
   let activeControl = (circleTurn == false) ?  leftControlPanel : rightControlPanel;
   let notActiveControl = (!circleTurn == true) ? rightControlPanel : leftControlPanel;
 
-  if (circleTurn == false) {
+  // if (circleTurn == false) {
     console.log(`1: Active Control`, activeControl);
     console.log(`1: NOT Active Control`, notActiveControl);
     activeControl.classList.add("LAY_FLEX_ACTIVE");
@@ -138,16 +138,16 @@ const setControlButtonLayout = (circleTurn) => {
     notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
     notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
 
-  } else {
-    console.log(`2: Active Control`, activeControl);
-    console.log(`2: NOT Active Control`, notActiveControl);
+  // } else {
+  //   console.log(`2: Active Control`, activeControl);
+  //   console.log(`2: NOT Active Control`, notActiveControl);
       
-    activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
-    activeControl.classList.add("LAY_FLEX_ACTIVE");
+  //   activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
+  //   activeControl.classList.add("LAY_FLEX_ACTIVE");
 
-    notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
-    notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
-  }
+  //   notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
+  //   notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
+  // }
   
 
 };
