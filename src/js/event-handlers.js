@@ -4,6 +4,8 @@ const handleCellClick = (event) => {
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
   // comparePieceToCell(); // Check to make sure you can place a piece there
+  
+  updateModel(identifier); 
 
   depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
   setCellBackground(event.target, family, piecePlayPower);
@@ -22,6 +24,7 @@ const handlePieceSelectionClick = (event) => {
   piecePower = selectedPiecePower;
 
   choosePiece(selectedPiecePower);
+  
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
   

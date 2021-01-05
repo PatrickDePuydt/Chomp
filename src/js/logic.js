@@ -11,15 +11,8 @@ const choosePiece = (selectedPiecePower) => {
 }
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
-     if (canTakePiece) {
-    // console.log(`1 can take`, piecePlayPower, cellPrice);
-    
-    updateModel(identifier); 
-    event.classList.add(currentTeam); 
-    event.classList.remove(opposingTeam); 
-  } else {
-    bounceClick();
-  }
+  event.classList.add(currentTeam); 
+  event.classList.remove(opposingTeam); 
 }
 
 const checkScore = (currentTeam) => {
@@ -44,13 +37,15 @@ function superviseGameplay() {
   let cellPowerPrice = cells[cellIdentifier].power;
 
   if (piecePlayPower > cellPowerPrice) {
-    console.log(`1`);
+    console.log(`1 Can click`, piecePlayPower, cellPowerPrice);
     return true;
   } else if (piecePlayPower == cellPowerPrice) {
-    log
+    console.log(`2 CanNOT click`, piecePlayPower, cellPowerPrice);
     return false;
   } else {
+    console.log(`3 CanNOT click`, piecePlayPower, cellPowerPrice);
     return false;
+    
   }
 }
 
@@ -99,6 +94,7 @@ const turnOverPossession = (team) => {
 }
 
 const updateModel = (identifier) => {
+  console.log(`4: updateModel: identifier`, identifier);
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
 }
