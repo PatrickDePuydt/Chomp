@@ -114,25 +114,16 @@ const setLayout = (circleTurn) => {
 };
 
 const hideInstructions = (circleTurn) => {
-  let activeInstructions = circleTurn ? [...leftInstructions] : [...rightInstructions];
-  let notActiveInstructions = !circleTurn ? [...rightInstructions] : [...leftInstructions];
-
-  if (circleTurn == false) {
-    activeInstructions.map(tidBit => {
-      tidBit.classList.remove("HIDDEN");
-    })
-    notActiveInstructions.map(tidBit => {
-      tidBit.classList.add("HIDDEN");
-    })
-  } else {
-    activeInstructions.map(tidBit => {
-      tidBit.classList.add("HIDDEN");
-    })
-    notActiveInstructions.map(tidBit => {
-      tidBit.classList.remove("HIDDEN");
-    })
-  }
-
+  let notActiveInstructions = circleTurn ? [...leftInstructions] : [...rightInstructions];
+  let activeInstructions = !circleTurn ? [...leftInstructions] : [...rightInstructions]
+  
+  notActiveInstructions.map(quip => {
+    quip.classList.add("HIDDEN");
+  });
+  
+  activeInstructions.map(quip => {
+    quip.classList.remove("HIDDEN");
+  });
 };
 
 
