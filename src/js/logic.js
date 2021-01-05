@@ -1,5 +1,5 @@
-const checkForWin = (currentTeam, opposingTeam)  => {
-    if (checkScore(currentTeam)) {
+const checkForWin = (currentTeam)  => {
+  if (checkScore(currentTeam)) {
     handleWin();
   } else {
     handleDraw();
@@ -11,8 +11,8 @@ const choosePiece = (selectedPiecePower) => {
 }
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
-  event.target.classList.remove(opposingTeam); 
-  event.target.classList.add(currentTeam); 
+  event.classList.add(currentTeam); 
+  event.classList.remove(opposingTeam); 
 }
 
 const checkScore = (currentTeam) => {

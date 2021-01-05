@@ -1,24 +1,14 @@
 const handleCellClick = (event) => {
   const identifier = event.target.innerHTML;
-  
+  let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
-  // console.log(`2. Cell Click: `, currentTeam);
-  // console.log(`2.1 circleTurn: `, circleTurn);
-  
-  let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
-  
   comparePieceToCell(identifier, piecePlayPower); // Check to make sure you can place a piece there
-
-  claimCell(event, currentTeam, opposingTeam); // Take space
-  
+  claimCell(event.target, currentTeam, opposingTeam); // Take space
   depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
-  
   setCellBackground(event.target, family, piecePlayPower);
   
-  // console.log(`family: `, family);
-  // swapPieceBackground(inventoryIndex, piecePlayPower);
-  
+  checkForWin(currentTeam);
   swapTurns();
   setLayout(circleTurn);
   handleGameBoardClickability(false);
