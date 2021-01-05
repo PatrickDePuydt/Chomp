@@ -44,6 +44,8 @@ function superviseGameplay(identifier, piecePlayPower) {
   console.log(`CellPrice:`, cells[identifier].power);
   console.log(`piecePlayPower:`, piecePlayPower);
   
+  
+
   if (piecePlayPower > cellPrice) {
     canTakePiece = true;
   } else if (piecePlayPower == cellPrice) {

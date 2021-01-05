@@ -25,14 +25,12 @@ const handlePieceSelectionClick = (event) => {
   choosePiece(selectedPiecePower);
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-
+  superviseGameplay();
   console.log(`piecePower`, piecePower);
 }
 
 const handleHover = (event) => {
   let localIdentifier = event.target.innerText;
-  // cellPrice = Number(cells[identifier].power);
-  // piecePower = piecePlayPower;
   
   comparePieceToCell(event.target, localIdentifier, piecePlayPower)
   superviseGameplay(localIdentifier, piecePlayPower);
