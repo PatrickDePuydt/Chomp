@@ -36,11 +36,11 @@ const handleHover = (event) => {
   
   if (superviseGameplay()) {
     console.log(`Can click`, event.target.classList);
-    event.target.classList.add("CAN_CLICK");
-    event.target.classList.remove("CANNOT_CLICK");
+    event.target.classList.toggle("CAN_CLICK");
+    event.target.classList.toggle("CANNOT_CLICK");
   } else {
-    event.target.classList.add("CANNOT_CLICK");
-    event.target.classList.remove("CAN_CLICK");
+    event.target.classList.toggle("CANNOT_CLICK");
+    event.target.classList.toggle("CAN_CLICK");
     console.log(`CanNOT click`, event.target.classList);
   }
 }

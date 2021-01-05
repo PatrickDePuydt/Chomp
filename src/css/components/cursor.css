@@ -9,7 +9,6 @@
 
 .CANNOT_CLICK {
   /* opacity: .5; */
-  transform: scale(.8)
 }
 
 .CANNOT_CLICK:hover {

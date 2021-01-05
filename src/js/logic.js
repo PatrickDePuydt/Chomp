@@ -107,7 +107,26 @@ const setLayout = (circleTurn) => {
   let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
   handleControlButtonClickability();
   setControlButtonLayout(circleTurn);
+  handleHeaderLayout(circleTurn);
 };
+
+const handleHeaderLayout = (circleTurn) => {
+
+  if (circleTurn) {
+    headerTag.classList.add("FLIP");
+  }  else {
+    headerTag.classList.remove("FLIP");
+  }
+}
+
+const handleHeaderLayout = (circleTurn) => {
+
+  if (circleTurn) {
+    headerTag.classList.add("FLIP");
+  }  else {
+    headerTag.classList.remove("FLIP");
+  }
+}
 
 
 const handleControlButtonClickability = () => {

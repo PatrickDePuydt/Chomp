@@ -2,6 +2,8 @@ header {
   display: flex;
   flex-direction: column;
   background: var(--ember);
+  border: 5px solid gold;
+  overflow: hidden;
 }
 
 header .c_logo {
@@ -14,6 +16,12 @@ header .c_logo {
 
 header .c_logo h1 {
   padding: 15px 50px;
+  display: inline-block;
+  transition: var(--transition-sm);
+}
+
+header .c_logo h1.FLIP {
+  transform: translateX(140vh);
 }
 
 header .header-sub {
