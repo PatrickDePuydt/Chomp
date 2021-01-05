@@ -58,6 +58,7 @@ const startGame = () => {
   dismissModal();
   setLayout(circleTurn);
   toggleHeader(team);
+  handlePieceEventListeners();
 };
 
 const turnOverPossession = (team) => {

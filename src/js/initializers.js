@@ -19,9 +19,31 @@ const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   family = piece.getAttribute("data-family");
   genus = piece.getAttribute("data-genus");
   piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
-
-  piece.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
 });
+
+
+// Here
+const handlePieceEventListeners = () => {
+  let activeControls  = (circleTurn == false) ?  [...leftControls] : [...rightControls];
+  let notActiveControls = (!circleTurn == true) ? [...rightControls] : [...leftControls];
+
+  [...gamePieces].map(piece => {
+    piece.addEventListener('click', handlePieceSelectionClick);
+  });
+
+  [...activeControls].map( activeControl => {
+    activeControl.classList.add("CAN_CLICK");
+    activeControl.classList.remove("CANNOT_CLICK");
+    activeControl.addEventListener('click', handlePieceSelectionClick); // Assign events listeners to all the pieces
+  });
+  
+  [...notActiveControls].map( notActiveControl => {
+    console.log(`notActiveControl:`, notActiveControl);
+    notActiveControl.classList.remove("CAN_CLICK");
+    notActiveControl.classList.add("CANNOT_CLICK");
+    notActiveControl.removeEventListener('click', handlePieceSelectionClick); 
+  });
+};
 
 const initializeGameGameboardControls = () => [...gameBoardCells].map( cell => {
   cell.addEventListener('click', handleCellClick);

@@ -25,8 +25,7 @@ const handleCellClick = (event) => {
 };
 
 const handlePieceSelectionClick = (event) => {
-  let currentTeam = circleTurn;
-  
+  console.log(`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   
   choosePiece(selectedPiecePower);
