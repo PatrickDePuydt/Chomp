@@ -2,7 +2,6 @@ header {
   display: flex;
   flex-direction: column;
   background: var(--ember);
-  border: 5px solid gold;
   overflow: hidden;
 }
 
@@ -21,7 +20,7 @@ header .c_logo h1 {
 }
 
 header .c_logo h1.FLIP {
-  transform: translateX(140vh);
+  transform: translateX(var(--header-distance));
 }
 
 header .header-sub {
@@ -30,8 +29,17 @@ header .header-sub {
   border-top: 10px solid var(--obsidian);
   border-bottom: 10px solid var(--obsidian);
   padding: 10px 0;
+  transition: var(--transition);
+}
+
+header .header-sub .header-sub-literal {
   display: flex;
   align-items: center;
+  transition: var(--transition-md);
+}
+
+header .header-sub .header-sub-literal.FLIP {
+  transform: translate(var(--header-distance));
 }
 
 header .header-sub h2 {

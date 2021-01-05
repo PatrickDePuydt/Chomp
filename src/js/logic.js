@@ -108,10 +108,10 @@ const setLayout = (circleTurn) => {
   handleControlButtonClickability();
   setControlButtonLayout(circleTurn);
   handleHeaderLayout(circleTurn);
+  handleInstructionsLayout(circleTurn);
 };
 
 const handleHeaderLayout = (circleTurn) => {
-
   if (circleTurn) {
     headerTag.classList.add("FLIP");
   }  else {
@@ -119,12 +119,11 @@ const handleHeaderLayout = (circleTurn) => {
   }
 }
 
-const handleHeaderLayout = (circleTurn) => {
-
+const handleInstructionsLayout = (circleTurn) => {
   if (circleTurn) {
-    headerTag.classList.add("FLIP");
+    instructions.classList.add("FLIP");
   }  else {
-    headerTag.classList.remove("FLIP");
+    instructions.classList.remove("FLIP");
   }
 }
 
@@ -186,3 +185,7 @@ const setControlButtonLayout = (circleTurn) => {
   notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
 };
 
+
+ const updateInstructions = (instructions) => {
+   instructionCopy.innerText = instructions;
+ }

@@ -19,6 +19,7 @@
   --transition-md: .5s all ease-in-out;
   --transition-lg: 1s all ease-in-out;
   --gameHeight: 75vh;
+  --header-distance: 95vh;
 }
 
 body {
