@@ -21,7 +21,7 @@ const handleCellClick = (event) => {
 };
 
 const handlePieceSelectionClick = (event) => {
-  (`handlePieceSelection`);  
+  // console.log(`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");
@@ -38,12 +38,10 @@ const handleHover = (event) => {
   cellIdentifier = event.target.innerText;
   
   if (superviseGameplay()) {
-    console.log(`Can click`, event.target.classList);
-    event.target.classList.toggle("CAN_CLICK");
-    event.target.classList.toggle("CANNOT_CLICK");
+    event.target.classList.add("CAN_CLICK");
+    event.target.classList.remove("CANNOT_CLICK");
   } else {
-    event.target.classList.toggle("CANNOT_CLICK");
-    event.target.classList.toggle("CAN_CLICK");
-    console.log(`CanNOT click`, event.target.classList);
+    event.target.classList.add("CANNOT_CLICK");
+    event.target.classList.remove("CAN_CLICK");
   }
 }

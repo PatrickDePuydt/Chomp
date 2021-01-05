@@ -32,10 +32,13 @@ function superviseGameplay() {
   let cellPowerPrice = cells[cellIdentifier].power;
 
   if (piecePlayPower > cellPowerPrice) {
+    console.log(`1. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return true;
   } else if (piecePlayPower == cellPowerPrice) {
+    console.log(`2. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return false;
   } else {
+    console.log(`3. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return false;
   }
 }
@@ -46,7 +49,7 @@ const bounceClick = () => {
 }
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
-// Attribution
+  // Attribution
   (`3. current team: `, currentTeam);
   let playerInventory = (circleTurn == false) ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
