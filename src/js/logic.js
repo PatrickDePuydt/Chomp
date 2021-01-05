@@ -12,7 +12,7 @@ const choosePiece = (selectedPiecePower) => {
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
      if (canTakePiece) {
-    console.log(`1 can take`, piecePlayPower, cellPrice);
+    // console.log(`1 can take`, piecePlayPower, cellPrice);
     
     updateModel(identifier); 
     event.classList.add(currentTeam); 
@@ -32,33 +32,31 @@ const checkScore = (currentTeam) => {
 
 const comparePieceToCell = (identifier, piecePlayPower) => {
   if (canTakePiece) {
-    console.log(`can take`);
+    // console.log(`can take`);
   } else {
-    console.log(`cannot take`);
+    // console.log(`cannot take`);
   }
 };
 
 
-function superviseGameplay(identifier, piecePlayPower) {
-  let cellPrice = cells[identifier].power
-  console.log(`CellPrice:`, cells[identifier].power);
-  console.log(`piecePlayPower:`, piecePlayPower);
-  
-  
+function superviseGameplay() {
 
-  if (piecePlayPower > cellPrice) {
-    canTakePiece = true;
-  } else if (piecePlayPower == cellPrice) {
-    canTakePiece = false;
+  let cellPowerPrice = cells[cellIdentifier].power;
+
+  if (piecePlayPower > cellPowerPrice) {
+    console.log(`1`);
+    return true;
+  } else if (piecePlayPower == cellPowerPrice) {
+    log
+    return false;
   } else {
-    canTakePiece = false;
+    return false;
   }
-  
 }
 
-function bounceClick() {
+const bounceClick = () => {
+  // console.log(`2 Bounce Click`);
   handleGameBoardClickability(false);
-  console.log(`2 Bounce Click`);
 }
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {

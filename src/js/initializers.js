@@ -60,6 +60,8 @@ const handleWin = () => console.log(`Handle Win`); // Used as a placeholder for 
 const handleDraw = () => console.log(`Habndle Draw`); // Used as a placeholder for draw tracking
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA")); // used to check if there was a combination (used in win evaluation)
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
+const swapTurns = () => circleTurn = !circleTurn;
+
 
 
 

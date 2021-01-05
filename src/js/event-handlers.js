@@ -21,20 +21,18 @@ const handlePieceSelectionClick = (event) => {
   family = event.target.getAttribute("data-family");
   piecePower = selectedPiecePower;
 
-  
   choosePiece(selectedPiecePower);
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-  superviseGameplay();
-  console.log(`piecePower`, piecePower);
+  
+  // console.log(`piecePower`, piecePower);
 }
+let cellIdentifier;
 
 const handleHover = (event) => {
-  let localIdentifier = event.target.innerText;
+  cellIdentifier = event.target.innerText;
   
-  comparePieceToCell(event.target, localIdentifier, piecePlayPower)
-  superviseGameplay(localIdentifier, piecePlayPower);
+  if (superviseGameplay()) {
+    comparePieceToCell(event.target, cellIdentifier, piecePlayPower)
+  }
 }
-
-
-const swapTurns = () => circleTurn = !circleTurn;
