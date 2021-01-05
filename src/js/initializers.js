@@ -14,18 +14,14 @@ let canEvenClick;
 let canTakePiece = false;
 let cellPrice;
 let piecePower;
+let cellIdentifier;
 
-
-
-// A.
 const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   family = piece.getAttribute("data-family");
   genus = piece.getAttribute("data-genus");
   piece.classList.add(`${family}-${genus}-3`); // Set initial Class state 
 });
 
-
-// B.
 const handlePieceEventListeners = () => {
   let activeControls  = (circleTurn == false) ?  [...leftControls] : [...rightControls];
   let notActiveControls = (!circleTurn == true) ? [...rightControls] : [...leftControls];

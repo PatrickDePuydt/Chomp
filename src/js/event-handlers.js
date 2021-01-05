@@ -3,10 +3,13 @@ const handleCellClick = (event) => {
   let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
-  // comparePieceToCell(); // Check to make sure you can place a piece there
+  if (superviseGameplay()) {
+    console.log(`can play`);
+  } else {
+    console.log(`cannot play`);
+  }
   
   updateModel(identifier); 
-
   depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
   setCellBackground(event.target, family, piecePlayPower);
   checkForWin(currentTeam);
@@ -24,18 +27,20 @@ const handlePieceSelectionClick = (event) => {
   piecePower = selectedPiecePower;
 
   choosePiece(selectedPiecePower);
-  
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-  
-  // console.log(`piecePower`, piecePower);
 }
-let cellIdentifier;
 
 const handleHover = (event) => {
   cellIdentifier = event.target.innerText;
   
   if (superviseGameplay()) {
-    comparePieceToCell(event.target, cellIdentifier, piecePlayPower)
+    console.log(`Can click`, event.target.classList);
+    event.target.classList.add("CAN_CLICK");
+    event.target.classList.remove("CANNOT_CLICK");
+  } else {
+    event.target.classList.add("CANNOT_CLICK");
+    event.target.classList.remove("CAN_CLICK");
+    console.log(`CanNOT click`, event.target.classList);
   }
 }

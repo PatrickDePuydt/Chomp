@@ -23,29 +23,20 @@ const checkScore = (currentTeam) => {
   });
 };
 
-const comparePieceToCell = (identifier, piecePlayPower) => {
-  if (canTakePiece) {
-    // console.log(`can take`);
-  } else {
-    // console.log(`cannot take`);
-  }
+const comparePieceToCell = (element, cellIdentifier, piecePlayPower) => {
+  console.log(`Compare`, element, cellIdentifier, piecePlayPower);
 };
 
 
 function superviseGameplay() {
-
   let cellPowerPrice = cells[cellIdentifier].power;
 
   if (piecePlayPower > cellPowerPrice) {
-    console.log(`1 Can click`, piecePlayPower, cellPowerPrice);
     return true;
   } else if (piecePlayPower == cellPowerPrice) {
-    console.log(`2 CanNOT click`, piecePlayPower, cellPowerPrice);
     return false;
   } else {
-    console.log(`3 CanNOT click`, piecePlayPower, cellPowerPrice);
     return false;
-    
   }
 }
 
