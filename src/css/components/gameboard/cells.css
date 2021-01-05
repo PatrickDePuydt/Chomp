@@ -13,3 +13,7 @@
   text-indent: -9999px;
   /* transition: var(--transition); */
 }
+
+[data-feature="chomp"] [data-target="cell"].CANNOT_CLICK:hover {
+  
+}
