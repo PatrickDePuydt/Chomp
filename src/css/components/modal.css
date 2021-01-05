@@ -28,8 +28,9 @@
   align-items: center;
 }
 
-[data-component='modal'] h2 {
+[data-component='modal'] h1 {
   color: var(--quartz);
+  margin: 100px 0;
 }
 
 [data-component='modal'] h2 {

@@ -3,11 +3,10 @@ const handleCellClick = (event) => {
   let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
-  comparePieceToCell(identifier, piecePlayPower); // Check to make sure you can place a piece there
-  claimCell(event.target, currentTeam, opposingTeam); // Take space
+  comparePieceToCell(event.target, identifier, piecePlayPower); // Check to make sure you can place a piece there
+
   depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
   setCellBackground(event.target, family, piecePlayPower);
-  
   checkForWin(currentTeam);
   swapTurns();
   setLayout(circleTurn);
@@ -18,19 +17,12 @@ const handleCellClick = (event) => {
 const handlePieceSelectionClick = (event) => {
   // console.log(`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
-  
-  choosePiece(selectedPiecePower);
-  
-  event.target.classList.toggle("CLICK"); // Add an animation helper
-  
-  // Set Family Genus
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");
   
+  choosePiece(selectedPiecePower);
+  event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-
-
-  // console.log(`Handle Piece Click,`, currentTeam);
 }
 
 const swapTurns = () => circleTurn = !circleTurn;

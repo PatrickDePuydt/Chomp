@@ -23,14 +23,29 @@ const checkScore = (currentTeam) => {
   });
 };
 
-const comparePieceToCell = (identifier, piecePlayPower) => {
+const comparePieceToCell = (element, identifier, piecePlayPower) => {
   let cellPrice = Number(cells[identifier].power);
-  if (piecePlayPower > cellPrice) {
-    updateModel(identifier); 
-  }
+
+  superviseGameplay(element, cellPrice, identifier, piecePlayPower);
+
 };
 
+function superviseGameplay(element, cellPrice, identifier, piecePlayPower) {
+  if (piecePlayPower > cellPrice) {
+    console.log(`1 can take`, piecePlayPower, cellPrice);
+    updateModel(identifier); 
+    claimCell(element, currentTeam, opposingTeam); // Take space
+  } else if (piecePlayPower == cellPrice) {
+    bounceClick();
+  } else {
+    bounceClick();
+  }
+}
 
+function bounceClick() {
+    console.log(`2 Bounce Click`);
+    handleGameBoardClickability(false);
+}
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
 // Attribution
