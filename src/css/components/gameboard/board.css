@@ -13,7 +13,7 @@
 
 [data-feature="chomp"] [data-selector="board"] {
   width: 40vw;
-  height: 90vh;
+  height: var(--gameHeight);
 }
 
 /* Borders */

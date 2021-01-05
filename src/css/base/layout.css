@@ -4,7 +4,7 @@
 }
 
 [data-feature="chomp"] .lay_full_height {
-  height: 90vh;
+  height: var(--gameHeight);
 }
 
 [data-feature="chomp"] .lay_grid_3x3 {
@@ -31,4 +31,8 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+[data-feature="chomp"] [data-container='control'] {
+  margin: 10px 0;
 }
