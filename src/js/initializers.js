@@ -22,8 +22,9 @@ const initializeGamePieceControls = () => [...gamePieces].map( piece => {
 });
 
 
-// Here
+// B.
 const handlePieceEventListeners = () => {
+  console.log(`1.`);
   let activeControls  = (circleTurn == false) ?  [...leftControls] : [...rightControls];
   let notActiveControls = (!circleTurn == true) ? [...rightControls] : [...leftControls];
 
@@ -38,7 +39,7 @@ const handlePieceEventListeners = () => {
   });
   
   [...notActiveControls].map( notActiveControl => {
-    console.log(`notActiveControl:`, notActiveControl);
+    // console.log(`notActiveControl:`, notActiveControl);
     notActiveControl.classList.remove("CAN_CLICK");
     notActiveControl.classList.add("CANNOT_CLICK");
     notActiveControl.removeEventListener('click', handlePieceSelectionClick); 

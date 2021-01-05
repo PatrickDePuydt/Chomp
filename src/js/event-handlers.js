@@ -22,10 +22,11 @@ const handleCellClick = (event) => {
   swapTurns();
   setLayout(circleTurn);
   handleGameBoardClickability(false);
+  handlePieceEventListeners();
 };
 
 const handlePieceSelectionClick = (event) => {
-  console.log(`handlePieceSelection`);  
+  // console.log(`handlePieceSelection`);  
   let selectedPiecePower = Number(event.target.innerHTML); // Make sure it's a number
   
   choosePiece(selectedPiecePower);

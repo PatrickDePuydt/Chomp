@@ -37,7 +37,7 @@ const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
   // console.log(`3. current team: `, currentTeam);
   let playerInventory = (circleTurn == false) ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
-  console.log(circleTurn == false);
+  // console.log(circleTurn == false);
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
@@ -95,10 +95,11 @@ const setLayout = (circleTurn) => {
   setControlButtonLayout(circleTurn);
 };
 
-// Here
+
 const handleControlButtonClickability = () => {
   let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
   let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
+// Here
 
   if (circleTurn == false) {
     [...activeControls].map( activeControl => {
@@ -131,7 +132,7 @@ const handleGameBoardClickability = (canClick) => {
       cell.classList.remove("CANNOT_CLICK");
       cell.classList.add("animate__bounceIn");
       cell.addEventListener('click', handleCellClick);
-      // 1850
+      
     }else {
       cell.classList.remove("CAN_CLICK");
       cell.classList.add("CANNOT_CLICK");
