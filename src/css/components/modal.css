@@ -3,7 +3,7 @@
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, .5);
+  background: var(--ember);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,14 +28,21 @@
   align-items: center;
 }
 
+[data-component='modal'] h1.logo {
+  color: var(--quartz);
+}
+
 [data-component='modal'] h2 {
-  color: white;
+  color: var(--quartz);
+}
+
+[data-component='modal'] h2 {
+  color: var(--quartz);
 }
 
 [data-component='modal'] button {
   width: var(--cell-size);
   height: var(--cell-size);
-  cursor:;
 }
 
 [data-component='modal'] .x3 {
@@ -55,5 +62,5 @@
   background-size: contain;
   background: url(../../../images/winter/z3.svg);
   background-repeat: no-repeat;
-  background: white;
+  background: var(--quartz);
 }

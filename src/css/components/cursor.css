@@ -8,11 +8,12 @@
 }
 
 .CANNOT_CLICK {
-  opacity: .5;
+  /* opacity: .5; */
+  transform: scale(.8)
 }
 
 .CANNOT_CLICK:hover {
-  border: 10px solid var(--supernova);
+  border: 10px solid var(--burn);
   cursor: not-allowed;
   cursor: url(../../images/cursors/boo-color.png) 25 25, pointer;
   pointer-events: not-allowed;

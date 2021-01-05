@@ -1,7 +1,14 @@
 .pd_md {
+  padding: 15px;
+}
+.pd_md {
   padding: 25px;
 }
 
 .pd_md_lg {
   padding: 25px 50px;
+}
+
+.pd_lg {
+  padding: 50px;
 }

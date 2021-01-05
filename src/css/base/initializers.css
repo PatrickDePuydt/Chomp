@@ -1,9 +1,37 @@
 /* Resets */
-*, *:before, *:after {box-sizing: border-box;}* {margin: 0; padding: 0;}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 /*  Variables & Colors // Element-Level Selectors */
-:root {  
+
+:root {
   /* Variables */
   --cell-size: 150px;
   --transition: .05s all ease-in-out;
+}
+
+body {
+  background: var(--ember);
+}
+
+[data-component='class-switcher'] [data-component='switcher-header'] h1 {
+  /* Start out in the center */
+  /* transform: translateX(43vw); */
+}
+
+[data-component='class-switcher'] [data-component='switcher-header'].LUNA h1 {
+  /* Left Player */
+  /* transform: translateX(0); */
+}
+
+[data-component='class-switcher'] [data-component='switcher-header'].LILY h1 {
+  /* Right Player */
+  /* transform: translateX(85vw); */
 }

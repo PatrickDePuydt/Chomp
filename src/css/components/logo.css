@@ -1,0 +1,5 @@
+h1.logo {
+  color: var(--pitchblack);
+  font-size: 40px;
+  font-style: italic;
+}

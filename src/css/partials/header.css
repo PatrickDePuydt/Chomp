@@ -1,4 +1,15 @@
 header {
   display: flex;
+  flex-direction: column;
+  background: var(--ember);
   /* transition: var(--transition); */
+}
+
+header .c_logo {
+  display: block;
+  width: 100%;
+}
+
+header .header-sub {
+  width: 100%;
 }

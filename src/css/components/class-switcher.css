@@ -1,25 +1,2 @@
-body {
-  background-color: var(--quartz);
-}
 
-[data-component='class-switcher'] [data-component='switcher-header'] h1 {
-  /* Start out in the center */
-  transform: translateX(43vw);
-}
 
-[data-component='class-switcher'] [data-component='switcher-header'].LUNA h1 {
-  /* Left Player */
-  transform: translateX(0);
-}
-
-[data-component='class-switcher'] [data-component='switcher-header'].LILY h1 {
-  /* Right Player */
-  transform: translateX(85vw);
-}
-
-[data-feature="chomp"] [data-target='side-control'] {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}

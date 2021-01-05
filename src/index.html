@@ -48,6 +48,18 @@
       rel="stylesheet"
       type="text/css"
       media="screen"
+      href="./css/components/logo.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./css/base/buttons.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
       href="./css/base/initializers.css"
     />
     <link
@@ -133,8 +145,11 @@
       class="pd_md_lg"
       data-component="switcher-header"
     >
-      <h1>Chomp!</h1>
-      <article data-target="instruction-bar">
+      <article class="c_logo">
+        <h1 class="logo">Chomp!</h1>
+      </article>
+
+      <article data-target="instruction-bar" class="header-sub pd_sm">
         <h2>Instructions</h2>
         <p>Choose a piece</p>
       </article>
@@ -246,6 +261,7 @@
     </main>
     <aside data-component="modal" class="modal">
       <section class="modal-payload">
+        <h1 class="logo pd_lg">Chomp!</h1>
         <h2 class="pd_md">Choose a Color</h2>
         <div class="modal-actions">
           <button data-target="modal_button" class="md_0_md x3">LUNA</button>

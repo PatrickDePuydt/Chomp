@@ -17,11 +17,18 @@
 }
 
 .LAY_FLEX_ACTIVE {
-  border: 5px solid black;
+  background: var(--quartz);
   flex: 3;
 }
 
 .LAY_FLEX_NOT_ACTIVE {
-  border: 5px solid hotpink;
+  background: transparent;
   flex: 1;
+}
+
+[data-feature="chomp"] [data-target='side-control'] {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
