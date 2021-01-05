@@ -34,15 +34,15 @@ const comparePieceToCell = (identifier, piecePlayPower) => {
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
 // Attribution
-  console.log(`3. current team: `, currentTeam);
+  // console.log(`3. current team: `, currentTeam);
   let playerInventory = (circleTurn == "LUNA") ? lunaPieceInventory : lilyPieceInventory;
   // Inventory Depletion
   let depletedInventory = playerInventory[`x${Number(piecePower)}`].quantity - 1;
   // Update inventory
   playerInventory[`x${Number(piecePower)}`].quantity = depletedInventory; 
   
-  console.log(`4. Luna's pieces: `, lunaPieceInventory);
-  console.log(`5. Lily's pieces: `, lilyPieceInventory);
+  // console.log(`4. Luna's pieces: `, lunaPieceInventory);
+  // console.log(`5. Lily's pieces: `, lilyPieceInventory);
 
   swapPieceBackground(inventoryIndex, piecePlayPower);
 };
@@ -60,13 +60,13 @@ const startGame = () => {
 };
 
 const turnOverPossession = (team) => {
-  console.log('turnOverPossession 2: ', team);
+  // console.log('turnOverPossession 2: ', team);
   if (team == false) {
     team = "LUNA"
   } else {
     team == "LILY";
   }
-  console.log('turnOverPossession 3: ', team);
+  // console.log('turnOverPossession 3: ', team);
 }
 
 const updateModel = (identifier) => {
@@ -93,30 +93,62 @@ const setLayout = (circleTurn) => {
   setControlButtonLayout(circleTurn);
 };
 
-const handleControlButtonClickability = (activeControls, notActiveControls) => {
-  activeControls.map(control => control.classList.add("CAN_CLICK"));
-  notActiveControls.map(control => control.classList.add("CANNOT_CLICK"));
-}
+// Here
+// debugger;
+const handleControlButtonClickability = () => {
+  let  notActiveControls = (circleTurn == false) ? [...rightControls] : [...leftControls];
+  let activeControls = (circleTurn == true) ? [...rightControls] : [...leftControls];
+
+  if (circleTurn == false) {
+    console.log(`1`);
+    [...activeControls].map( activeControl => {
+      activeControl.classList.remove("CANNOT_CLICK");
+      activeControl.classList.add("CAN_CLICK");
+    });
+    
+    [...notActiveControls].map( notActiveControl => {
+      notActiveControl.classList.remove("CAN_CLICK");
+      notActiveControl.classList.add("CANNOT_CLICK");
+    });
+
+  } else {
+    console.log(`2`);
+    [...activeControls].map( activeControl => {
+      activeControl.classList.add("CAN_CLICK");
+      activeControl.classList.remove("CANNOT_CLICK");
+    });
+    
+    [...notActiveControls].map( notActiveControl => {
+      notActiveControl.classList.add("CANNOT_CLICK");
+      notActiveControl.classList.remove("CAN_CLICK");
+    });
+  }
+};
 
 const setControlButtonLayout = (circleTurn) => {
-  // console.log(`11: `, circleTurn);
-  
-  // console.log(`9:`, circleTurn);
-  if (circleTurn == false) {
-    leftControlPanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
-    leftControlPanel.classList.add("LAY_FLEX_ACTIVE");
-    
-    rightControlPanel.classList.remove("LAY_FLEX_ACTIVE");
-    rightControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
-    // console.log(`10: Luna Styles active`);
-  } else {
-    rightControlPanel.classList.remove("LAY_FLEX_NOT_ACTIVE");
-    rightControlPanel.classList.add("LAY_FLEX_ACTIVE");
-    
-    leftControlPanel.classList.remove("LAY_FLEX_ACTIVE");
-    leftControlPanel.classList.add("LAY_FLEX_NOT_ACTIVE");
-    // console.log(`11: Lily Styles active`);
-  }
+  let activeControl = (circleTurn == false) ?  leftControlPanel : rightControlPanel;
+  let notActiveControl = (!circleTurn == true) ? rightControlPanel : leftControlPanel;
 
-}
+  if (circleTurn == false) {
+    console.log(`1: Active Control`, activeControl);
+    console.log(`1: NOT Active Control`, notActiveControl);
+    activeControl.classList.add("LAY_FLEX_ACTIVE");
+    activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
+
+    notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
+    notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
+
+  } else {
+    console.log(`2: Active Control`, activeControl);
+    console.log(`2: NOT Active Control`, notActiveControl);
+      
+    activeControl.classList.remove("LAY_FLEX_NOT_ACTIVE");
+    activeControl.classList.add("LAY_FLEX_ACTIVE");
+
+    notActiveControl.classList.remove("LAY_FLEX_ACTIVE");
+    notActiveControl.classList.add("LAY_FLEX_NOT_ACTIVE");
+  }
+  
+
+};
 

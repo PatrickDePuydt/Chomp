@@ -3,8 +3,8 @@ const handleCellClick = (event) => {
   
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
-  console.log(`2. Cell Click: `, currentTeam);
-  console.log(`2.1 circleTurn: `, circleTurn);
+  // console.log(`2. Cell Click: `, currentTeam);
+  // console.log(`2.1 circleTurn: `, circleTurn);
   
   let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
   
@@ -16,11 +16,11 @@ const handleCellClick = (event) => {
   
   setCellBackground(event.target, family, piecePlayPower);
   
-  console.log(`family: `, family);
+  // console.log(`family: `, family);
   swapPieceBackground(inventoryIndex, piecePlayPower);
   
   swapTurns();
-  setLayout();
+  setLayout(circleTurn);
 };
 
 const handlePieceSelectionClick = (event) => {
@@ -36,7 +36,7 @@ const handlePieceSelectionClick = (event) => {
   genus = event.target.getAttribute("data-genus");
   family = event.target.getAttribute("data-family");
 
-  console.log(`Handle Piece Click,`, currentTeam);
+  // console.log(`Handle Piece Click,`, currentTeam);
 }
 
 const swapTurns = () => circleTurn = !circleTurn;

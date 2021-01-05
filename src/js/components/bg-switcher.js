@@ -16,15 +16,6 @@ const swapPieceBackground = (inventoryIndex, piecePlayPower, currentTeam) => {
   let dynamicGenus = `[data-genus="${genus}"]`;
   let targetPiece = document.querySelector(`${dynamicFamily}${dynamicGenus}`);
 
-
-  console.log(`17 circleTurn: `, circleTurn);
-  console.log(`18 inventory index: `, inventory);
-  console.log(`19 piecePlayPower: `, piecePlayPower);
-  console.log(`21 currentPlayerInventory: + 1`, currentPlayerInventory + 1);
-  console.log(`22: family`, family);
-  console.log(`21: genus`, genus);
-  console.log(`23: targetPiece`, targetPiece);
-
   targetPiece.classList.remove(`${family}-${genus}-${currentPlayerInventory + 1}`); // remove the previous class
   targetPiece.classList.add(`${family}-${genus}-${currentPlayerInventory}`); // Add the new background class
 
