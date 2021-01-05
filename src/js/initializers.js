@@ -11,6 +11,9 @@ let genus;
 let family;
 let team;
 let canEvenClick;
+let canTakePiece = false;
+let cellPrice;
+let piecePower;
 
 
 
@@ -47,7 +50,7 @@ const handlePieceEventListeners = () => {
 
 const initializeGameGameboardControls = () => [...gameBoardCells].map( cell => {
   cell.addEventListener('click', handleCellClick);
-  cell.addEventListener('mouseover', superviseGameplay);
+  cell.addEventListener('mouseover', handleHover);
 
 }); // Add events to all the cells
 

@@ -11,8 +11,15 @@ const choosePiece = (selectedPiecePower) => {
 }
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
-  event.classList.add(currentTeam); 
-  event.classList.remove(opposingTeam); 
+     if (canTakePiece) {
+    console.log(`1 can take`, piecePlayPower, cellPrice);
+    
+    updateModel(identifier); 
+    event.classList.add(currentTeam); 
+    event.classList.remove(opposingTeam); 
+  } else {
+    bounceClick();
+  }
 }
 
 const checkScore = (currentTeam) => {
@@ -23,28 +30,33 @@ const checkScore = (currentTeam) => {
   });
 };
 
-const comparePieceToCell = (element, identifier, piecePlayPower) => {
-  let cellPrice = Number(cells[identifier].power);
-
-  superviseGameplay(element, cellPrice, identifier, piecePlayPower);
-
+const comparePieceToCell = (identifier, piecePlayPower) => {
+  if (canTakePiece) {
+    console.log(`can take`);
+  } else {
+    console.log(`cannot take`);
+  }
 };
 
-function superviseGameplay(element, cellPrice, identifier, piecePlayPower) {
+
+function superviseGameplay(identifier, piecePlayPower) {
+  let cellPrice = cells[identifier].power
+  console.log(`CellPrice:`, cells[identifier].power);
+  console.log(`piecePlayPower:`, piecePlayPower);
+  
   if (piecePlayPower > cellPrice) {
-    console.log(`1 can take`, piecePlayPower, cellPrice);
-    updateModel(identifier); 
-    claimCell(element, currentTeam, opposingTeam); // Take space
+    canTakePiece = true;
   } else if (piecePlayPower == cellPrice) {
-    bounceClick();
+    canTakePiece = false;
   } else {
-    bounceClick();
+    canTakePiece = false;
   }
+  
 }
 
 function bounceClick() {
-    console.log(`2 Bounce Click`);
-    handleGameBoardClickability(false);
+  handleGameBoardClickability(false);
+  console.log(`2 Bounce Click`);
 }
 
 const depleteResource = (piecePower, currentTeam, inventoryIndex) => {
