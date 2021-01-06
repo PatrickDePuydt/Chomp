@@ -237,3 +237,8 @@
   background-position-y: center;
   background-size: cover;
 }
+
+.WIN {
+  animation: tada;
+  animation-duration: 1s;
+}

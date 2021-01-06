@@ -25,7 +25,7 @@ const handlePieceSelectionClick = (event) => {
   choosePiece(selectedPiecePower);
   event.target.classList.toggle("CLICK"); // Add an animation helper
   handleGameBoardClickability(true);
-  updateInstructions("Choose a game cell");
+  updateInstructions("Choose a game cell.");
 }
 
 const handleHover = (event) => {

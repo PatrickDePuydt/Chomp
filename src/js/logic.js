@@ -1,8 +1,12 @@
 const checkForWin = (currentTeam)  => {
+  
   if (checkScore(currentTeam)) {
+
     handleWin();
+    console.log(`Handle Win: `, checkScore(currentTeam));
   } else {
-    handleDraw();
+    // handleDraw();
+    console.log(`Still going: `, checkScore(currentTeam));
   }
 }
 
@@ -207,5 +211,17 @@ const setControlButtonLayout = (circleTurn) => {
 
 
  const updateInstructions = (instructions) => {
-  //  instructionCopy.innerText = instructions;
+   instructionCopy.innerText = instructions;
  }
+
+ const handleWin = () => {
+  winningCombinations.some(winningCombo => { 
+    winningCombo.every(cell => { 
+      if (gameBoardCells[cell].classList.contains(currentTeam)) {
+        gameBoardCells[cell].classList.add("WIN");
+      }
+    });
+  });
+
+  updateInstructions("Winner");
+};
