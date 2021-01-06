@@ -238,7 +238,9 @@
   background-size: cover;
 }
 
-.WIN {
+[data-feature="chomp"] [data-target="cell"].WIN {
   animation: tada;
   animation-duration: 1s;
+  border: 15px solid var(--acoma);
+  background-color: var(--acoma) !important;
 }
