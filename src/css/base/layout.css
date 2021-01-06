@@ -22,7 +22,7 @@
 }
 
 .LAY_FLEX_NOT_ACTIVE {
-  background: transparent;
+  background: var(--ember);
   flex: 1;
 }
 
@@ -35,4 +35,24 @@
 
 [data-feature="chomp"] [data-container='control'] {
   margin: 10px 0;
+}
+
+[data-component="switcher-control"][data-family="x"].LAY_FLEX_ACTIVE {
+  background: var(--obsidian);
+}
+
+[data-component="switcher-control"][data-family="x"].LAY_FLEX_NOT_ACTIVE {
+  background: var(--ember);
+}
+
+[data-component="switcher-control"][data-family="x"].LAY_FLEX_ACTIVE span {
+  color: var(--quartz)
+}
+
+[data-component="switcher-control"][data-family="z"].LAY_FLEX_ACTIVE {
+  background: var(--quartz);
+}
+
+[data-component="switcher-control"][data-family="z"].LAY_FLEX_NOT_ACTIVE {
+  background: var(--ember);
 }
