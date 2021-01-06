@@ -1,19 +1,15 @@
 [data-feature="chomp"] [data-target="cell"] {
-  background: var(--hoodie);
+  background: var(--falcon);
   width: var(--cell-size);
   height: var(--cell-size);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 5px solid var(--quartz);
+  border: 5px solid var(--ember);
   background-size: 150px;
   background-repeat: no-repeat;
   background-position: center;
   text-indent: -9999px;
   transition: var(--transition);
-}
-
-[data-feature="chomp"] [data-target="cell"].CANNOT_CLICK:hover {
-  
 }
