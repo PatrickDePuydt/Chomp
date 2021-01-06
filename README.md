@@ -1,14 +1,14 @@
-# [Chomp!]()
+# [Chomp!](https://patrickdepuydt.github.io/Chomp/src/index.html)
 MAARK010621-v2
 
-[Click here to see the](src/index.html) project in the wild.
+[Click here to see the](https://patrickdepuydt.github.io/Chomp/src/index.html) project in the wild.
 
 ### Tech Stack
 
-HTML, CSS, & ECMA baby
-Fonts: [Work Sans (Bold)](https://fonts.google.com/specimen/Work+Sans) | [Nunito (Bold)](https://fonts.google.com/specimen/Nunito)
-Animation Helper: [Animate.Style](https://animate.style)
-Color Pallet Helper: [Coolors](https://coolors.co/)
+* HTML, CSS, & ECMA baby
+* Fonts: [Work Sans (Bold)](https://fonts.google.com/specimen/Work+Sans) | [Nunito (Bold)](https://fonts.google.com/specimen/Nunito)
+* Animation Helper: [Animate.Style](https://animate.style)
+* Color Pallet Helper: [Coolors](https://coolors.co/)
 
 ---
 # Development Process
@@ -50,7 +50,9 @@ Why:
 | Approach | Image | Technique |
 |:-----------|:------------:|------------:|
 |  Wireframes/Flow Charts | <img src="journal/images/122320-c.png" width="300px"/>  <img src="journal/images/122320-d.png" width="300px"/> | This process was somewhat illustrative of abstracted logic, but it didn't break down any of the problems I would later face nor did it prepare me well for them. |
-|  Drawing out each play | <img src="journal/images/010621-a-drawing.png" width="300px"/> | To try and project what the programming challenges would be, I did what I know: I drew. I drew every play into a game, and recorded what was happening. |
+|  Drawing out each play | <img src="journal/images/010621-a-drawing.png" width="300px"/> | Adding each play and having to draw out the grid was very time-consuming, but it gave me time to think between the moves what I would need to keep track of. |
+|  Journal Rubber Duck | <img src="journal/images/010621-b-talking.png" width="300px"/> | I often find I think while I'm talking, which ended up being similar to the misguided practice referred to as as "Rubber Ducking". This allowed me to get thoughts out that were in plain English, which sometimes resulted in action items, most of the time it just allowed me to focus better. |
+|  Mocks | <img src="journal/images/010621-c-mocks.png" width="300px"/> | The layout design came together in one fell swoop. I find that wireframes are helpful in design thinking only in certain contexts, and are a hindrance in other, especially creative, situations.|
 
 
 
