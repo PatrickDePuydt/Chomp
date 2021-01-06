@@ -14,7 +14,13 @@ MAARK010621-v2
 # Development Process
 
 ## TL;DR:
-<img src="journal/images/010626-Meme.png" width="500px"/> 
+
+
+|  |  |
+|:-----------:|:------------:|
+| <img src="journal/images/123120-lies.jpg" width="300px"/> | <img src="journal/images/010626-Meme.png" width="500px"/> |
+| <img src="journal/images/123120-fork.jpg" width="400px"/>  | <img src="journal/images/gravity.png" width="600px" /> |
+
 
 ## Long Form
 
