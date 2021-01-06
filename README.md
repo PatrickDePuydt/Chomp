@@ -50,15 +50,39 @@ I've found this advice helpful in hindsight when reflecting but when I'm buried 
 
 Here are some of the things I did to teach myself about what problem I was trying to solve.
 
+#### Wireframes/Flow Charts 
+This process was somewhat illustrative of abstracted logic, but it didn't break down any of the problems I would later face nor did it prepare me well for them. 
 
-| Approach | Image | Technique |
-|:-----------|:------------:|:------------|
-|  Wireframes/Flow Charts | <img src="journal/images/122320-c.png" width="300px"/>  <img src="journal/images/122320-d.png" width="300px"/> | This process was somewhat illustrative of abstracted logic, but it didn't break down any of the problems I would later face nor did it prepare me well for them. |
-|  Drawing out each play | <img src="journal/images/010621-a-drawing.png" width="300px"/> | Adding each play and having to draw out the grid was very time-consuming, but it gave me time to think between the moves what I would need to keep track of. |
-|  Journaling | <img src="journal/images/010621-b-talking.png" width="300px"/> | I often find I think while I'm talking the problem through, I realize things I hadn't thought of. (similar to the sometimes tragically misguided practice known as "Rubber Ducking"). Jouranling allowed me to get thoughts out that were in plain English, which sometimes resulted in action items. Most of the time though, it just allowed me to focus better. |
-|  Mocks | <img src="journal/images/010621-c-mocks.png" width="300px"/> | The layout design came together in one fell swoop. I find that wireframes are helpful in design thinking only in certain contexts, and are a hindrance in other, especially creative, situations.|
-|  I used my cat's names as Variables | <img src="journal/images/123020-a.png" width="400px"/> | If variable names are merely reverential abstractions, and it doesn't matter what i call them, while I'm working I might as well use a mental model which is familiar to me, and then global rename later if needed. |
-|  Numbering my print calls | <img src="journal/images/010421-Logs.png" width="400px"/> | While 21 console logs is excessive, a sticky problem I run into is the errors I get are false-positives/negatives: they are often what cries out in the console but they are not the culprit. To trace the call stack and get a mental picture of what order things were being called in, and where things were breaking, I flagged each console log with a number.|
+<img src="journal/images/122320-c.png" width="300px"/>  
+<img src="journal/images/122320-d.png" width="300px"/> 
+
+#### Drawing out each play 
+
+Adding each play and having to draw out the grid was very time-consuming, but it gave me time to think between the moves what I would need to keep track of. 
+<img src="journal/images/010621-a-drawing.png" width="300px"/> 
+
+
+#### Journaling 
+I often find I think while I'm talking the problem through, I realize things I hadn't thought of. (similar to the sometimes tragically misguided practice known as "Rubber Ducking"). Jouranling allowed me to get thoughts out that were in plain English, which sometimes resulted in action items. Most of the time though, it just allowed me to focus better. 
+<img src="journal/images/010621-b-talking.png" width="300px"/> 
+
+
+#### Layout 
+The layout design came together in one fell swoop. I find that wireframes are helpful in design thinking only in certain contexts, and are a hindrance in other, especially creative, situations.
+<img src="journal/images/010621-c-mocks.png" width="300px"/> 
+
+
+#### Personal Process
+##### Naming Convention
+I used my cat's names as variables; if variable names are merely reverential abstractions, and it doesn't matter what i call them, while I'm working I might as well use a mental model which is familiar to me, and then global rename later if needed. 
+<img src="journal/images/123020-a.png" width="400px"/> 
+
+
+#### Console logs
+While 21 console logs is excessive, a sticky problem I run into is the errors I get are false-positives/negatives: they are often what cries out in the console but they are not the culprit. To trace the call stack and get a mental picture of what order things were being called in, and where things were breaking, I flagged each console log with a number.
+<img src="journal/images/010421-Logs.png" width="400px"/> 
+
+
 
 ### Still Unsolved...
 | Feature | Status |
