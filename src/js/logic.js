@@ -8,7 +8,7 @@ const checkForWin = (currentTeam)  => {
 
 const choosePiece = (selectedPiecePower) => {
   piecePlayPower = selectedPiecePower;
-  console.log(`6. piecePowerPlay`, piecePlayPower);
+  // console.log(`6. piecePowerPlay`, piecePlayPower);
 }
 
 const claimCell = (event, currentTeam, opposingTeam) => { 
@@ -25,7 +25,7 @@ const checkScore = (currentTeam) => {
 };
 
 const comparePieceToCell = (element, cellIdentifier, piecePlayPower) => {
-  console.log(`Compare`, element, cellIdentifier, piecePlayPower);
+  // console.log(`Compare`, element, cellIdentifier, piecePlayPower);
 };
 
 
@@ -33,13 +33,13 @@ function superviseGameplay() {
   let cellPowerPrice = cells[cellIdentifier].power;
 
   if (piecePlayPower > cellPowerPrice) {
-    console.log(`1. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
+    // console.log(`1. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return true;
   } else if (piecePlayPower == cellPowerPrice) {
-    console.log(`2. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
+    // console.log(`2. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return false;
   } else {
-    console.log(`3. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
+    // console.log(`3. piecePlayPower, cellPowerPrice`, piecePlayPower, cellPowerPrice);
     return false;
   }
 }
@@ -89,10 +89,10 @@ const turnOverPossession = (team) => {
   ('turnOverPossession 3: ', team);
 }
 
-const updateModel = (identifier) => {
-  console.log(`4: updateModel: identifier`, identifier);
+const updateModel = (identifier, piecePlayPower) => {
   cells[identifier].taken = true;
   cells[identifier].power = piecePlayPower;
+  cells[identifier].chomp.push(piecePlayPower);
 }
 
 const toggleHeader = (team) => {

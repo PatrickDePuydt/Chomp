@@ -3,16 +3,11 @@ const handleCellClick = (event) => {
   let inventoryIndex = (family == "x") ? lunaPieceInventory : lilyPieceInventory;
   currentTeam = !circleTurn ? "LUNA" : "LILY";
   
-  if (superviseGameplay()) {
-    console.log(`can play`);
-  } else {
-    console.log(`cannot play`);
-  }
-  
-  updateModel(identifier); 
+  updateModel(identifier, piecePlayPower); 
   depleteResource(piecePlayPower, currentTeam, inventoryIndex); 
-  setCellBackground(event.target, family, piecePlayPower);
+  setCellBackground(event.target, family, piecePlayPower, currentTeam);
   checkForWin(currentTeam);
+  
   swapTurns();
   setLayout(circleTurn);
   handleGameBoardClickability(false);

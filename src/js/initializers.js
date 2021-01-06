@@ -15,6 +15,7 @@ let canTakePiece = false;
 let cellPrice;
 let piecePower;
 let cellIdentifier;
+let previousPiecePower;
 
 const initializeGamePieceControls = () => [...gamePieces].map( piece => {
   family = piece.getAttribute("data-family");
@@ -52,7 +53,16 @@ const initializeGameGameboardControls = () => [...gameBoardCells].map( cell => {
 
 const disableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", true))}; // Used to lock the board
 const enableBoard = () => {gameBoardCells.forEach( cell => cell.setAttribute("disabled", false))}; // Used to unlock the board
-const handleWin = () => console.log(`Handle Win`); // Used as a placeholder for win tracking
+
+const handleWin = () => {
+  winningCombinations.some(winningCombo => { 
+    winningCombo.every(cell => { 
+      if (gameBoardCells[cell].classList.contains(currentTeam)) {
+        gameBoardCells[cell].classList.add("WIN"); 
+      }
+    });
+  });
+};
 const handleDraw = () => console.log(`Habndle Draw`); // Used as a placeholder for draw tracking
 const isDraw = () => [...gameBoardCells].every( cell => cell.classList.contains("LILY") || cell.classList.contains("LUNA")); // used to check if there was a combination (used in win evaluation)
 const resetPiecePower = () => console.log(`Reset`); // Utility for clean piece tracking
