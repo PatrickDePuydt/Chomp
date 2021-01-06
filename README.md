@@ -6,7 +6,7 @@ MAARK010621-v2
 ### Tech Stack
 
 * HTML, CSS, & ECMA baby
-* Fonts: [Work Sans (Bold)](https://fonts.google.com/specimen/Work+Sans) | [Nunito (Bold)](https://fonts.google.com/specimen/Nunito)
+* Fonts: [Work Sans (Bold)](https://fonts.google.com/specimen/Work+Sans), [Nunito (Bold)](https://fonts.google.com/specimen/Nunito)
 * Animation Helper: [Animate.Style](https://animate.style)
 * Color Pallet Helper: [Coolors](https://coolors.co/)
 
