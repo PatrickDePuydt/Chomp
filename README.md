@@ -58,4 +58,4 @@ Here are some of the things I did to teach myself about what problem I was tryin
 |:-----------|:------------|
 | _Triple-threat juicy target_ | This is one of the core features of Goblet!, but one I found difficult with a one-dimensional array which neither knows nor cares about diagonals.  |
 | _Win conditions_ |  |
-| _Buggy UI_ |   |
+| _Buggy UI_ |  can't click, depleted resource, chomp |
