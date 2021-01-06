@@ -16,7 +16,7 @@ MAARK010621-v2
 ## TL;DR:
 
 
-|  |  |
+| Meme | Meme |
 |:-----------:|:------------:|
 | <img src="journal/images/123120-lies.jpg" width="300px"/> | <img src="journal/images/010626-Meme.png" width="500px"/> |
 | <img src="journal/images/123120-fork.jpg" width="400px"/>  | <img src="journal/images/gravity.png" width="600px" /> |
@@ -59,9 +59,10 @@ Here are some of the things I did to teach myself about what problem I was tryin
 |  Mocks | <img src="journal/images/010621-c-mocks.png" width="300px"/> | The layout design came together in one fell swoop. I find that wireframes are helpful in design thinking only in certain contexts, and are a hindrance in other, especially creative, situations.|
 |  I used my cat's names as Variables | <img src="journal/images/123020-a.png" width="400px"/> | If variable names are merely reverential abstractions, and it doesn't matter what i call them, while I'm working I might as well use a mental model which is familiar to me, and then global rename later if needed. |
 |  Numbering my print calls | <img src="journal/images/010421-Logs.png" width="400px"/> | While 21 console logs is excessive, a sticky problem I run into is the errors I get are false-positives/negatives: they are often what cries out in the console but they are not the culprit. To trace the call stack and get a mental picture of what order things were being called in, and where things were breaking, I flagged each console log with a number.|
+
 ### Still Unsolved...
 | Feature | Status |
 |:-----------|:------------|
 | _Triple-threat juicy target_ | This is one of the core features of Goblet!, but one I found difficult with a one-dimensional array which neither knows nor cares about diagonals.  |
-| _Win conditions_ |  |
+| _Win conditions_ | &nbsp; |
 | _Buggy UI_ |  can't click, depleted resource, chomp |
